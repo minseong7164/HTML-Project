@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NC 다이노스 - KBO-Wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <!-- 자바스크립트가 네비게이션바를 주입할 공간 -->
+    <header class="kbo-navbar" id="global-navbar"></header>
+
+    <!-- 💡 [해결] 중복 상자들을 싹 걷어내고 완벽한 정렬을 복구한 단일 메인 컨테이너 -->
+    <main class="wiki-container">
+        <div id="page-nc" class="wiki-page active">
+
+            <div class="wiki-header-row">
+                <h1>NC 다이노스 (NC Dinos)</h1>
+            </div>
+
+            <!-- 본문과 인포박스를 좌우로 나란히 이쁘게 배치해주는 flex 상자 -->
+            <div class="wiki-body" style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
+                
+                <!-- 1. 왼쪽 본문 영역 -->
+                <div class="wiki-text" style="flex: 1;">
+
+                    <!-- 📦 NC 다이노스 접기/펼치기 상자 -->
+                    <details class="namu-toggle-box" style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
+                        <summary style="font-weight: bold; cursor: pointer; color: #315288; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            <span>ℹ️ NC 다이노스 추가 정보 (기록 및 요약)</strong>
+                            <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]</strong>
+                        </summary>
+                        <div class="toggle-content" style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td><td style="padding: 6px;">총 8회 (신생팀 중 압도적인 단기전 도깨비)</td></tr>
+                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td><td style="padding: 6px;">2020년 (창단 9년 만의 첫 한국시리즈 통합 우승)</td></tr>
+                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold;">구단 마스코트</td><td style="padding: 6px;">단디 (Dandi), 쎄리 (Sseri)</td></tr>
+                                <tr><td style="padding: 6px; font-weight: bold;">응원가</td><td style="padding: 6px;">우리는 다이노스, 마산 스트리트, 승리를 향해 다이노스</td></tr>
+                            </table>
+                        </div>
+                    </details>
+
+                    <h3>1. 개요</h3>
+                    <p><strong>2011년</strong> 프로야구 제9구단으로 창단되어 <strong>2013년</strong>부터 KBO 1군 리그에 정식 진입한 엔씨소프트가 운영하는 프로야구 팀이다.</p>
+                    <p>
+                        연고지는 야구 열기가 매우 뜨거운 <strong>경상남도 창원시</strong>이며, 홈구장은 성산구 양덕동에 위치한 메이저리그급 최신식 야구장인 <strong>창원 NC 파크</strong>이다. 
+                        구 마산 야구장을 사용하다 신축 구장으로 이전하였으며, 국내에서 손꼽히는 쾌적하고 관중 친화적인 야구 인프라를 보유한 팀이다.
+                    </p>
+                    <p>
+                        '거침없이 가자'라는 슬로건답게 1군 진입 초기부터 엄청난 저력과 화끈한 타격을 선보이며 빠르게 강팀의 반열에 합류했다. 
+                        가장 상징적인 순간은 통합 우승을 차지했던 **2020년 한국시리즈**로, 모기업 엔씨소프트의 리니지 IP를 활용한 '집행검 들어 올리기 세레머니'를 전 세계 야구계에 각인시키며 창단 첫 우승의 금자탑을 쌓아 올렸다.
+                    </p>
+
+                    <h3>2. 레전드 선수</h3>
+                    <p>팀의 첫 우승을 이끈 캡틴 양의지(포수)와 '한국 야구 최고의 교타자' 손아섭(외야수), 그리고 프랜차이즈 간판스타 박민우(내야수)를 비롯해 구단 초창기 신바람을 일으켰던 나성범, 에릭 테임즈 등이 대표적인 역사 속 레전드로 기억되고 있다.</p>
+                </div>
+
+                <!-- 2. 오른쪽 인포박스 영역 (클래스명을 nc-theme로 맞춰주어 청량한 마린 블루가 정상 연동됩니다) -->
+                <aside class="infobox nc-theme">
+                    <div class="infobox-title">NC 다이노스</div>
+                    <div class="infobox-img">
+                        <img src="./images/NC다이노스 로고.svg" alt="NC 다이노스 로고"
+                            style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto; padding: 10px;">
+                    </div>
+
+                    <table class="infobox-table" style="width: 100%; border-collapse: collapse; background-color: #f8f9fa;">
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; width: 35%; font-weight: bold; text-align: left;">정식 명칭</th>
+                            <td style="padding: 6px;">NC 다이노스 프로야구단</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">창단</th>
+                            <td style="padding: 6px;">2011년 3월 31일</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">1군 진입</th>
+                            <td style="padding: 6px;">2013년 4월 2일</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">모기업</th>
+                            <td style="padding: 6px;">엔씨소프트 (NCsoft)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">연고지</th>
+                            <td style="padding: 6px;"><span class="text-orange">경상남도 창원시</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">홈구장</th>
+                            <td style="padding: 6px;"><span class="text-navy">창원 NC 파크</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">구단주</th>
+                            <td style="padding: 8px;">김택진</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">단장 / 감독</th>
+                            <td style="padding: 6px;">임선남 / <span class="text-orange">이호준</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주장</th>
+                            <td style="padding: 6px;">박민우</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">영구 결번</th>
+                            <td style="padding: 6px;">없음</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주요 라이벌</th>
+                            <td style="padding: 6px;">롯데 자이언츠 (낙동강 더비)<br>두산 베어스 (가을야구 단골 숙적)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">공식 링크</th>
+                            <td class="sns-links">
+                                <a href="https://www.heroesbaseball.co.kr/" target="_blank">
+                                    <img src="./images/키움 링크 로고.svg" alt="공식 홈페이지">
+                                </a>
+                                <a href="https://www.instagram.com/kiwoomheroesbaseballclub/" target="_blank">
+                                    <img src="./images/인스타그램 로고.svg" alt="인스타그램">
+                                </a>
+                                <a href="https://www.facebook.com/kiwoomheroesbaseballclub" target="_blank">
+                                    <img src="./images/페이스북 로고.svg" alt="페이스북">
+                                </a>
+                                <a href="https://www.youtube.com/@kiwoomheroes" target="_blank">
+                                    <img src="./images/유튜브 로고.svg" alt="유튜브">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold; text-align: left;">한국시리즈 우승</th>
+                            <td style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold;">1회 (2020)</td>
+                        </tr>
+                    </table>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

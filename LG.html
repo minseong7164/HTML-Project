@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG 트윈스 - KBO-Wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <!-- 자바스크립트가 네비게이션바를 주입할 공간 -->
+    <header class="kbo-navbar" id="global-navbar"></header>
+
+    <!-- 💡 [해결] 완전히 누락되었던 메인 레이아웃 뼈대 컨테이너를 정상적으로 조립했습니다! -->
+    <main class="wiki-container">
+        <div id="page-lg" class="wiki-page active">
+
+            <div class="wiki-header-row">
+                <h1>LG 트윈스 (LG Twins)</h1>
+            </div>
+
+            <!-- 본문과 인포박스를 예쁘게 좌우로 나란히 배치해주는 flex 상자 -->
+            <div class="wiki-body" style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
+                
+                <!-- 1. 왼쪽 본문 영역 -->
+                <div class="wiki-text" style="flex: 1;">
+
+                    <!-- 📦 LG 트윈스 접기/펼치기 상자 -->
+                    <details class="namu-toggle-box" style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
+                        <summary style="font-weight: bold; cursor: pointer; color: #c6002f; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            <span>ℹ️ LG 트윈스 추가 정보 (기록 및 요약)</strong>
+                            <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]</strong>
+                        </summary>
+                        <div class="toggle-content" style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td><td style="padding: 6px;">총 21회</td></tr>
+                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td><td style="padding: 6px;">2023년 (29년 만의 극적인 통합 우승 달성)</td></tr>
+                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold;">구단 마스코트</td><td style="padding: 6px;">럭키, 스타</td></tr>
+                                <tr><td style="padding: 6px; font-weight: bold;">응원가</td><td style="padding: 6px;">서울의 찬가, 서울의 모정, 아파트</td></tr>
+                            </table>
+                        </div>
+                    </details>
+
+                    <h3>1. 개요</h3>
+                    <p><<strong>1982년</strong> MBC 청룡으로 창단하여 <<strong>1990년</strong> LG그룹이 인수하며 재탄생한 KBO 리그 소속 프로야구 팀이다.</p>
+                    <p>
+                        연고지는 대한민국 수도인 <<strong>서울특별시</strong>이며, 홈구장은 송파구 잠실동에 위치한 대한민국 최대 규모의 야구장인 <<strong>서울 종합운동장 야구장</strong>(잠실 야구장)이다. 
+                        두산 베어스와 함께 잠실 야구장을 공동 홈구장으로 사용하는 독특한 한 지붕 두 가족 체제를 유지하고 있다.
+                    </p>
+                    <p>
+                        KBO 리그 역사상 최초로 100만 관중을 돌파한 구단이며, 세련된 '신바람 야구' 스타일과 가장 충성도가 높고 규모가 큰 팬덤을 보유한 최고 인기 구단 중 하나이다. 
+                        1990년, 1994년 우승 이후 오랜 암흑기를 거쳐 2023년 드디어 29년 만의 한국시리즈 통합 우승을 차지하며 화려하게 부활했다.
+                    </p>
+
+                    <h3>2. 레전드 선수</h3>
+                    <p>'노송' 김용수(투수), '적토마' 이병규(타자) 등 팀을 이끈 위대한 영구결번 레전드들이 있으며, 오지환, 임찬규 등 프랜차이즈 스타들이 주축으로 활약하고 있다.</p>
+                </div>
+
+                <!-- 2. 오른쪽 인포박스 영역 (클래스명을 lg-theme로 지정하여 핀스트라이프 블랙/레드 테마가 연동됩니다) -->
+                <aside class="infobox lg-theme">
+                    <div class="infobox-title">LG 트윈스</div>
+                    <div class="infobox-img">
+                        <img src="./images/LG트윈스 로고.svg" alt="LG 트윈스 로고"
+                            style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto; padding: 10px;">
+                    </div>
+
+                    <table class="infobox-table" style="width: 100%; border-collapse: collapse; background-color: #f8f9fa;">
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; width: 35%; font-weight: bold; text-align: left;">정식 명칭</th>
+                            <td style="padding: 6px;">LG트윈스 프로야구단</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">창단 / 프로화</th>
+                            <td style="padding: 6px;">1982년 1월 26일 (MBC 청룡)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">인수 / 재창단</th>
+                            <td style="padding: 6px;">1990년 3월 15일 (LG 트윈스)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">모기업</th>
+                            <td style="padding: 6px;">LG그룹 (주식회사 엘지스포츠)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">연고지</th>
+                            <td style="padding: 6px;"><span class="text-orange">서울특별시</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">홈구장</th>
+                            <td style="padding: 6px;"><span class="text-navy">서울 종합운동장 야구장</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">구단주</th>
+                            <td style="padding: 8px;">구광모</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">단장 / 감독</th>
+                            <td style="padding: 6px;">차명석 / <span class="text-orange">염경엽</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주장</th>
+                            <td style="padding: 6px;">김현수</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">영구 결번</th>
+                            <td style="padding: 6px;"><span class="text-orange">41 김용수</strong> | <span class="text-navy">9 이병규</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주요 라이벌</th>
+                            <td style="padding: 6px;">두산 (한 지붕 두 가족, 어린이날 시리즈)<br>키움 (엘키라시코)<br>KIA (엘꼴라시코의 후예 및 헤리티지)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">공식 링크</th>
+                            <td class="sns-links">
+                                <a href="https://www.heroesbaseball.co.kr/" target="_blank">
+                                    <img src="./images/키움 링크 로고.svg" alt="공식 홈페이지">
+                                </a>
+                                <a href="https://www.instagram.com/kiwoomheroesbaseballclub/" target="_blank">
+                                    <img src="./images/인스타그램 로고.svg" alt="인스타그램">
+                                </a>
+                                <a href="https://www.facebook.com/kiwoomheroesbaseballclub" target="_blank">
+                                    <img src="./images/페이스북 로고.svg" alt="페이스북">
+                                </a>
+                                <a href="https://www.youtube.com/@kiwoomheroes" target="_blank">
+                                    <img src="./images/유튜브 로고.svg" alt="유튜브">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold; text-align: left;">한국시리즈 우승</th>
+                            <td style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold;">3회 (1990, 1994, 2023)</td>
+                        </tr>
+                    </table>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

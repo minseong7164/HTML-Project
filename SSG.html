@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSG 랜더스 - KBO-Wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <!-- 자바스크립트가 네비게이션바를 주입할 공간 -->
+    <header class="kbo-navbar" id="global-navbar"></header>
+
+    <!-- 💡 [해결] 완전히 누락되고 중복되어 레이아웃을 깨뜨렸던 뼈대 컨테이너 정상 조립 -->
+    <main class="wiki-container">
+        <div id="page-ssg" class="wiki-page active">
+
+            <div class="wiki-header-row">
+                <h1>SSG 랜더스 (SSG Landers)</h1>
+            </div>
+
+            <!-- 본문과 인포박스를 예쁘게 좌우로 배치해주는 flex 상자 -->
+            <div class="wiki-body" style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
+                
+                <!-- 1. 왼쪽 본문 영역 -->
+                <div class="wiki-text" style="flex: 1;">
+
+                    <!-- 📦 SSG 랜더스 접기/펼치기 상자 -->
+                    <details class="namu-toggle-box" style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
+                        <summary style="font-weight: bold; cursor: pointer; color: #c81029; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            <span>ℹ️ SSG 랜더스 추가 정보 (기록 및 요약)</strong>
+                            <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]</strong>
+                        </summary>
+                        <div class="toggle-content" style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td><td style="padding: 6px;">총 14회 (SK 와이번스 기록 합산)</td></tr>
+                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td><td style="padding: 6px;">2022년 (KBO 역사상 최초의 '와이어 투 와이어' 통합 우승)</td></tr>
+                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold;">구단 마스코트</td><td style="padding: 6px;">랜디 (Landy)</td></tr>
+                                <tr><td style="padding: 6px; font-weight: bold;">응원가</td><td style="padding: 6px;">연안부두, 불새마냥, 승리의 랜더스</td></tr>
+                            </table>
+                        </div>
+                    </details>
+
+                    <h3>1. 개요</h3>
+                    <p><strong>2000년</strong> 인천 연고의 SK 와이번스로 창단하여 <strong>2021년</strong> 신세계그룹이 인수한 KBO 리그 소속 프로야구 팀이다.</p>
+                    <p>
+                        연고지는 인천 야구의 성지인 <strong>인천광역시</strong>이며, 홈구장은 미추홀구 문학동에 위치한 <strong>인천 SSG 랜더스필드</strong>(문학야구장)이다. 
+                        삼미, 청보, 태평양, 현대 등 굴곡이 많았던 인천 야구의 역사적 계보를 묵묵히 이어받아 신세계그룹 산하에서 새로운 명문 구단으로 완전히 자리 잡았다.
+                    </p>
+                    <p>
+                        과거 SK 와이번스 시절 강력한 데이터 야구와 화수분 야구로 통산 4회 한국시리즈 우승을 기록하며 'SK 왕조'를 구축했으며, 모기업 인수 직후인 2022년에는 정규시즌 개막일터 종료일까지 단 한 번도 1위를 놓치지 않는 사상 최초의 **'와이어 투 와이어 통합 우승'**을 달성하며 KBO 리그에 거대한 신세계 신드롬을 불러일으켰다.
+                    </p>
+
+                    <h3>2. 레전드 선수</h3>
+                    <p>'포수 역사상 최고의 레전드' 박경수 이전의 영구결번 주인공 박경완(포수)을 비롯해, 메이저리그를 거쳐 돌아온 에이스 김광현(투수)과 KBO 역대 최고의 홈런왕 중 한 명인 최정(내야수) 등이 팀을 상징하는 살아있는 전설들이다.</p>
+                </div>
+
+                <!-- 2. 오른쪽 인포박스 영역 (ssg-theme 클래스를 적용하여 이마트 레드 테마가 정확하게 맞물립니다) -->
+                <aside class="infobox ssg-theme">
+                    <div class="infobox-title">SSG 랜더스</div>
+                    <div class="infobox-img">
+                        <img src="./images/SSG랜더스 로고.svg" alt="SSG 랜더스 로고"
+                            style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto; padding: 10px;">
+                    </div>
+
+                    <table class="infobox-table" style="width: 100%; border-collapse: collapse; background-color: #f8f9fa;">
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; width: 35%; font-weight: bold; text-align: left;">정식 명칭</th>
+                            <td style="padding: 6px;">SSG 랜더스 프로야구단</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">창단 / 프로화</th>
+                            <td style="padding: 6px;">2000년 3월 31일 (SK 와이번스)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">인수 / 창단</th>
+                            <td style="padding: 6px;">2021년 3월 5일 (SSG 랜더스)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">모기업</th>
+                            <td style="padding: 6px;">신세계그룹 (주식회사 신세계야구단)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">연고지</th>
+                            <td style="padding: 6px;"><span class="text-orange">인천광역시</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">홈구장</th>
+                            <td style="padding: 6px;"><span class="text-navy">인천 SSG 랜더스필드</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">구단주</th>
+                            <td style="padding: 8px;">정용진</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">단장 / 감독</th>
+                            <td style="padding: 6px;">김재현 / <span class="text-orange">이숭용</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주장</th>
+                            <td style="padding: 6px;">한유섬</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">영구 결번</th>
+                            <td style="padding: 6px;"><span class="text-orange">26 박경완</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주요 라이벌</th>
+                            <td style="padding: 6px;">키움 (지하철 시리즈)<br>KT (경수고속도로 시리즈)<br>두산 (포스트시즌 단골 매치)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">공식 링크</th>
+                            <td class="sns-links">
+                                <a href="https://www.heroesbaseball.co.kr/" target="_blank">
+                                    <img src="./images/키움 링크 로고.svg" alt="공식 홈페이지">
+                                </a>
+                                <a href="https://www.instagram.com/kiwoomheroesbaseballclub/" target="_blank">
+                                    <img src="./images/인스타그램 로고.svg" alt="인스타그램">
+                                </a>
+                                <a href="https://www.facebook.com/kiwoomheroesbaseballclub" target="_blank">
+                                    <img src="./images/페이스북 로고.svg" alt="페이스북">
+                                </a>
+                                <a href="https://www.youtube.com/@kiwoomheroes" target="_blank">
+                                    <img src="./images/유튜브 로고.svg" alt="유튜브">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold; text-align: left;">한국시리즈 우승</th>
+                            <td style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold;">5회 (2007, 2008, 2010, 2018, 2022)</td>
+                        </tr>
+                    </table>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

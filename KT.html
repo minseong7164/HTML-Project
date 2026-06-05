@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KT 위즈 - KBO-Wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <!-- 자바스크립트가 네비게이션바를 주입할 공간 -->
+    <header class="kbo-navbar" id="global-navbar"></header>
+
+    <!-- 💡 [해결] 완전히 누락되고 중복되어 레이아웃을 깨뜨렸던 뼈대 컨테이너 정상 조립 -->
+    <main class="wiki-container">
+        <div id="page-kt" class="wiki-page active">
+
+            <div class="wiki-header-row">
+                <h1>KT 위즈 (kt wiz)</h1>
+            </div>
+
+            <!-- 본문과 인포박스를 예쁘게 좌우로 배치해주는 flex 상자 -->
+            <div class="wiki-body" style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
+                
+                <!-- 1. 왼쪽 본문 영역 -->
+                <div class="wiki-text" style="flex: 1;">
+
+                    <!-- 📦 KT 위즈 접기/펼치기 상자 -->
+                    <details class="namu-toggle-box" style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
+                        <summary style="font-weight: bold; cursor: pointer; color: #007bc7; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            <span>ℹ️ KT 위즈 추가 정보 (기록 및 요약)</strong>
+                            <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]</strong>
+                        </summary>
+                        <div class="toggle-content" style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td><td style="padding: 6px;">총 5회</td></tr>
+                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td><td style="padding: 6px;">2021년 (통합 우승)</td></tr>
+                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold;">구단 마스코트</td><td style="padding: 6px;">빅(Vic), 또리(Ddory)</td></tr>
+                                <tr><td style="padding: 6px; font-weight: bold;">응원가</td><td style="padding: 6px;">만고강산, 승리의 kt wiz, 내 사랑 kt wiz</td></tr>
+                            </table>
+                        </div>
+                    </details>
+
+                    <h3>1. 개요</h3>
+                    <p><strong>2013년</strong> KBO 리그의 10번째 심장으로 창단되어 <strong>2015년</strong>부터 1군 리그에 정식 진입한 KT그룹이 운영하는 프로야구 팀이다.</p>
+                    <p>
+                        연고지는 경기도 <strong>수원시</strong>이며, 홈구장은 장안구 조원동에 위치한 <strong>수원 케이티 위즈 파크</strong>(수원 야구장을 리모델링 및 증축)이다. 
+                        수원 야구장의 현대 야구 메카화를 이끌어낸 주역이며, 정보통신기술(ICT)과 야구를 접목한 스마트 야구장 설계로 팬들에게 다양한 디지털 편의를 선사하는 구단으로 널리 알려져 있다.
+                    </p>
+                    <p>
+                        창단 극초기에는 하위권에 머무르는 성장통을 겪었으나, 명장 이강철 감독 부임 이후 끈끈한 투수력과 응집력 넘치는 팀 컬러를 확립하며 빠르게 강팀의 반열에 올라섰다. 
+                        결국 창단 8년 만인 **2021년 정규리그 및 한국시리즈 통합 우승**을 달성하며 KBO 역사상 가장 빠르게 정상에 도달한 신생 구단 중 하나로 등극했다.
+                    </p>
+
+                    <h3>2. 레전드 선수</h3>
+                    <p>창단 첫 홈런의 주인공이자 팀의 첫 통합 우승을 이끌며 화려한 은퇴식을 치른 박경수(내야수)를 비롯하여, '창단 멤버' 고영표(투수), 천재 타자 강백호(야구선수) 등이 대표적인 프랜차이즈 레전드 및 스타로 활약하고 있다.</p>
+                </div>
+
+                <!-- 2. 오른쪽 인포박스 영역 (kt-theme 클래스를 적용하여 청량한 kt 블루/블랙 테마가 정확하게 맞물립니다) -->
+                <aside class="infobox kt-theme">
+                    <div class="infobox-title">KT 위즈</div>
+                    <div class="infobox-img">
+                        <img src="./images/KT위즈 로고.svg" alt="KT 위즈 로고"
+                            style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto; padding: 10px;">
+                    </div>
+
+                    <table class="infobox-table" style="width: 100%; border-collapse: collapse; background-color: #f8f9fa;">
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; width: 35%; font-weight: bold; text-align: left;">정식 명칭</th>
+                            <td style="padding: 6px;">kt wiz 프로야구단</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">창단</th>
+                            <td style="padding: 6px;">2013년 10월 11일</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">1군 진입</th>
+                            <td style="padding: 6px;">2015년 3월 28일</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">모기업</th>
+                            <td style="padding: 6px;">KT (주식회사 케이티스포츠)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">연고지</th>
+                            <td style="padding: 6px;"><span class="text-orange">경기도 수원시</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">홈구장</th>
+                            <td style="padding: 6px;"><span class="text-navy">수원 케이티 위즈 파크</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">구단주</th>
+                            <td style="padding: 8px;">김영섭</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">단장 / 감독</th>
+                            <td style="padding: 6px;">나도현 / <span class="text-orange">이강철</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주장</th>
+                            <td style="padding: 6px;">장성우</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">영구 결번</th>
+                            <td style="padding: 6px;">없음</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주요 라이벌</th>
+                            <td style="padding: 6px;">SSG 랜더스 (경수고속도로 시리즈)<br>LG 트윈스 (가을야구 단골 라이벌전)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dddddd;">
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">공식 링크</th>
+                            <td class="sns-links">
+                                <a href="https://www.heroesbaseball.co.kr/" target="_blank">
+                                    <img src="./images/키움 링크 로고.svg" alt="공식 홈페이지">
+                                </a>
+                                <a href="https://www.instagram.com/kiwoomheroesbaseballclub/" target="_blank">
+                                    <img src="./images/인스타그램 로고.svg" alt="인스타그램">
+                                </a>
+                                <a href="https://www.facebook.com/kiwoomheroesbaseballclub" target="_blank">
+                                    <img src="./images/페이스북 로고.svg" alt="페이스북">
+                                </a>
+                                <a href="https://www.youtube.com/@kiwoomheroes" target="_blank">
+                                    <img src="./images/유튜브 로고.svg" alt="유튜브">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold; text-align: left;">한국시리즈 우승</th>
+                            <td style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold;">1회 (2021)</td>
+                        </tr>
+                    </table>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

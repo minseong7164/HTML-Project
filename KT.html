@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+
     <!-- 자바스크립트가 네비게이션바를 주입할 공간 -->
     <header class="kbo-navbar" id="global-navbar"></header>
 
@@ -23,39 +23,161 @@
 
             <!-- 본문과 인포박스를 예쁘게 좌우로 배치해주는 flex 상자 -->
             <div class="wiki-body" style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
-                
+
                 <!-- 1. 왼쪽 본문 영역 -->
                 <div class="wiki-text" style="flex: 1;">
 
                     <!-- 📦 KT 위즈 접기/펼치기 상자 -->
-                    <details class="namu-toggle-box" style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
-                        <summary style="font-weight: bold; cursor: pointer; color: #007bc7; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    <details class="namu-toggle-box"
+                        style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
+                        <summary
+                            style="font-weight: bold; cursor: pointer; color: #007bc7; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
                             <span>ℹ️ KT 위즈 추가 정보 (기록 및 요약)</strong>
-                            <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]</strong>
+                                <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]</strong>
                         </summary>
-                        <div class="toggle-content" style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
+                        <div class="toggle-content"
+                            style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
                             <table style="width: 100%; border-collapse: collapse;">
-                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td><td style="padding: 6px;">총 5회</td></tr>
-                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td><td style="padding: 6px;">2021년 (통합 우승)</td></tr>
-                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold;">구단 마스코트</td><td style="padding: 6px;">빅(Vic), 또리(Ddory)</td></tr>
-                                <tr><td style="padding: 6px; font-weight: bold;">응원가</td><td style="padding: 6px;">만고강산, 승리의 kt wiz, 내 사랑 kt wiz</td></tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td>
+                                    <td style="padding: 6px;">총 5회</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td>
+                                    <td style="padding: 6px;">2021년 (통합 우승)</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold;">구단 마스코트</td>
+                                    <td style="padding: 6px;">빅(Vic), 또리(Ddory)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 6px; font-weight: bold;">응원가</td>
+                                    <td style="padding: 6px;">만고강산, 승리의 kt wiz, 내 사랑 kt wiz</td>
+                                </tr>
                             </table>
                         </div>
                     </details>
 
                     <h3>1. 개요</h3>
-                    <p><strong>2013년</strong> KBO 리그의 10번째 심장으로 창단되어 <strong>2015년</strong>부터 1군 리그에 정식 진입한 KT그룹이 운영하는 프로야구 팀이다.</p>
+                    <!--유튜브 영상링크 복사 붙여넣기 한 후 watch?v= 부분을 embed로 변경해야 오류 발생 안함-->
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/YbtMx8yofi4?t=1s" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                     <p>
-                        연고지는 경기도 <strong>수원시</strong>이며, 홈구장은 장안구 조원동에 위치한 <strong>수원 케이티 위즈 파크</strong>(수원 야구장을 리모델링 및 증축)이다. 
-                        수원 야구장의 현대 야구 메카화를 이끌어낸 주역이며, 정보통신기술(ICT)과 야구를 접목한 스마트 야구장 설계로 팬들에게 다양한 디지털 편의를 선사하는 구단으로 널리 알려져 있다.
-                    </p>
-                    <p>
-                        창단 극초기에는 하위권에 머무르는 성장통을 겪었으나, 명장 이강철 감독 부임 이후 끈끈한 투수력과 응집력 넘치는 팀 컬러를 확립하며 빠르게 강팀의 반열에 올라섰다. 
-                        결국 창단 8년 만인 **2021년 정규리그 및 한국시리즈 통합 우승**을 달성하며 KBO 역사상 가장 빠르게 정상에 도달한 신생 구단 중 하나로 등극했다.
+                        연고지는 <strong>경기도 수원시</strong>이며, 홈구장은 장안구 조원동에 위치한 <strong>수원 KT 위즈 파크</strong>이다. KBO 리그의 10번째
+                        구단으로 합류하여 짧은 역사 속에서도 빠르게 성장하며 명문 구단의 입지를 다져왔다.
                     </p>
 
-                    <h3>2. 레전드 선수</h3>
-                    <p>창단 첫 홈런의 주인공이자 팀의 첫 통합 우승을 이끌며 화려한 은퇴식을 치른 박경수(내야수)를 비롯하여, '창단 멤버' 고영표(투수), 천재 타자 강백호(야구선수) 등이 대표적인 프랜차이즈 레전드 및 스타로 활약하고 있다.</p>
+                    <p>
+                        창단 후 2021년, <strong>통합 우승</strong>을 달성하며 최단기간 우승 기록을 갈아치우는 기적을 썼다. 이후 꾸준히 포스트시즌 진출권에서 경쟁하는 강팀으로
+                        자리 잡았다.
+                    </p>
+
+                    <p>
+                        구단 상징은 <strong>'위즈(Wiz)'</strong>이며, 스마트한 야구와 함께 팬들에게 즐거움을 선사하는 팀을 지향한다.
+                    </p>
+
+                    <h2><strong>2.</strong> 역사</h2>
+                    <p>
+                        KT 위즈는 KBO 리그의 막내 구단으로 시작해 비약적인 성장을 이뤄낸 구단이다.
+                    </p>
+
+                    <h4><strong>2.1</strong> 창단 및 1군 진입 (2013 ~ 2016)</h4>
+                    <p>
+                        2013년 창단 승인을 거쳐 2015년 1군 무대에 데뷔했다. 초기에는 팀을 정비하며 리그 적응기를 가졌다.
+                    </p>
+
+                    <h4><strong>2.2</strong> 도약의 준비 (2017 ~ 2019)</h4>
+                    <p>
+                        유망주 발굴과 전력 보강을 통해 팀의 기초를 닦았다. 이 시기 팀의 기틀을 다지며 강팀으로 성장하기 위한 발판을 마련했다.
+                    </p>
+
+                    <h4><strong>2.3</strong> 창단 첫 통합 우승 (2020 ~ 2021)</h4>
+                    <p>
+                        2020년 창단 첫 포스트시즌 진출에 이어, 2021년 <strong>창단 첫 통합 우승</strong>을 차지하며 KBO 리그에 돌풍을 일으켰다.
+                    </p>
+
+                    <h4><strong>2.4</strong> 꾸준한 강팀의 면모 (2022 ~ 현재)</h4>
+                    <p>
+                        매년 포스트시즌 진출을 다투는 안정된 전력을 유지하며 리그의 상위권 구단으로 확실히 자리매김했다.
+                    </p>
+
+                    <h2><strong>3.</strong> 상징 및 구단 특색</h2>
+                    <p>
+                        KT 위즈는 데이터 분석을 활용한 <strong>'스마트 야구'</strong>와 수원 팬들의 열광적인 응원이 결합된 구단이다.
+                    </p>
+
+                    <h4><strong>3.1</strong> 응원 문화</h4>
+                    <p>
+                        수원 KT 위즈 파크에서 울려 퍼지는 특유의 응원가들은 팬들에게 큰 즐거움을 주며, 경기장 내에서의 다양한 이벤트와 팬 친화적인 서비스로 유명하다.
+                    </p>
+
+                    <h4><strong>3.2</strong> 구단 상징 및 마스코트</h4>
+                    <p>
+                        공식 마스코트인 <strong>'빅(Vic)과 또리(Dori)'</strong>는 구단의 스마트하고 친근한 이미지를 대변한다.
+                    </p>
+
+                    <h4><strong>3.3</strong> 주요 라이벌리</h4>
+                    <ul>
+                        <li><strong>경인 시리즈</strong>: 수도권 연고 팀인 SSG 랜더스 등과의 경기에서 지역적 특수성과 라이벌 관계를 형성하고 있다.</li>
+                    </ul>
+
+                    <h2><strong>4.</strong> 주요 선수 및 영구 결번</h2>
+                    <p>
+                        구단의 역사를 빛낸 선수와 현재 핵심 선수들이다.
+                    </p>
+
+                    <h4><strong>4.1</strong> 영구 결번</h4>
+                    <table class="infobox-table">
+                        <tr>
+                            <th>등번호</th>
+                            <th>선수명</th>
+                            <th>비고</th>
+                        </tr>
+                        <tr>
+                            <td><strong>-</strong></td>
+                            <td><strong>-</strong></td>
+                            <td>현재 구단 영구 결번 선수는 없다.</td>
+                        </tr>
+                    </table>
+
+                    <h4><strong>4.2</strong> 팀의 상징적인 선수</h4>
+                    <ul>
+                        <li><strong>박경수</strong>: 팀의 창단 초기부터 중심을 잡아온 영원한 캡틴.</li>
+                        <li><strong>황재균</strong>: 팀의 내야와 타선을 이끄는 핵심 베테랑.</li>
+                    </ul>
+
+                    <h4><strong>4.3</strong> 현재 활약 중인 현역 핵심 선수</h4>
+                    <ul>
+                        <li><strong>강백호</strong>: 팀 타선의 핵심이자 리그를 대표하는 젊은 타자.</li>
+                        <li><strong>고영표</strong>: 팀 마운드의 중심을 지키는 리그 최고의 잠수함 투수.</li>
+                    </ul>
+
+                    <h2><strong>5.</strong> 우승 및 포스트시즌 기록</h2>
+                    <p>
+                        KT 위즈의 <strong>한국시리즈 우승</strong> 횟수와 <strong>포스트시즌</strong> 진출 기록이다.
+                    </p>
+                    <table class="infobox-table">
+                        <tr>
+                            <th>구분</th>
+                            <th>기록</th>
+                        </tr>
+                        <tr>
+                            <td><strong>한국시리즈 우승</strong></td>
+                            <td><strong>1회</strong> (2021)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>포스트시즌 진출</strong></td>
+                            <td>총 5회 이상</td>
+                        </tr>
+                    </table>
+                    <p>
+                        짧은 역사에도 불구하고 우승이라는 값진 성과를 냈으며, 앞으로도 지속적인 성장이 기대되는 젊고 강한 구단이다.
+                    </p>
                 </div>
 
                 <!-- 2. 오른쪽 인포박스 영역 (kt-theme 클래스를 적용하여 청량한 kt 블루/블랙 테마가 정확하게 맞물립니다) -->
@@ -66,53 +188,67 @@
                             style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto; padding: 10px;">
                     </div>
 
-                    <table class="infobox-table" style="width: 100%; border-collapse: collapse; background-color: #f8f9fa;">
+                    <table class="infobox-table"
+                        style="width: 100%; border-collapse: collapse; background-color: #f8f9fa;">
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; width: 35%; font-weight: bold; text-align: left;">정식 명칭</th>
+                            <th
+                                style="padding: 6px; background-color: #eceeef; width: 35%; font-weight: bold; text-align: left;">
+                                정식 명칭</th>
                             <td style="padding: 6px;">kt wiz 프로야구단</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">창단</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">창단
+                            </th>
                             <td style="padding: 6px;">2013년 10월 11일</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">1군 진입</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">1군
+                                진입</th>
                             <td style="padding: 6px;">2015년 3월 28일</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">모기업</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
+                                모기업</th>
                             <td style="padding: 6px;">KT (주식회사 케이티스포츠)</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">연고지</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
+                                연고지</th>
                             <td style="padding: 6px;"><span class="text-orange">경기도 수원시</strong></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">홈구장</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
+                                홈구장</th>
                             <td style="padding: 6px;"><span class="text-navy">수원 케이티 위즈 파크</strong></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">구단주</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
+                                구단주</th>
                             <td style="padding: 8px;">김영섭</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">단장 / 감독</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">단장
+                                / 감독</th>
                             <td style="padding: 6px;">나도현 / <span class="text-orange">이강철</strong></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주장</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주장
+                            </th>
                             <td style="padding: 6px;">장성우</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">영구 결번</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">영구
+                                결번</th>
                             <td style="padding: 6px;">없음</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주요 라이벌</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주요
+                                라이벌</th>
                             <td style="padding: 6px;">SSG 랜더스 (경수고속도로 시리즈)<br>LG 트윈스 (가을야구 단골 라이벌전)</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">공식 링크</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">공식
+                                링크</th>
                             <td class="sns-links">
                                 <a href="https://www.heroesbaseball.co.kr/" target="_blank">
                                     <img src="./images/키움 링크 로고.svg" alt="공식 홈페이지">
@@ -129,8 +265,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <th style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold; text-align: left;">한국시리즈 우승</th>
-                            <td style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold;">1회 (2021)</td>
+                            <th
+                                style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold; text-align: left;">
+                                한국시리즈 우승</th>
+                            <td style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold;">1회
+                                (2021)</td>
                         </tr>
                     </table>
                 </aside>

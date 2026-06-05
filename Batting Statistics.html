@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>KBO 기록실</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- nav.html 연결 -->
+    <header class="kbo-navbar" id="global-navbar">
+        <script>
+            fetch('nav.html').then(response => response.text()).then(data => {
+                document.getElementById('global-navbar').innerHTML = data;
+            });
+        </script>
+    </header>
+
+    <div class="main-container" style="display: flex;">
+        <!-- 왼쪽 사이드바 -->
+        <aside class="sidebar" style="width: 200px; padding: 20px;">
+            <h3>기록・순위</h3>
+            <ul>
+                <li><strong>기록실</strong></li>
+                <li>팀 순위</li>
+                <li>선수 순위</li>
+                <li>역대 기록</li>
+                <li>예상 달성 기록</li>
+                <li>기록 정정 현황</li>
+                <li>관중 현황</li>
+            </ul>
+        </aside>
+
+        <!-- 본문 영역 -->
+        <div class="wiki-text" style="flex: 1; padding: 20px;">
+            <h2>기록실</h2>
+            
+            <!-- 상단 탭 및 필터 -->
+            <div class="record-filter">
+                <div class="top-tabs"><strong>선수 기록</strong> | 팀 기록 | 투수 VS 타자</div>
+                <div class="sub-tabs"><strong>타자</strong> | 투수 | 수비 | 주루</div>
+            </div>
+
+            <!-- 데이터 테이블 -->
+             <div class="record-table-wrapper">
+    <table class="infobox-table record-table">
+        <thead>
+            <tr>
+                <th>순위</th><th>선수명</th><th>팀명</th><th>AVG</th><th>G</th><th>PA</th>
+                <th>AB</th><th>R</th><th>H</th><th>2B</th><th>3B</th><th>HR</th>
+                <th>TB</th><th>RBI</th><th>SAC</th><th>SF</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 1~10위 -->
+                    <tr><td>1</td><td>최원준</td><td>KT</td><td>0.382</td><td>56</td><td>271</td><td>233</td><td>49</td><td>89</td><td>17</td><td>2</td><td>5</td><td>125</td><td>35</td><td>3</td><td>3</td></tr>
+                    <tr><td>2</td><td>이우성</td><td>NC</td><td>0.356</td><td>53</td><td>202</td><td>188</td><td>19</td><td>67</td><td>12</td><td>0</td><td>4</td><td>91</td><td>21</td><td>1</td><td>0</td></tr>
+                    <tr><td>3</td><td>박성한</td><td>SSG</td><td>0.354</td><td>57</td><td>253</td><td>209</td><td>43</td><td>74</td><td>15</td><td>1</td><td>3</td><td>100</td><td>31</td><td>0</td><td>2</td></tr>
+                    <tr><td>4</td><td>오스틴</td><td>LG</td><td>0.335</td><td>57</td><td>261</td><td>230</td><td>44</td><td>77</td><td>12</td><td>3</td><td>16</td><td>143</td><td>47</td><td>0</td><td>1</td></tr>
+                    <tr><td>5</td><td>강백호</td><td>한화</td><td>0.333</td><td>53</td><td>238</td><td>210</td><td>35</td><td>70</td><td>15</td><td>0</td><td>12</td><td>121</td><td>61</td><td>0</td><td>1</td></tr>
+                    <tr><td>6</td><td>레이예스</td><td>롯데</td><td>0.333</td><td>56</td><td>249</td><td>222</td><td>27</td><td>74</td><td>13</td><td>0</td><td>9</td><td>114</td><td>39</td><td>0</td><td>2</td></tr>
+                    <tr><td>7</td><td>최형우</td><td>삼성</td><td>0.325</td><td>54</td><td>244</td><td>197</td><td>27</td><td>64</td><td>10</td><td>0</td><td>8</td><td>98</td><td>42</td><td>0</td><td>3</td></tr>
+                    <tr><td>8</td><td>페라자</td><td>한화</td><td>0.321</td><td>56</td><td>259</td><td>218</td><td>49</td><td>70</td><td>14</td><td>1</td><td>11</td><td>119</td><td>35</td><td>2</td><td>3</td></tr>
+                    <tr><td>9</td><td>김주원</td><td>NC</td><td>0.307</td><td>56</td><td>252</td><td>215</td><td>31</td><td>66</td><td>9</td><td>0</td><td>10</td><td>105</td><td>28</td><td>1</td><td>3</td></tr>
+                    <tr><td>10</td><td>김상수</td><td>KT</td><td>0.307</td><td>54</td><td>218</td><td>176</td><td>19</td><td>54</td><td>4</td><td>1</td><td>0</td><td>60</td><td>20</td><td>5</td><td>1</td></tr>
+                    <!-- 11~20위 -->
+                    <tr><td>11</td><td>박민우</td><td>NC</td><td>0.304</td><td>54</td><td>228</td><td>191</td><td>36</td><td>58</td><td>13</td><td>0</td><td>4</td><td>83</td><td>36</td><td>0</td><td>1</td></tr>
+                    <tr><td>12</td><td>류지혁</td><td>삼성</td><td>0.301</td><td>54</td><td>215</td><td>183</td><td>28</td><td>55</td><td>11</td><td>3</td><td>4</td><td>84</td><td>29</td><td>2</td><td>1</td></tr>
+                    <tr><td>13</td><td>박재현</td><td>KIA</td><td>0.299</td><td>54</td><td>211</td><td>194</td><td>30</td><td>58</td><td>7</td><td>0</td><td>8</td><td>89</td><td>30</td><td>4</td><td>0</td></tr>
+                    <tr><td>14</td><td>정준재</td><td>SSG</td><td>0.299</td><td>54</td><td>208</td><td>174</td><td>28</td><td>52</td><td>7</td><td>4</td><td>1</td><td>70</td><td>21</td><td>9</td><td>3</td></tr>
+                    <tr><td>15</td><td>디아즈</td><td>삼성</td><td>0.297</td><td>56</td><td>253</td><td>222</td><td>33</td><td>66</td><td>10</td><td>0</td><td>11</td><td>109</td><td>46</td><td>0</td><td>3</td></tr>
+                    <tr><td>16</td><td>박건우</td><td>NC</td><td>0.297</td><td>54</td><td>214</td><td>182</td><td>29</td><td>54</td><td>7</td><td>0</td><td>11</td><td>94</td><td>30</td><td>0</td><td>4</td></tr>
+                    <tr><td>17</td><td>문현빈</td><td>한화</td><td>0.297</td><td>54</td><td>252</td><td>209</td><td>40</td><td>62</td><td>14</td><td>4</td><td>8</td><td>108</td><td>40</td><td>1</td><td>3</td></tr>
+                    <tr><td>18</td><td>최정</td><td>SSG</td><td>0.294</td><td>48</td><td>212</td><td>177</td><td>30</td><td>52</td><td>13</td><td>1</td><td>14</td><td>109</td><td>40</td><td>0</td><td>5</td></tr>
+                    <tr><td>19</td><td>카메론</td><td>두산</td><td>0.294</td><td>58</td><td>246</td><td>218</td><td>33</td><td>64</td><td>13</td><td>3</td><td>8</td><td>107</td><td>35</td><td>0</td><td>1</td></tr>
+                    <tr><td>20</td><td>안치홍</td><td>키움</td><td>0.291</td><td>57</td><td>249</td><td>220</td><td>25</td><td>64</td><td>11</td><td>0</td><td>4</td><td>87</td><td>24</td><td>0</td><td>0</td></tr>
+                    <!-- 21~30위 추가 -->
+                    <tr><td>21</td><td>김지찬</td><td>삼성</td><td>0.289</td><td>55</td><td>206</td><td>173</td><td>42</td><td>50</td><td>5</td><td>2</td><td>0</td><td>59</td><td>15</td><td>4</td><td>1</td></tr>
+                    <tr><td>22</td><td>힐리어드</td><td>KT</td><td>0.285</td><td>57</td><td>256</td><td>228</td><td>46</td><td>65</td><td>11</td><td>3</td><td>13</td><td>121</td><td>46</td><td>0</td><td>4</td></tr>
+                    <tr><td>23</td><td>김현수</td><td>KT</td><td>0.284</td><td>57</td><td>265</td><td>236</td><td>27</td><td>67</td><td>13</td><td>0</td><td>5</td><td>95</td><td>42</td><td>0</td><td>2</td></tr>
+                    <tr><td>24</td><td>심우준</td><td>한화</td><td>0.284</td><td>48</td><td>176</td><td>148</td><td>29</td><td>42</td><td>6</td><td>0</td><td>3</td><td>57</td><td>22</td><td>3</td><td>0</td></tr>
+                    <tr><td>25</td><td>박승규</td><td>삼성</td><td>0.284</td><td>42</td><td>173</td><td>148</td><td>30</td><td>42</td><td>5</td><td>3</td><td>9</td><td>80</td><td>26</td><td>0</td><td>1</td></tr>
+                    <tr><td>26</td><td>김민석</td><td>두산</td><td>0.280</td><td>52</td><td>185</td><td>161</td><td>22</td><td>45</td><td>9</td><td>1</td><td>3</td><td>65</td><td>20</td><td>1</td><td>1</td></tr>
+                    <tr><td>27</td><td>나성범</td><td>KIA</td><td>0.276</td><td>54</td><td>216</td><td>185</td><td>30</td><td>51</td><td>12</td><td>0</td><td>9</td><td>90</td><td>29</td><td>0</td><td>2</td></tr>
+                    <tr><td>28</td><td>김호령</td><td>KIA</td><td>0.274</td><td>57</td><td>245</td><td>219</td><td>33</td><td>60</td><td>13</td><td>1</td><td>8</td><td>99</td><td>31</td><td>5</td><td>3</td></tr>
+                    <tr><td>29</td><td>전민재</td><td>롯데</td><td>0.273</td><td>53</td><td>182</td><td>165</td><td>16</td><td>45</td><td>7</td><td>0</td><td>5</td><td>67</td><td>25</td><td>2</td><td>1</td></tr>
+                    <tr><td>30</td><td>천성호</td><td>LG</td><td>0.272</td><td>53</td><td>177</td><td>162</td><td>25</td><td>44</td><td>10</td><td>1</td><td>1</td><td>59</td><td>20</td><td>2</td><td>0</td></tr>
+                </tbody>
+        </tbody>
+    </table>
+</div>
+            
+            </table>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

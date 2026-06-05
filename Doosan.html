@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+
     <!-- 자바스크립트가 네비게이션바를 주입할 공간 -->
     <header class="kbo-navbar" id="global-navbar"></header>
 
@@ -23,39 +23,165 @@
 
             <!-- 본문과 인포박스를 예쁘게 좌우로 배치해주는 flex 상자 -->
             <div class="wiki-body" style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
-                
+
                 <!-- 1. 왼쪽 본문 영역 -->
                 <div class="wiki-text" style="flex: 1;">
 
                     <!-- 📦 두산 베어스 접기/펼치기 상자 -->
-                    <details class="namu-toggle-box" style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
-                        <summary style="font-weight: bold; cursor: pointer; color: #131230; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    <details class="namu-toggle-box"
+                        style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
+                        <summary
+                            style="font-weight: bold; cursor: pointer; color: #131230; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
                             <span>ℹ️ 두산 베어스 추가 정보 (기록 및 요약)</strong>
-                            <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]</strong>
+                                <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]</strong>
                         </summary>
-                        <div class="toggle-content" style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
+                        <div class="toggle-content"
+                            style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
                             <table style="width: 100%; border-collapse: collapse;">
-                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td><td style="padding: 6px;">총 25회</td></tr>
-                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td><td style="padding: 6px;">2019년 (통합 우승)</td></tr>
-                                <tr style="border-bottom: 1px solid #eee;"><td style="padding: 6px; font-weight: bold;">구단 마스코트</td><td style="padding: 6px;">철웅이</td></tr>
-                                <tr><td style="padding: 6px; font-weight: bold;">응원가</td><td style="padding: 6px;">해야 해야, 승리의 두산베어스, 브라보 마이 라이프</td></tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td>
+                                    <td style="padding: 6px;">총 25회</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td>
+                                    <td style="padding: 6px;">2019년 (통합 우승)</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold;">구단 마스코트</td>
+                                    <td style="padding: 6px;">철웅이</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 6px; font-weight: bold;">응원가</td>
+                                    <td style="padding: 6px;">해야 해야, 승리의 두산베어스, 브라보 마이 라이프</td>
+                                </tr>
                             </table>
                         </div>
                     </details>
 
                     <h3>1. 개요</h3>
-                    <p><strong>1982년</strong> 프로야구 원년에 OB 베어스로 창단하여 <strong>1999년</strong> 현재의 구단명으로 변경된 두산그룹이 운영하는 KBO 리그 소속 프로야구 팀이다.</p>
+                    <!--유튜브 영상링크 복사 붙여넣기 한 후 watch?v= 부분을 embed로 변경해야 오류 발생 안함-->
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/ZRhApFvILdM" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                     <p>
-                        연고지는 대한민국 수도인 <strong>서울특별시</strong>이며, 홈구장은 송파구 잠실동에 위치한 <strong>서울 종합운동장 야구장</strong>(잠실 야구장)이다. 
-                        원년에는 충청도(대전)를 연고지로 출발하였으나, 1985년 서울로 연고지를 이전하며 현재까지 잠실 야구장을 공동 홈구장으로 사용하는 '한 지붕 두 가족' 라이벌 구도를 LG 트윈스와 함께 유지하고 있다.
-                    </p>
-                    <p>
-                        KBO 리그 역사상 최초의 한국시리즈 우승(1982년) 타이틀을 가진 구단이며, 끈질기고 화끈한 '미라클 두산'이라는 수식어에 걸맞게 포스트시즌에서 유독 강력한 모습을 보여주는 명문 구단이다. 
-                        특히 2015년부터 2021년까지 KBO 역사상 최초로 **7년 연속 한국시리즈 진출**이라는 대기록을 작성하기도 했다.
+                        연고지는 <strong>서울특별시</strong>이며, 홈구장은 송파구 잠실동에 위치한 <strong>잠실 야구장</strong>이다. KBO 리그 원년 구단으로서,
+                        '허슬두'라는 별명에 걸맞게 근성 있는 플레이를 중시하며 명문 구단의 입지를 다져왔다.
                     </p>
 
-                    <h3>2. 레전드 선수</h3>
-                    <p>'불사조' 박철순(투수), '우동수 트리오'의 핵심 김동주(타자) 등 시대를 풍미한 영웅들이 활약했으며, 현재는 양의지(포수), 김재환, 양석환 등 리그 정상급 선수들이 팀을 이끌고 있다.</p>
+                    <p>
+                        총 6회의 <strong>한국시리즈 우승</strong>을 달성했으며, 특히 2015년부터 2021년까지 7년 연속 한국시리즈에 진출하는 KBO 역사상 전무후무한 대기록을
+                        작성한 바 있다.
+                    </p>
+
+                    <p>
+                        구단 상징은 팀명인 <strong>'베어스(Bears)'</strong>에 맞춰 곰을 사용하며, 네이비와 화이트를 팀 컬러로 사용하여 클래식하고 강인한 이미지를 보여준다.
+                    </p>
+
+                    <h2><strong>2.</strong> 역사</h2>
+                    <p>
+                        두산 베어스의 역사는 1982년 프로야구 출범과 함께한 OB 베어스에서 시작된다. 한국 야구의 흐름과 함께해 온 두산 베어스의 주요 흐름은 다음과 같다.
+                    </p>
+
+                    <h4><strong>2.1</strong> OB 베어스 시대 (1982 ~ 1998)</h4>
+                    <p>
+                        1982년 프로야구 원년 우승을 차지하며 화려하게 등장했다. 박철순의 22연승 등 전설적인 기록을 남기며 초창기 프로야구의 흥행을 주도했다.
+                    </p>
+
+                    <h4><strong>2.2</strong> 두산 베어스로의 재탄생 (1999 ~ 2014)</h4>
+                    <p>
+                        1999년 모기업 명칭 변경에 따라 '두산 베어스'로 팀명을 변경하였다. 김동주, 홍성흔 등 프랜차이즈 스타들이 활약하며 중흥기를 이끌었다.
+                    </p>
+
+                    <h4><strong>2.3</strong> 7년 연속 한국시리즈 진출과 왕조 (2015 ~ 2021)</h4>
+                    <p>
+                        2015년부터 2021년까지 7년 연속 한국시리즈 진출이라는 대기록을 세우며 명실상부한 '왕조'를 건설했다. 이 시기 3번의 통합 우승을 포함해 6회 우승 기록을 완성했다.
+                    </p>
+
+                    <h4><strong>2.4</strong> 변화와 도전 (2022 ~ 현재)</h4>
+                    <p>
+                        이승엽 감독 부임 이후 팀의 세대교체와 체질 개선을 병행하고 있다. 새로운 레전드들이 등장하며 다시 한번 정상의 자리를 향해 나아가고 있다.
+                    </p>
+
+                    <h2><strong>3.</strong> 상징 및 구단 특색</h2>
+                    <p>
+                        두산 베어스는 <strong>'허슬두'</strong> 정신을 바탕으로, 끈질기고 근성 있는 야구를 펼치는 것으로 유명하다.
+                    </p>
+
+                    <h4><strong>3.1</strong> 응원 문화</h4>
+                    <p>
+                        잠실 야구장을 홈으로 사용하는 두산 베어스는 <strong>'두산의 승리를 위하여'</strong> 등 강렬하고 신나는 응원가로 팬들에게 큰 사랑을 받고 있다.
+                    </p>
+
+                    <h4><strong>3.2</strong> 구단 상징 및 마스코트</h4>
+                    <p>
+                        공식 마스코트인 <strong>'철웅이'</strong>는 곰을 형상화하였으며, 경기장 내에서 선수들과 함께 호흡하며 활발하게 응원을 주도한다.
+                    </p>
+
+                    <h4><strong>3.3</strong> 주요 라이벌리</h4>
+                    <ul>
+                        <li><strong>잠실 라이벌</strong>: LG 트윈스와 같은 잠실 야구장을 사용하며, 서울의 패권을 두고 매 경기 치열한 경쟁을 펼친다.</li>
+                    </ul>
+
+                    <h2><strong>4.</strong> 주요 선수 및 영구 결번</h2>
+                    <p>
+                        구단의 역사를 상징하는 영구 결번, 전설적인 레전드, 현재의 핵심 선수들이다.
+                    </p>
+
+                    <h4><strong>4.1</strong> 영구 결번 레전드</h4>
+                    <table class="infobox-table">
+                        <tr>
+                            <th>등번호</th>
+                            <th>선수명</th>
+                            <th>비고</th>
+                        </tr>
+                        <tr>
+                            <td><strong>21</strong></td>
+                            <td><strong>박철순</strong></td>
+                            <td>불사조, 원년 22연승의 전설적인 에이스</td>
+                        </tr>
+                    </table>
+
+                    <h4><strong>4.2</strong> 전설적인 레전드 선수</h4>
+                    <p>두산 베어스의 황금기를 이끌었던 기념비적인 선수들이다.</p>
+                    <ul>
+                        <li><strong>김동주</strong>: <strong>'두목곰'</strong>, 두산 프랜차이즈의 영원한 중심 타자.</li>
+                        <li><strong>홍성흔</strong>: 공수 양면에서 팀의 활력을 불어넣었던 최고의 포수.</li>
+                        <li><strong>안경현</strong>: 근성 야구의 상징이자 내야의 중심을 잡았던 베테랑.</li>
+                    </ul>
+
+                    <h4><strong>4.3</strong> 현재 활약 중인 현역 핵심 선수</h4>
+                    <p>현재 팀의 승리를 이끄는 핵심 현역 선수들이다.</p>
+                    <ul>
+                        <li><strong>양의지</strong>: 리그를 대표하는 최고의 포수이자 팀의 정신적 지주.</li>
+                        <li><strong>곽빈</strong>: 강력한 구위로 마운드를 책임지는 국가대표 에이스.</li>
+                        <li><strong>정수빈</strong>: 팀의 외야와 기동력을 책임지는 핵심 타자.</li>
+                    </ul>
+
+                    <h2><strong>5.</strong> 우승 및 포스트시즌 기록</h2>
+                    <p>
+                        두산 베어스의 <strong>한국시리즈 우승</strong> 횟수와 <strong>포스트시즌</strong> 진출 기록이다.
+                    </p>
+                    <table class="infobox-table">
+                        <tr>
+                            <th>구분</th>
+                            <th>기록</th>
+                        </tr>
+                        <tr>
+                            <td><strong>한국시리즈 우승</strong></td>
+                            <td><strong>6회</strong> (1982, 1995, 2001, 2015, 2016, 2019)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>포스트시즌 진출</strong></td>
+                            <td>총 30회 이상</td>
+                        </tr>
+                    </table>
+                    <p>
+                        근성 있는 야구로 팬들에게 감동을 선사해 온 두산 베어스는, 앞으로도 새로운 역사를 써 내려가기 위해 끊임없이 도전하고 있다.
+                    </p>
                 </div>
 
                 <!-- 2. 오른쪽 인포박스 영역 (doosan-theme를 지정하여 딥네이비 컬러가 완벽하게 연동됩니다) -->
@@ -66,53 +192,69 @@
                             style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto; padding: 10px;">
                     </div>
 
-                    <table class="infobox-table" style="width: 100%; border-collapse: collapse; background-color: #f8f9fa;">
+                    <table class="infobox-table"
+                        style="width: 100%; border-collapse: collapse; background-color: #f8f9fa;">
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; width: 35%; font-weight: bold; text-align: left;">정식 명칭</th>
+                            <th
+                                style="padding: 6px; background-color: #eceeef; width: 35%; font-weight: bold; text-align: left;">
+                                정식 명칭</th>
                             <td style="padding: 6px;">두산베어스 프로야구단</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">창단 / 프로화</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">창단
+                                / 프로화</th>
                             <td style="padding: 6px;">1982년 1월 15일 (OB 베어스)</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">명칭 변경</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">명칭
+                                변경</th>
                             <td style="padding: 6px;">1999년 1월 5일 (두산 베어스)</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">모기업</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
+                                모기업</th>
                             <td style="padding: 6px;">두산그룹 (주식회사 두산베어스)</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">연고지</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
+                                연고지</th>
                             <td style="padding: 6px;"><span class="text-orange">서울특별시</strong></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">홈구장</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
+                                홈구장</th>
                             <td style="padding: 6px;"><span class="text-navy">서울 종합운동장 야구장</strong></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">구단주</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
+                                구단주</th>
                             <td style="padding: 8px;">박정원</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">단장 / 감독</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">단장
+                                / 감독</th>
                             <td style="padding: 6px;">김태룡 / <span class="text-orange">이승엽</strong></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주장</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주장
+                            </th>
                             <td style="padding: 6px;">양석환</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">영구 결번</th>
-                            <td style="padding: 6px;"><span class="text-orange">21 박철순</strong> | <span class="text-navy">41 김영신</strong></td>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">영구
+                                결번</th>
+                            <td style="padding: 6px;"><span class="text-orange">21 박철순</strong> | <span
+                                        class="text-navy">41 김영신</strong></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주요 라이벌</th>
-                            <td style="padding: 6px;">LG (한 지붕 두 가족, 어린이날 시리즈)<br>KIA (단골 KS 라이벌)<br>삼성 (정상 길목 포스트시즌 라이벌)</td>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주요
+                                라이벌</th>
+                            <td style="padding: 6px;">LG (한 지붕 두 가족, 어린이날 시리즈)<br>KIA (단골 KS 라이벌)<br>삼성 (정상 길목 포스트시즌
+                                라이벌)</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
-                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">공식 링크</th>
+                            <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">공식
+                                링크</th>
                             <td class="sns-links">
                                 <a href="https://www.heroesbaseball.co.kr/" target="_blank">
                                     <img src="./images/키움 링크 로고.svg" alt="공식 홈페이지">
@@ -129,8 +271,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <th style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold; text-align: left;">한국시리즈 우승</th>
-                            <td style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold;">6회 (1982, 1995, 2001, 2015, 2016, 2019)</td>
+                            <th
+                                style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold; text-align: left;">
+                                한국시리즈 우승</th>
+                            <td style="padding: 6px; background-color: #f2dede; color: #a94442; font-weight: bold;">6회
+                                (1982, 1995, 2001, 2015, 2016, 2019)</td>
                         </tr>
                     </table>
                 </aside>

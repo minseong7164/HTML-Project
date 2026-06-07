@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBO.Wiki - 로그인</title>
+        <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="login-modal" class="login-container">
+    <div class="login-box">
+            <header class="kbo-navbar" id="global-navbar"></header>
+
+        <h2>로그인</h2>
+        <form onsubmit="return false;"> <!-- 백엔드 없으니 submit 방지 -->
+            <div class="input-group">
+                <label>아이디</label>
+                <input type="text" placeholder="아이디를 입력하세요">
+            </div>
+            <div class="input-group">
+                <label>비밀번호</label>
+                <input type="password" placeholder="비밀번호를 입력하세요">
+            </div>
+            <button type="button" class="login-btn" onclick="alert('로그인되었습니다!')">로그인</button>
+        </form>
+        <div class="login-footer">
+            <a href="#">회원가입</a> | <a href="#">아이디/비밀번호 찾기</a>
+        </div>
+    </div>
+</div>
+    <script src="main.js"></script>
+
+</body>
+</html>

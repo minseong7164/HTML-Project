@@ -247,7 +247,7 @@
                                 링크</th>
                             <td class="sns-links">
                                 <a href="https://www.ssglanders.com/main" target="_blank">
-                                    <img src="./images/SSG링크 로고.svg" alt="공식 홈페이지">
+                                    <img src="./images/SSG링크 로고.svg" alt="공식 홈페이지">
                                 </a>
                                 <a href="https://www.instagram.com/ssglanders.incheon" target="_blank">
                                     <img src="./images/인스타그램 로고.svg" alt="인스타그램">
@@ -275,6 +275,15 @@
     </main>
 
     <script src="main.js"></script>
+    <footer id="global-footer"></footer>
+<!-- footer 적용 -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>

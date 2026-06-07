@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -259,7 +258,7 @@
                                 링크</th>
                             <td class="sns-links">
                                 <a href="https://www.hanwhaeagles.co.kr/index.do" target="_blank">
-                                    <img src="./images/한화이글스 링크 로고.svg" alt="공식 홈페이지">
+                                    <img src="./images/한화이글스 링크 로고.svg" alt="공식 홈페이지">
                                 </a>
                                 <a href="https://www.instagram.com/hanwhaeagles_soori" target="_blank">
                                     <img src="./images/인스타그램 로고.svg" alt="인스타그램">
@@ -286,7 +285,16 @@
         </div>
     </main>
 
+    <footer id="global-footer"></footer>
     <script src="main.js"></script>
+    <!-- footer 적용 -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>

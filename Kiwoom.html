@@ -68,7 +68,7 @@
                     </details>
 
                     <h3>1. 개요</h3>
-\                   <div class="video-container">
+                    <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/g-ZLu4WyVSY" title="YouTube video player"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -275,7 +275,16 @@
         </div>
     </main>
 
+    <footer id="global-footer"></footer>
     <script src="main.js"></script>
+    <!-- footer 적용 -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>

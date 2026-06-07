@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KBO.Wiki - 로그인</title>
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
-    <div id="login-modal" class="login-container">
-    <div class="login-box">
-            <header class="kbo-navbar" id="global-navbar"></header>
 
-        <h2>로그인</h2>
-        <form onsubmit="return false;"> <!-- 백엔드 없으니 submit 방지 -->
-            <div class="input-group">
-                <label>아이디</label>
-                <input type="text" placeholder="아이디를 입력하세요">
+<body>
+    <header class="kbo-navbar" id="global-navbar"></header>
+    <div class="login-page">
+    <div class="login-wrapper">
+        <!-- 로고 영역 -->
+        <div class="login-logo">
+            <img src="./images/KBO-wiki_로고.png" alt="All-Star Logo">
+        </div>
+        
+        <!-- 로그인 폼 -->
+        <div class="login-box">
+            <p class="login-msg">* 회원가입 후 로그인해주세요.</p>
+            <p id="message" style="color: red; font-size: 14px; text-align: center; display: none;"></p>
+            <input type="text" id="userid" placeholder="ID (아이디)">
+            <input type="password" id="userpw" placeholder="PW (패스워드)">
+            <div class="save-id">
+                <input type="checkbox" id="save-id"> <label for="save-id">아이디 저장</label>
             </div>
-            <div class="input-group">
-                <label>비밀번호</label>
-                <input type="password" placeholder="비밀번호를 입력하세요">
-            </div>
-            <button type="button" class="login-btn" onclick="alert('로그인되었습니다!')">로그인</button>
-        </form>
+            <button class="login-btn" onclick="checkLogin()">로그인</button>
+        </div>
+
+        <!-- 하단 메뉴 -->
         <div class="login-footer">
-            <a href="#">회원가입</a> | <a href="#">아이디/비밀번호 찾기</a>
+            <a href="#">회원가입</a> | <a href="#">아이디 찾기</a> | <a href="#">비밀번호 찾기</a>
         </div>
     </div>
 </div>
+    <footer id="global-footer"></footer>
     <script src="main.js"></script>
+    <!-- footer 적용 -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            });
+    </script>
 
 </body>
+
 </html>

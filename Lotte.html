@@ -28,10 +28,12 @@
                 <div class="wiki-text" style="flex: 1;">
 
                     <!-- 롯데 자이언츠 접기/펼치기 상자 -->
-                    <details class="namu-toggle-box">
-                        <summary>
-                            <span>ℹ️ 롯데 자이언츠 추가 정보 (기록 및 요약)</span>
-                            <span>[ 펼치기 · 접기 ]</span>
+                    <details class="namu-toggle-box"
+                        style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
+                        <summary
+                            style="font-weight: bold; cursor: pointer; color: #063ea7; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            <span>ℹ️ 롯데 자이언츠 추가 정보 (기록 및 요약)</strong>
+                                <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]</strong>
                         </summary>
                         <div class="toggle-content"
                             style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
@@ -321,7 +323,16 @@
         </div>
     </main>
 
+    <footer id="global-footer"></footer>
     <script src="main.js"></script>
+    <!-- footer 적용 -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>

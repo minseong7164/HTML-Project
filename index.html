@@ -20,129 +20,16 @@
             <p>상단의 <strong>[구단 소개]</strong> 메뉴에 마우스를 올린 뒤 원하는 구단을 선택해 보세요!</p>
         </div>
 
-        <!-- 기아 -->
-        <div id="page-tigers" class="wiki-page">
-            <div class="wiki-header-row">
-                <h1>KIA 타이거즈 (KIA Tigers)</h1>
-            </div>
-
-            <div class="wiki-body">
-                <div class="wiki-text">
-                    <h3>1. 개요</h3>
-                    <p>KBO 리그 소속 프로야구단. 연고지는 광주광역시이며 홈구장은 광주-기아 챔피언스 필드이다. 전신인 해태 타이거즈 시절을 포함해 KBO 리그 통산 최다 우승(11회) 기록을
-                        보유하고 있다.</p>
-
-                    <h3>2. 레전드 선수</h3>
-                    <p>선동열(투수), 이종범(타자) 등 한국 야구 역사에 한 획을 그은 명선수들이 활약했다.</p>
-                </div>
-
-                <aside class="infobox tigers-theme">
-                    <div class="infobox-title">KIA 타이거즈</div>
-                    <div class="infobox-img">🐯 로고 이미지 자리</div>
-                    <table class="infobox-table">
-                        <tr>
-                            <th>창단 연도</th>
-                            <td>1982년</td>
-                        </tr>
-                        <tr>
-                            <th>연고지</th>
-                            <td>광주광역시</td>
-                        </tr>
-                        <tr>
-                            <th>홈구장</th>
-                            <td>광주-기아 챔피언스 필드</td>
-                        </tr>
-                        <tr>
-                            <th>우승 횟수</th>
-                            <td>11회 (최다 우승)</td>
-                        </tr>
-                    </table>
-                </aside>
-            </div>
-        </div>
-
-        <!-- 한화 -->
-        <div id="page-eagles" class="wiki-page">
-            <div class="wiki-header-row">
-                <h1>한화 이글스 (Hanwha Eagles)</h1>
-            </div>
-
-            <div class="wiki-body">
-                <div class="wiki-text">
-                    <h3>1. 개요</h3>
-                    <p>KBO 리그 소속 프로야구단. 연고지는 대전광역시이며 홈구장은 대전 한화이글스파크이다. 1986년 빙그레 이글스로 창단하여 1993년 한화 이글스로 구단명을 변경했다.</p>
-
-                    <h3>2. 레전드 선수</h3>
-                    <p>송진우(KBO 최다승 투수), 장종훈, 구대성, 김태균, 그리고 메이저리그에서 활약한 류현진이 대표적이다.</p>
-                </div>
-
-                <aside class="infobox eagles-theme">
-                    <div class="infobox-title">한화 이글스</div>
-                    <div class="infobox-img">🦅 로고 이미지 자리</div>
-                    <table class="infobox-table">
-                        <tr>
-                            <th>창단 연도</th>
-                            <td>1986년</td>
-                        </tr>
-                        <tr>
-                            <th>연고지</th>
-                            <td>대전광역시</td>
-                        </tr>
-                        <tr>
-                            <th>홈구장</th>
-                            <td>대전 한화이글스파크</td>
-                        </tr>
-                        <tr>
-                            <th>우승 횟수</th>
-                            <td>1회 (1999년)</td>
-                        </tr>
-                    </table>
-                </aside>
-            </div>
-        </div>
-
-        <!-- 삼성 -->
-        <div id="page-eagles" class="wiki-page">
-            <div class="wiki-header-row">
-                <h1>삼성 라이온즈 (Samsung Lions)</h1>
-            </div>
-
-            <div class="wiki-body">
-                <div class="wiki-text">
-                    <h3>1. 개요</h3>
-                    <p>KBO 리그 소속 프로야구단. 연고지는 대구광역시이며 홈구장은 대구 삼성 라이온즈파크이다.</p>
-
-                    <h3>2. 레전드 선수</h3>
-                    <p>송진우(KBO 최다승 투수), 장종훈, 구대성, 김태균, 그리고 메이저리그에서 활약한 류현진이 대표적이다.</p>
-                </div>
-
-                <aside class="infobox eagles-theme">
-                    <div class="infobox-title">한화 이글스</div>
-                    <div class="infobox-img">🦅 로고 이미지 자리</div>
-                    <table class="infobox-table">
-                        <tr>
-                            <th>창단 연도</th>
-                            <td>1986년</td>
-                        </tr>
-                        <tr>
-                            <th>연고지</th>
-                            <td>대전광역시</td>
-                        </tr>
-                        <tr>
-                            <th>홈구장</th>
-                            <td>대전 한화이글스파크</td>
-                        </tr>
-                        <tr>
-                            <th>우승 횟수</th>
-                            <td>1회 (1999년)</td>
-                        </tr>
-                    </table>
-                </aside>
-            </div>
-        </div>
-    </main>
-
+    <footer id="global-footer"></footer>    
     <script src="main.js"></script>
+    <!-- footer 적용 -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>

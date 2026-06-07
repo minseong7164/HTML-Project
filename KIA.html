@@ -259,7 +259,7 @@
                                     <img src="./images/인스타그램 로고.svg" alt="인스타그램">
                                 </a>
                                 <a href="https://x.com/Kiatigers" target="_blank">
-                                    <img src="./images/x(트위터)로고.svg" alt="트위터">
+                                    <img src="./images/x(트위터)로고.svg" alt="트위터">
                                 </a>
                                 <a href="https://www.youtube.com/channel/UCKp8knO8a6tSI1oaLjfd9XA" target="_blank">
                                     <img src="./images/유튜브 로고.svg" alt="유튜브">
@@ -280,7 +280,16 @@
         </div>
     </main>
 
+    <footer id="global-footer"></footer>
     <script src="main.js"></script>
+    <!-- footer 적용 -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>

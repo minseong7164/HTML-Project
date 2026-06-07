@@ -115,6 +115,9 @@ body {
     display: flex;
     height: 100%;
 }
+.nav-menu lost-child {
+    margin-left: 0;
+}
 
 .menu-item {
     position: relative;
@@ -241,7 +244,7 @@ h4 {
 }
 
 .infobox-img {
-    height: 120px;
+    height: 140px;
     background: #f0f0f0;
     display: flex;
     align-items: center;
@@ -374,24 +377,167 @@ strong {
     transition: 0.3s;
 }
 
-/* 타자 기록 CSS 부분 */
-    .record-table {
-        font-size: 12px; /* 텍스트 크기를 작게 조절 */
-        border-collapse: collapse;
-        width: auto; /* 표 크기를 데이터에 맞게 조절 */
-        margin: 0;
-    }
-    .record-table th, .record-table td {
-        padding: 4px 6px; /* 촘촘하게 패딩 조정 */
-        border: 1px solid #ddd;
-        text-align: center;
-        line-height: 1.2;
-    }
-    .record-table thead {
-        background-color: #f8f9fa;
-        font-weight: bold;
-    }
-    /* 스크린샷처럼 순위 열 강조 */
-    .record-table tbody tr td:first-child {
-        background-color: #f0f0f0;
-    }
+/* 테이블 전체 기본 설정 */
+/* 기록실 전용 콤팩트 스타일 */
+.record-table-wrapper {
+    margin-top: 20px;
+}
+
+.record-table {
+    font-size: 12px;
+    border-collapse: collapse;
+    width: auto; /* 표 크기를 데이터에 맞춰 최소화 */
+    table-layout: fixed; /* 열 너비 고정 */
+    border-top: 2px solid #333;
+}
+
+.record-table th, .record-table td {
+    padding: 4px 6px; /* 아주 촘촘하게 간격 조정 */
+    border: 1px solid #ddd;
+    text-align: center;
+    white-space: nowrap; /* 글자 줄바꿈 방지 */
+}
+
+.record-table thead {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+/* 순위 열 강조 */
+.record-table tbody tr td:first-child {
+    background-color: #f7f7f7;
+    font-weight: bold;
+    width: 40px;
+}
+
+.record-table tr:hover {
+    background-color: #f1f1f1;
+}
+        
+/* 로그인 페이지 스타일 */
+.login-page {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.login-wrapper {
+    width: 400px;
+    text-align: center;
+}
+
+.login-logo img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.login-box {
+    border: 1px solid #d1e2ec;
+    padding: 40px;
+}
+
+.login-msg {
+    color: #00256c;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.save-id {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #666;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #001e4a;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-footer {
+    margin-top: 20px;
+    color: #666;
+    font-size: 13px;
+}
+
+.login-footer a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 10px;
+}
+/* footer css */
+.footer {
+    background-color: #1a2942;
+    color: #ccc;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 30px; /* 본문과 간격 */
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 링크 간격 */
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-info {
+    font-size: 11px;
+    color: #888;
+}
+.footer-logo {
+    display: block;
+    margin: 0 auto 1px auto;
+    width: 150px;
+}
+
+/* 팀순위 css */
+/* 표 기본 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* 팀 순위 테이블 강조 */
+.rank-table tbody tr:nth-child(1) { background-color: #eef6ff; } /* 1위 팀 배경색 */
+
+/* 섹션 간격 */
+section {
+    margin-bottom: 50px;
+}

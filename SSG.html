@@ -1,189 +1,32 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>SSG 랜더스 - KBO-Wiki</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet" />
 </head>
 
-<body>
-
+<body class="team-page">
     <!-- 자바스크립트가 네비게이션바를 주입할 공간 -->
     <header class="kbo-navbar" id="global-navbar"></header>
-
     <!-- 💡 [해결] 완전히 누락되고 중복되어 레이아웃을 깨뜨렸던 뼈대 컨테이너 정상 조립 -->
     <main class="wiki-container">
-        <div id="page-ssg" class="wiki-page active">
-
+        <div class="wiki-page active" id="page-ssg">
             <div class="wiki-header-row">
                 <h1>SSG 랜더스 (SSG Landers)</h1>
             </div>
-
             <!-- 본문과 인포박스를 예쁘게 좌우로 배치해주는 flex 상자 -->
             <div class="wiki-body" style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
-
                 <!-- 1. 왼쪽 본문 영역 -->
-                <div class="wiki-text" style="flex: 1;">
-
-                    <!-- 📦 SSG 랜더스 접기/펼치기 상자 -->
-                    <details class="namu-toggle-box"
-                        style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
-                        <summary
-                            style="font-weight: bold; cursor: pointer; color: #c81029; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                            <span>ℹ️ SSG 랜더스 추가 정보 (기록 및 요약)</strong>
-                                <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]</strong>
-                        </summary>
-                        <div class="toggle-content"
-                            style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
-                            <table style="width: 100%; border-collapse: collapse;">
-                                <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td>
-                                    <td style="padding: 6px;">총 14회 (SK 와이번스 기록 합산)</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td>
-                                    <td style="padding: 6px;">2022년 (KBO 역사상 최초의 '와이어 투 와이어' 통합 우승)</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 6px; font-weight: bold;">구단 마스코트</td>
-                                    <td style="padding: 6px;">랜디 (Landy)</td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 6px; font-weight: bold;">응원가</td>
-                                    <td style="padding: 6px;">연안부두, 불새마냥, 승리의 랜더스</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </details>
-
-                    <h3>1. 개요</h3>
-                    <!--유튜브 영상링크 복사 붙여넣기 한 후 watch?v= 부분을 embed로 변경해야 오류 발생 안함-->
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/0ybqCIASX6Q?t=1s" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <p>
-                        연고지는 <strong>인천광역시</strong>이며, 홈구장은 미추홀구 문학동에 위치한 <strong>인천SSG랜더스필드</strong>이다. 구단명인
-                        '랜더스(Landers)'는 인천국제공항을 통해 대한민국에 들어오는 관문이자, 야구라는 새로운 문화를 상륙시킨다는 의미를 담고 있다.
-                    </p>
-
-                    <p>
-                        창단 직후인 2022년 <strong>'와이어 투 와이어(Wire-to-Wire)'</strong> 우승이라는 전무후무한 기록과 함께 한국시리즈 정상에 오르며 명문
-                        구단으로서의 입지를 다졌다.
-                    </p>
-
-                    <p>
-                        구단 상징색은 레드(Red)를 사용하여 강렬하고 역동적인 이미지를 강조하며, SK 와이번스 시절부터 이어져 온 전통과 새로운 변화를 조화롭게 계승하고 있다.
-                    </p>
-
-                    <h2><strong>2.</strong> 역사</h2>
-                    <p>
-                        SSG 랜더스는 SK 와이번스의 역사를 이어받아 인천 야구의 자부심을 지키고 있다.
-                    </p>
-
-                    <h4><strong>2.1</strong> SK 와이번스 시대 (2000 ~ 2020)</h4>
-                    <p>
-                        인천 야구의 부흥을 이끌며 총 4회의 한국시리즈 우승을 차지한 강팀으로, '왕조' 시절을 구가하며 KBO 리그의 한 축을 담당했다.
-                    </p>
-
-                    <h4><strong>2.2</strong> SSG 랜더스로의 재탄생 (2021 ~ 현재)</h4>
-                    <p>
-                        2021년 신세계그룹의 구단 인수를 통해 SSG 랜더스로 새롭게 출발했다. 인프라 개선과 공격적인 투자를 통해 팬들에게 즐거운 야구를 선사하고 있다.
-                    </p>
-
-                    <h4><strong>2.3</strong> 와이어 투 와이어 우승 (2022)</h4>
-                    <p>
-                        창단 2년 차인 2022년, 시즌 시작부터 끝까지 1위를 지키는 전무후무한 와이어 투 와이어 우승을 달성하며 한국시리즈 우승컵을 들어 올렸다.
-                    </p>
-
-                    <h2><strong>3.</strong> 상징 및 구단 특색</h2>
-                    <p>
-                        SSG 랜더스는 <strong>'랜딩(Landing)'</strong>이라는 의미를 바탕으로 인천 야구팬들과 소통하며 열정적인 문화를 만들어가고 있다.
-                    </p>
-
-                    <h4><strong>3.1</strong> 응원 문화</h4>
-                    <p>
-                        인천SSG랜더스필드는 국내 최고의 야구 인프라를 갖춘 구장으로 평가받으며, 다양한 먹거리와 이벤트가 어우러진 <strong>'야구 축제의 장'</strong>으로 사랑받고
-                        있다.
-                    </p>
-
-                    <h4><strong>3.2</strong> 구단 상징 및 마스코트</h4>
-                    <p>
-                        랜더스의 마스코트인 <strong>'랜디(Landi)'</strong>는 용을 형상화하였으며, 친근한 모습으로 경기장 안팎에서 팬들과 활발히 소통한다.
-                    </p>
-
-                    <h4><strong>3.3</strong> 주요 라이벌리</h4>
-                    <ul>
-                        <li><strong>인천-경기 라이벌</strong>: 인근 수도권 구단들(KT 위즈 등)과의 경기는 지역 연고의 자존심이 걸린 뜨거운 승부가 펼쳐진다.</li>
-                    </ul>
-
-                    <h2><strong>4.</strong> 주요 선수 및 영구 결번</h2>
-                    <p>
-                        구단의 역사를 빛낸 선수와 현재 활약 중인 핵심 선수들이다.
-                    </p>
-
-                    <h4><strong>4.1</strong> 영구 결번</h4>
-                    <table class="infobox-table">
-                        <tr>
-                            <th>등번호</th>
-                            <th>선수명</th>
-                            <th>비고</th>
-                        </tr>
-                        <tr>
-                            <td><strong>26</strong></td>
-                            <td><strong>박경완</strong></td>
-                            <td>한국 야구 최고의 포수, SK 왕조의 주역</td>
-                        </tr>
-                    </table>
-
-                    <h4><strong>4.2</strong> 팀의 상징적인 선수</h4>
-                    <ul>
-                        <li><strong>김광현</strong>: 인천 야구의 자존심이자 KBO를 대표하는 왼손 에이스.</li>
-                        <li><strong>최정</strong>: KBO 통산 홈런 기록을 갈아치우고 있는 리그 최고의 거포.</li>
-                    </ul>
-
-                    <h4><strong>4.3</strong> 현재 활약 중인 현역 핵심 선수</h4>
-                    <ul>
-                        <li><strong>한유섬</strong>: 팀의 장타력을 책임지는 핵심 외야수.</li>
-                        <li><strong>박종훈</strong>: 리그를 대표하는 잠수함 투수.</li>
-                    </ul>
-
-                    <h2><strong>5.</strong> 우승 및 포스트시즌 기록</h2>
-                    <p>
-                        SSG 랜더스(전신 SK 와이번스 포함)의 한국시리즈 우승 횟수와 포스트시즌 기록이다.
-                    </p>
-                    <table class="infobox-table">
-                        <tr>
-                            <th>구분</th>
-                            <th>기록</th>
-                        </tr>
-                        <tr>
-                            <td><strong>한국시리즈 우승</strong></td>
-                            <td><strong>5회</strong> (2007, 2008, 2010, 2018, 2022)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>포스트시즌 진출</strong></td>
-                            <td>총 20회 이상</td>
-                        </tr>
-                    </table>
-                    <p>
-                        전신 구단의 역사를 계승하며 명문 구단의 입지를 굳히고 있으며, 팬들과 함께 다시 한번 정상에 오르기 위한 도전을 멈추지 않고 있다.
-                    </p>
-                </div>
-
-                <!-- 2. 오른쪽 인포박스 영역 (ssg-theme 클래스를 적용하여 이마트 레드 테마가 정확하게 맞물립니다) -->
                 <aside class="infobox ssg-theme">
                     <div class="infobox-title">SSG 랜더스</div>
                     <div class="infobox-img">
-                        <img src="./images/SSG랜더스 로고.svg" alt="SSG 랜더스 로고"
-                            style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto; padding: 10px;">
+                        <img alt="SSG 랜더스 로고" src="./images/SSG랜더스 로고.svg"
+                            style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto; padding: 10px;" />
                     </div>
-
                     <table class="infobox-table"
                         style="width: 100%; border-collapse: collapse; background-color: #f8f9fa;">
                         <tr style="border-bottom: 1px solid #dddddd;">
@@ -210,12 +53,12 @@
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
                                 연고지</th>
-                            <td style="padding: 6px;"><span class="text-orange">인천광역시</strong></td>
+                            <td style="padding: 6px;"><span class="text-orange">인천광역시</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
                                 홈구장</th>
-                            <td style="padding: 6px;"><span class="text-navy">인천 SSG 랜더스필드</strong></td>
+                            <td style="padding: 6px;"><span class="text-navy">인천 SSG 랜더스필드</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
@@ -225,7 +68,7 @@
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">단장
                                 / 감독</th>
-                            <td style="padding: 6px;">김재현 / <span class="text-orange">이숭용</strong></td>
+                            <td style="padding: 6px;">김재현 / <span class="text-orange">이숭용</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주장
@@ -235,28 +78,28 @@
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">영구
                                 결번</th>
-                            <td style="padding: 6px;"><span class="text-orange">26 박경완</strong></td>
+                            <td style="padding: 6px;"><span class="text-orange">26 박경완</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주요
                                 라이벌</th>
-                            <td style="padding: 6px;">키움 (지하철 시리즈)<br>KT (경수고속도로 시리즈)<br>두산 (포스트시즌 단골 매치)</td>
+                            <td style="padding: 6px;">키움 (지하철 시리즈)<br />KT (경수고속도로 시리즈)<br />두산 (포스트시즌 단골 매치)</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">공식
                                 링크</th>
                             <td class="sns-links">
                                 <a href="https://www.ssglanders.com/main" target="_blank">
-                                    <img src="./images/SSG링크 로고.svg" alt="공식 홈페이지">
+                                    <img alt="공식 홈페이지" src="./images/SSG링크 로고.svg" />
                                 </a>
                                 <a href="https://www.instagram.com/ssglanders.incheon" target="_blank">
-                                    <img src="./images/인스타그램 로고.svg" alt="인스타그램">
+                                    <img alt="인스타그램" src="./images/인스타그램 로고.svg" />
                                 </a>
                                 <a href="https://www.facebook.com/SSGlanders" target="_blank">
-                                    <img src="./images/페이스북 로고.svg" alt="페이스북">
+                                    <img alt="페이스북" src="./images/페이스북 로고.svg" />
                                 </a>
                                 <a href="https://www.youtube.com/channel/UCt8iRtgjVqm5rJHNl1TUojg" target="_blank">
-                                    <img src="./images/유튜브 로고.svg" alt="유튜브">
+                                    <img alt="유튜브" src="./images/유튜브 로고.svg" />
                                 </a>
                             </td>
                         </tr>
@@ -269,14 +112,148 @@
                         </tr>
                     </table>
                 </aside>
+                <div class="wiki-text" style="flex: 1;">
+                    <!-- 📦 SSG 랜더스 접기/펼치기 상자 -->
+                    <details class="namu-toggle-box"
+                        style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
+                        <summary
+                            style="font-weight: bold; cursor: pointer; color: #c81029; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            <span>ℹ️ SSG 랜더스 추가 정보 (기록 및 요약)
+                                <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]
+                                </span></span>
+                        </summary>
+                        <div class="toggle-content"
+                            style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td>
+                                    <td style="padding: 6px;">총 15회 (SK 와이번스 기록 합산)</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td>
+                                    <td style="padding: 6px;">2022년 (KBO 역사상 최초의 '와이어 투 와이어' 통합 우승)</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold;">구단 마스코트</td>
+                                    <td style="padding: 6px;">랜디 (Landy)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 6px; font-weight: bold;">응원가</td>
+                                    <td style="padding: 6px;">연안부두, 불새마냥, 승리의 랜더스</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </details>
+                    <h3>1. 개요</h3>
+                    <!--유튜브 영상링크 복사 붙여넣기 한 후 watch?v= 부분을 embed로 변경해야 오류 발생 안함-->
+                    <div class="video-container">
+                        <iframe
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/0ybqCIASX6Q?t=1s"
+                            title="YouTube video player">
+                        </iframe>
+                    </div>
+                    <p>
+                        연고지는 <strong>인천광역시</strong>이며, 홈구장은 미추홀구 문학동에 위치한 <strong>인천SSG랜더스필드</strong>이다. 구단명인
+                        '랜더스(Landers)'는 인천국제공항을 통해 대한민국에 들어오는 관문이자, 야구라는 새로운 문화를 상륙시킨다는 의미를 담고 있다.
+                    </p>
+                    <p>
+                        창단 직후인 2022년 <strong>'와이어 투 와이어(Wire-to-Wire)'</strong> 우승이라는 전무후무한 기록과 함께 한국시리즈 정상에 오르며 명문
+                        구단으로서의 입지를 다졌다.
+                    </p>
+                    <p>
+                        구단 상징색은 레드(Red)를 사용하여 강렬하고 역동적인 이미지를 강조하며, SK 와이번스 시절부터 이어져 온 전통과 새로운 변화를 조화롭게 계승하고 있다.
+                    </p>
+                    <h2><strong>2.</strong> 역사</h2>
+                    <p>
+                        SSG 랜더스는 SK 와이번스의 역사를 이어받아 인천 야구의 자부심을 지키고 있다.
+                    </p>
+                    <h4><strong>2.1</strong> SK 와이번스 시대 (2000 ~ 2020)</h4>
+                    <p>
+                        인천 야구의 부흥을 이끌며 총 4회의 한국시리즈 우승을 차지한 강팀으로, '왕조' 시절을 구가하며 KBO 리그의 한 축을 담당했다.
+                    </p>
+                    <h4><strong>2.2</strong> SSG 랜더스로의 재탄생 (2021 ~ 현재)</h4>
+                    <p>
+                        2021년 신세계그룹의 구단 인수를 통해 SSG 랜더스로 새롭게 출발했다. 인프라 개선과 공격적인 투자를 통해 팬들에게 즐거운 야구를 선사하고 있다.
+                    </p>
+                    <h4><strong>2.3</strong> 와이어 투 와이어 우승 (2022)</h4>
+                    <p>
+                        창단 2년 차인 2022년, 시즌 시작부터 끝까지 1위를 지키는 전무후무한 와이어 투 와이어 우승을 달성하며 한국시리즈 우승컵을 들어 올렸다.
+                    </p>
+                    <h2><strong>3.</strong> 상징 및 구단 특색</h2>
+                    <p>
+                        SSG 랜더스는 <strong>'랜딩(Landing)'</strong>이라는 의미를 바탕으로 인천 야구팬들과 소통하며 열정적인 문화를 만들어가고 있다.
+                    </p>
+                    <h4><strong>3.1</strong> 응원 문화</h4>
+                    <p>
+                        인천SSG랜더스필드는 국내 최고의 야구 인프라를 갖춘 구장으로 평가받으며, 다양한 먹거리와 이벤트가 어우러진 <strong>'야구 축제의 장'</strong>으로 사랑받고
+                        있다.
+                    </p>
+                    <h4><strong>3.2</strong> 구단 상징 및 마스코트</h4>
+                    <p>
+                        랜더스의 마스코트인 <strong>'랜디(Landi)'</strong>는 용을 형상화하였으며, 친근한 모습으로 경기장 안팎에서 팬들과 활발히 소통한다.
+                    </p>
+                    <h4><strong>3.3</strong> 주요 라이벌리</h4>
+                    <ul>
+                        <li><strong>인천-경기 라이벌</strong>: 인근 수도권 구단들(KT 위즈 등)과의 경기는 지역 연고의 자존심이 걸린 뜨거운 승부가 펼쳐진다.</li>
+                    </ul>
+                    <h2><strong>4.</strong> 주요 선수 및 영구 결번</h2>
+                    <p>
+                        구단의 역사를 빛낸 선수와 현재 활약 중인 핵심 선수들이다.
+                    </p>
+                    <h4><strong>4.1</strong> 영구 결번</h4>
+                    <table class="infobox-table">
+                        <tr>
+                            <th>등번호</th>
+                            <th>선수명</th>
+                            <th>비고</th>
+                        </tr>
+                        <tr>
+                            <td><strong>26</strong></td>
+                            <td><strong>박경완</strong></td>
+                            <td>한국 야구 최고의 포수, SK 왕조의 주역</td>
+                        </tr>
+                    </table>
+                    <h4><strong>4.2</strong> 팀의 상징적인 선수</h4>
+                    <ul>
+                        <li><strong>김광현</strong>: 인천 야구의 자존심이자 KBO를 대표하는 왼손 에이스.</li>
+                        <li><strong>최정</strong>: KBO 통산 홈런 기록을 갈아치우고 있는 리그 최고의 거포.</li>
+                    </ul>
+                    <h4><strong>4.3</strong> 현재 활약 중인 현역 핵심 선수</h4>
+                    <ul>
+                        <li><strong>한유섬</strong>: 팀의 장타력을 책임지는 핵심 외야수.</li>
+                        <li><strong>박종훈</strong>: 리그를 대표하는 잠수함 투수.</li>
+                    </ul>
+                    <h2><strong>5.</strong> 우승 및 포스트시즌 기록</h2>
+                    <p>
+                        SSG 랜더스(전신 SK 와이번스 포함)의 한국시리즈 우승 횟수와 포스트시즌 기록이다.
+                    </p>
+                    <table class="infobox-table">
+                        <tr>
+                            <th>구분</th>
+                            <th>기록</th>
+                        </tr>
+                        <tr>
+                            <td><strong>한국시리즈 우승</strong></td>
+                            <td><strong>5회</strong> (2007, 2008, 2010, 2018, 2022)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>포스트시즌 진출</strong></td>
+                            <td>총 15회</td>
+                        </tr>
+                    </table>
+                    <p>
+                        전신 구단의 역사를 계승하며 명문 구단의 입지를 굳히고 있으며, 팬들과 함께 다시 한번 정상에 오르기 위한 도전을 멈추지 않고 있다.
+                    </p>
+                </div>
+                <!-- 2. 오른쪽 인포박스 영역 (ssg-theme 클래스를 적용하여 이마트 레드 테마가 정확하게 맞물립니다) -->
 
             </div>
         </div>
     </main>
-
     <script src="main.js"></script>
     <footer id="global-footer"></footer>
-<!-- footer 적용 -->
+    <!-- footer 적용 -->
     <script>
         fetch('footer.html')
             .then(response => response.text())

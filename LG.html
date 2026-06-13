@@ -1,191 +1,32 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>LG 트윈스 - KBO-Wiki</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet" />
 </head>
 
-<body>
-
+<body class="team-page">
     <!-- 자바스크립트가 네비게이션바를 주입할 공간 -->
     <header class="kbo-navbar" id="global-navbar"></header>
-
     <!-- 💡 [해결] 완전히 누락되었던 메인 레이아웃 뼈대 컨테이너를 정상적으로 조립했습니다! -->
     <main class="wiki-container">
-        <div id="page-lg" class="wiki-page active">
-
+        <div class="wiki-page active" id="page-lg">
             <div class="wiki-header-row">
                 <h1>LG 트윈스 (LG Twins)</h1>
             </div>
-
             <!-- 본문과 인포박스를 예쁘게 좌우로 나란히 배치해주는 flex 상자 -->
             <div class="wiki-body" style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
-
                 <!-- 1. 왼쪽 본문 영역 -->
-                <div class="wiki-text" style="flex: 1;">
-
-                    <!-- 📦 LG 트윈스 접기/펼치기 상자 -->
-                    <details class="namu-toggle-box"
-                        style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
-                        <summary
-                            style="font-weight: bold; cursor: pointer; color: #c6002f; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                            <span>ℹ️ LG 트윈스 추가 정보 (기록 및 요약)</strong>
-                                <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]</strong>
-                        </summary>
-                        <div class="toggle-content"
-                            style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
-                            <table style="width: 100%; border-collapse: collapse;">
-                                <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td>
-                                    <td style="padding: 6px;">총 21회</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td>
-                                    <td style="padding: 6px;">2023년 (29년 만의 극적인 통합 우승 달성)</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 6px; font-weight: bold;">구단 마스코트</td>
-                                    <td style="padding: 6px;">럭키, 스타</td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 6px; font-weight: bold;">응원가</td>
-                                    <td style="padding: 6px;">서울의 찬가, 서울의 모정, 아파트</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </details>
-
-                    <h3>1. 개요</h3>
-                    <!--유튜브 영상링크 복사 붙여넣기 한 후 watch?v= 부분을 embed로 변경해야 오류 발생 안함-->
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/Qu7E-YAdrV4" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <p>
-                        연고지는 <strong>서울특별시</strong>이며, 홈구장은 송파구 잠실동에 위치한 <strong>잠실 야구장</strong>이다.
-                    </p>
-
-                    <p>
-                        총 4회의 <strong>한국시리즈 우승</strong>을 달성했으며, 특히 2023년 통합 우승에 이어 <strong>2025년 한국시리즈 우승</strong>을 차지하며
-                        명실상부한 왕조 시대를 열어가고 있다.
-                    </p>
-
-                    <p>
-                        구단 상징은 <strong>'트윈스(Twins)'</strong>이며, <strong>'핀스트라이프'</strong> 유니폼은 LG 트윈스의 전통과 아이덴티티를 상징한다.
-                    </p>
-
-                    <h2><strong>2.</strong> 역사</h2>
-                    <p>
-                        MBC 청룡 시절부터 이어온 LG 트윈스의 역사는 대한민국 프로야구의 흐름과 함께해 왔다.
-                    </p>
-
-                    <h4><strong>2.1</strong> MBC 청룡 시대 (1982 ~ 1989)</h4>
-                    <p>
-                        프로야구 원년 구단으로 출발하여 1990년 LG그룹이 인수하며 LG 트윈스로 새롭게 탄생하였다.
-                    </p>
-
-                    <h4><strong>2.2</strong> 창단 첫 황금기 (1990 ~ 1994)</h4>
-                    <p>
-                        1990년과 1994년 한국시리즈 우승을 차지하며 자율 야구의 정점을 보여준 시기였다.
-                    </p>
-
-                    <h4><strong>2.3</strong> 긴 암흑기와 재도약 (1995 ~ 2022)</h4>
-                    <p>
-                        오랜 침체기를 거쳤으나 2013년 이후 꾸준한 전력 보강을 통해 다시 강팀으로 자리 잡았다.
-                    </p>
-
-                    <h4><strong>2.4</strong> 왕조의 서막과 현재 (2023 ~ 2025)</h4>
-                    <p>
-                        2023년 29년 만의 통합 우승에 이어, <strong>2025년 한국시리즈 정상</strong>에 오르며 최근 몇 년간 압도적인 성과를 거두고 있다.
-                    </p>
-
-                    <h2><strong>3.</strong> 상징 및 구단 특색</h2>
-                    <p>
-                        서울을 대표하는 구단으로서 가장 거대한 팬덤과 열정적인 응원 문화를 보유하고 있다.
-                    </p>
-
-                    <h4><strong>3.1</strong> 응원 문화</h4>
-                    <p>
-                        잠실 야구장을 가득 채우는 <strong>'서울의 찬가'</strong>와 <strong>'무적 LG'</strong> 구호는 팬들의 자부심 그 자체이다.
-                    </p>
-
-                    <h4><strong>3.2</strong> 주요 라이벌리</h4>
-                    <ul>
-                        <li><strong>잠실 라이벌</strong>: 같은 홈구장을 사용하는 두산 베어스와의 치열한 라이벌 관계.</li>
-                    </ul>
-
-                    <h2><strong>4.</strong> 주요 선수 및 영구 결번</h2>
-                    <p>
-                        구단의 역사를 빛낸 레전드와 현재 팀을 이끄는 핵심 선수들이다.
-                    </p>
-
-                    <h4><strong>4.1</strong> 영구 결번 레전드</h4>
-                    <table class="infobox-table">
-                        <tr>
-                            <th>등번호</th>
-                            <th>선수명</th>
-                            <th>비고</th>
-                        </tr>
-                        <tr>
-                            <td><strong>0</strong></td>
-                            <td><strong>김용수</strong></td>
-                            <td>LG 트윈스 최초 영구 결번, 전설적인 투수</td>
-                        </tr>
-                        <tr>
-                            <td><strong>9</strong></td>
-                            <td><strong>이병규</strong></td>
-                            <td>'적토마', 타격의 상징</td>
-                        </tr>
-                        <tr>
-                            <td><strong>41</strong></td>
-                            <td><strong>박용택</strong></td>
-                            <td>KBO 통산 최다 안타, 영원한 캡틴</td>
-                        </tr>
-                    </table>
-
-                    <h4><strong>4.2</strong> 현재 활약 중인 현역 핵심 선수</h4>
-                    <ul>
-                        <li><strong>오지환</strong>: 팀의 캡틴이자 우승을 이끄는 핵심 내야수.</li>
-                        <li><strong>홍창기</strong>: 타선의 리드오프이자 출루의 달인.</li>
-                    </ul>
-
-                    <h2><strong>5.</strong> 우승 및 포스트시즌 기록</h2>
-                    <p>
-                        LG 트윈스의 한국시리즈 우승 및 포스트시즌 기록이다.
-                    </p>
-                    <table class="infobox-table">
-                        <tr>
-                            <th>구분</th>
-                            <th>기록</th>
-                        </tr>
-                        <tr>
-                            <td><strong>한국시리즈 우승</strong></td>
-                            <td><strong>4회</strong> (1990, 1994, 2023, 2025)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>포스트시즌 진출</strong></td>
-                            <td>총 18회</td>
-                        </tr>
-                    </table>
-                    <p>
-                        2025년 우승을 달성하며 명문 구단으로서의 위상을 공고히 했으며, 앞으로도 지속적인 강팀의 모습을 보여줄 것으로 기대된다.
-                    </p>
-                </div>
-
-                <!-- 2. 오른쪽 인포박스 영역 (클래스명을 lg-theme로 지정하여 핀스트라이프 블랙/레드 테마가 연동됩니다) -->
                 <aside class="infobox lg-theme">
                     <div class="infobox-title">LG 트윈스</div>
                     <div class="infobox-img">
-                        <img src="./images/LG트윈스 로고.svg" alt="LG 트윈스 로고"
-                            style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto; padding: 10px;">
+                        <img alt="LG 트윈스 로고" src="./images/LG트윈스 로고.svg"
+                            style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto; padding: 10px;" />
                     </div>
-
                     <table class="infobox-table"
                         style="width: 100%; border-collapse: collapse; background-color: #f8f9fa;">
                         <tr style="border-bottom: 1px solid #dddddd;">
@@ -212,12 +53,12 @@
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
                                 연고지</th>
-                            <td style="padding: 6px;"><span class="text-orange">서울특별시</strong></td>
+                            <td style="padding: 6px;"><span class="text-orange">서울특별시</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
                                 홈구장</th>
-                            <td style="padding: 6px;"><span class="text-navy">서울 종합운동장 야구장</strong></td>
+                            <td style="padding: 6px;"><span class="text-navy">서울 종합운동장 야구장</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
@@ -227,7 +68,7 @@
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
                                 단장 / 감독</th>
-                            <td style="padding: 6px;">차명석 / <span class="text-orange">염경엽</strong></td>
+                            <td style="padding: 6px;">차명석 / <span class="text-orange">염경엽</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
@@ -237,13 +78,13 @@
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
                                 영구 결번</th>
-                            <td style="padding: 6px;"><span class="text-orange">41 김용수</strong> | <span
-                                        class="text-navy">9 이병규</strong></td>
+                            <td style="padding: 6px;"><span class="text-orange">41 김용수 | <span class="text-navy">9
+                                        이병규</span></span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
                                 주요 라이벌</th>
-                            <td style="padding: 6px;">두산 (한 지붕 두 가족, 어린이날 시리즈)<br>키움 (엘키라시코)<br>KIA (엘꼴라시코의 후예 및
+                            <td style="padding: 6px;">두산 (한 지붕 두 가족, 어린이날 시리즈)<br />키움 (엘키라시코)<br />KIA (엘꼴라시코의 후예 및
                                 헤리티지)</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
@@ -251,16 +92,16 @@
                                 공식 링크</th>
                             <td class="sns-links">
                                 <a href="https://www.lgtwins.com/" target="_blank">
-                                    <img src="./images/엘지트윈스 링크 로고.svg" alt="공식 홈페이지">
+                                    <img alt="공식 홈페이지" src="./images/엘지트윈스 링크 로고.svg" />
                                 </a>
                                 <a href="https://www.instagram.com/lgtwinsbaseballclub/" target="_blank">
-                                    <img src="./images/인스타그램 로고.svg" alt="인스타그램">
+                                    <img alt="인스타그램" src="./images/인스타그램 로고.svg" />
                                 </a>
                                 <a href="https://www.facebook.com/LGTWINSSEOUL/" target="_blank">
-                                    <img src="./images/페이스북 로고.svg" alt="페이스북">
+                                    <img alt="페이스북" src="./images/페이스북 로고.svg" />
                                 </a>
                                 <a href="https://www.youtube.com/channel/UCL6QZZxb-HR4hCh_eFAnQWA" target="_blank">
-                                    <img src="./images/유튜브 로고.svg" alt="유튜브">
+                                    <img alt="유튜브" src="./images/유튜브 로고.svg" />
                                 </a>
                             </td>
                         </tr>
@@ -273,11 +114,148 @@
                         </tr>
                     </table>
                 </aside>
+                <div class="wiki-text" style="flex: 1;">
+                    <!-- 📦 LG 트윈스 접기/펼치기 상자 -->
+                    <details class="namu-toggle-box"
+                        style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
+                        <summary
+                            style="font-weight: bold; cursor: pointer; color: #c6002f; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            <span>ℹ️ LG 트윈스 추가 정보 (기록 및 요약)
+                                <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]
+                                </span></span>
+                        </summary>
+                        <div class="toggle-content"
+                            style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td>
+                                    <td style="padding: 6px;">총 18회</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td>
+                                    <td style="padding: 6px;">2023년 (29년 만의 극적인 통합 우승 달성)</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold;">구단 마스코트</td>
+                                    <td style="padding: 6px;">럭키, 스타</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 6px; font-weight: bold;">응원가</td>
+                                    <td style="padding: 6px;">서울의 찬가, 서울의 모정, 아파트</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </details>
+                    <h3>1. 개요</h3>
+                    <!--유튜브 영상링크 복사 붙여넣기 한 후 watch?v= 부분을 embed로 변경해야 오류 발생 안함-->
+                    <div class="video-container">
+                        <iframe
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/Qu7E-YAdrV4"
+                            title="YouTube video player">
+                        </iframe>
+                    </div>
+                    <p>
+                        연고지는 <strong>서울특별시</strong>이며, 홈구장은 송파구 잠실동에 위치한 <strong>잠실 야구장</strong>이다.
+                    </p>
+                    <p>
+                        총 4회의 <strong>한국시리즈 우승</strong>을 달성했으며, 특히 2023년 통합 우승에 이어 <strong>2025년 한국시리즈 우승</strong>을 차지하며
+                        명실상부한 왕조 시대를 열어가고 있다.
+                    </p>
+                    <p>
+                        구단 상징은 <strong>'트윈스(Twins)'</strong>이며, <strong>'핀스트라이프'</strong> 유니폼은 LG 트윈스의 전통과 아이덴티티를 상징한다.
+                    </p>
+                    <h2><strong>2.</strong> 역사</h2>
+                    <p>
+                        MBC 청룡 시절부터 이어온 LG 트윈스의 역사는 대한민국 프로야구의 흐름과 함께해 왔다.
+                    </p>
+                    <h4><strong>2.1</strong> MBC 청룡 시대 (1982 ~ 1989)</h4>
+                    <p>
+                        프로야구 원년 구단으로 출발하여 1990년 LG그룹이 인수하며 LG 트윈스로 새롭게 탄생하였다.
+                    </p>
+                    <h4><strong>2.2</strong> 창단 첫 황금기 (1990 ~ 1994)</h4>
+                    <p>
+                        1990년과 1994년 한국시리즈 우승을 차지하며 자율 야구의 정점을 보여준 시기였다.
+                    </p>
+                    <h4><strong>2.3</strong> 긴 암흑기와 재도약 (1995 ~ 2022)</h4>
+                    <p>
+                        오랜 침체기를 거쳤으나 2013년 이후 꾸준한 전력 보강을 통해 다시 강팀으로 자리 잡았다.
+                    </p>
+                    <h4><strong>2.4</strong> 왕조의 서막과 현재 (2023 ~ 2025)</h4>
+                    <p>
+                        2023년 29년 만의 통합 우승에 이어, <strong>2025년 한국시리즈 정상</strong>에 오르며 최근 몇 년간 압도적인 성과를 거두고 있다.
+                    </p>
+                    <h2><strong>3.</strong> 상징 및 구단 특색</h2>
+                    <p>
+                        서울을 대표하는 구단으로서 가장 거대한 팬덤과 열정적인 응원 문화를 보유하고 있다.
+                    </p>
+                    <h4><strong>3.1</strong> 응원 문화</h4>
+                    <p>
+                        잠실 야구장을 가득 채우는 <strong>'서울의 찬가'</strong>와 <strong>'무적 LG'</strong> 구호는 팬들의 자부심 그 자체이다.
+                    </p>
+                    <h4><strong>3.2</strong> 주요 라이벌리</h4>
+                    <ul>
+                        <li><strong>잠실 라이벌</strong>: 같은 홈구장을 사용하는 두산 베어스와의 치열한 라이벌 관계.</li>
+                    </ul>
+                    <h2><strong>4.</strong> 주요 선수 및 영구 결번</h2>
+                    <p>
+                        구단의 역사를 빛낸 레전드와 현재 팀을 이끄는 핵심 선수들이다.
+                    </p>
+                    <h4><strong>4.1</strong> 영구 결번 레전드</h4>
+                    <table class="infobox-table">
+                        <tr>
+                            <th>등번호</th>
+                            <th>선수명</th>
+                            <th>비고</th>
+                        </tr>
+                        <tr>
+                            <td><strong>0</strong></td>
+                            <td><strong>김용수</strong></td>
+                            <td>LG 트윈스 최초 영구 결번, 전설적인 투수</td>
+                        </tr>
+                        <tr>
+                            <td><strong>9</strong></td>
+                            <td><strong>이병규</strong></td>
+                            <td>'적토마', 타격의 상징</td>
+                        </tr>
+                        <tr>
+                            <td><strong>41</strong></td>
+                            <td><strong>박용택</strong></td>
+                            <td>KBO 통산 최다 안타, 영원한 캡틴</td>
+                        </tr>
+                    </table>
+                    <h4><strong>4.2</strong> 현재 활약 중인 현역 핵심 선수</h4>
+                    <ul>
+                        <li><strong>오지환</strong>: 팀의 캡틴이자 우승을 이끄는 핵심 내야수.</li>
+                        <li><strong>홍창기</strong>: 타선의 리드오프이자 출루의 달인.</li>
+                    </ul>
+                    <h2><strong>5.</strong> 우승 및 포스트시즌 기록</h2>
+                    <p>
+                        LG 트윈스의 한국시리즈 우승 및 포스트시즌 기록이다.
+                    </p>
+                    <table class="infobox-table">
+                        <tr>
+                            <th>구분</th>
+                            <th>기록</th>
+                        </tr>
+                        <tr>
+                            <td><strong>한국시리즈 우승</strong></td>
+                            <td><strong>4회</strong> (1990, 1994, 2023, 2025)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>포스트시즌 진출</strong></td>
+                            <td>총 18회</td>
+                        </tr>
+                    </table>
+                    <p>
+                        2025년 우승을 달성하며 명문 구단으로서의 위상을 공고히 했으며, 앞으로도 지속적인 강팀의 모습을 보여줄 것으로 기대된다.
+                    </p>
+                </div>
+                <!-- 2. 오른쪽 인포박스 영역 (클래스명을 lg-theme로 지정하여 핀스트라이프 블랙/레드 테마가 연동됩니다) -->
 
             </div>
         </div>
     </main>
-
     <footer id="global-footer"></footer>
     <script src="main.js"></script>
     <!-- footer 적용 -->

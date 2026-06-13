@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBO-Wiki | 하이라이트</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 하이라이트 페이지 전용 레이아웃 스타일 */
+        .highlight-container {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+            align-items: flex-start;
+        }
+
+        /* 1. 좌측 서브 네비게이션 (KBO 공식 스타일) */
+        .highlight-sidebar,
+        .sidebar {
+            width: 200px;
+            flex-shrink: 0;
+        }
+        .sidebar-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #111;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #222;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+        .sidebar-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-menu li {
+            margin-bottom: 4px;
+        }
+        .sidebar-menu li a {
+            display: block;
+            padding: 10px 12px;
+            color: #111;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 4px;
+            transition: 0.2s;
+        }
+        .sidebar-menu li.active a,
+        .sidebar-menu a:hover {
+            background: rgba(128, 128, 128, 0.1);
+            color: #00256c;
+            font-weight: bold;
+        }
+
+        /* 2. 우측 메인 콘텐츠 구역 */
+        .highlight-main {
+            flex-grow: 1;
+            background: #fff;
+        }
+        .main-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #111;
+            margin: 0 0 8px 0;
+        }
+        .sub-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin: 30px 0 15px 0;
+        }
+
+        /* 날짜 조절 컨트롤러 */
+        .date-controller {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #111;
+        }
+        .date-btn {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: #333;
+            padding: 5px 10px;
+        }
+        .date-btn:hover {
+            color: #00256c;
+        }
+        .calendar-icon {
+            font-size: 14px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        /* 3. 동영상 그리드 격자 배열 (3열 구성) */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px 20px;
+        }
+
+        .video-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .video-card:hover {
+            transform: translateY(-4px);
+        }
+
+        /* 썸네일 이미지 및 재생 아이콘 오버레이 */
+        .thumbnail-box {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 비율 고정 */
+            background: #000;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+        }
+        .thumbnail-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* KBO 공식 홈페이지 특유의 노란색 재생 버튼 구현 */
+        .play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(24d, 222, 24, 0.85); /* 반투명 노란색 배경 */
+            background-color: #ffd800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            border: 2px solid #fff;
+        }
+        .play-overlay::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7px 0 7px 12px;
+            border-color: transparent transparent transparent #00256c; /* 남색 삼각형화살표 */
+            margin-left: 3px;
+        }
+
+        /* 영상 정보 텍스트 */
+        .video-info {
+            margin-top: 10px;
+            padding: 0 2px;
+        }
+        .video-date {
+            font-size: 11px;
+            color: #888;
+            margin: 0 0 4px 0;
+        }
+        .video-match {
+            font-size: 13px;
+            font-weight: bold;
+            color: #222;
+            margin: 0 0 2px 0;
+        }
+        .video-score {
+            font-size: 13px;
+            font-weight: bold;
+            color: #00256c;
+            margin: 0;
+        }
+
+        /* 반응형 모바일 대응 */
+        @media (max-width: 992px) {
+            .highlight-container { flex-direction: column; gap: 20px; }
+            .highlight-sidebar { width: 100%; }
+            .sidebar-menu { display: flex; flex-wrap: wrap; gap: 5px; }
+            .video-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 576px) {
+            .video-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="kbo-navbar" id="global-navbar"></header>
+
+    <main class="wiki-container">
+        <div class="highlight-container">
+            
+            <aside class="sidebar highlight-sidebar">
+                <div class="sidebar-title">미디어·뉴스</div>
+                <ul class="sidebar-menu">
+                    <li class="active"><a href="highlight.html">하이라이트</a></li>
+                    <li><a href="news.html">뉴스</a></li>
+                </ul>
+            </aside>
+
+            <section class="highlight-main">
+                <h2 class="main-title">하이라이트</h2>
+                <h3 class="sub-title">KBO 리그</h3>
+
+                <div class="date-controller">
+                    <button class="date-btn">&lt;</button>
+                    <span>2026.06.10(수) <span class="calendar-icon">📅</span></span>
+                    <button class="date-btn">&gt;</button>
+                </div>
+
+                <div class="video-grid">
+                    
+                    <a href="https://www.youtube.com/watch?v=yEWfrTP1BCM" target="_blank" class="video-card">
+                        <div class="thumbnail-box">
+                            <img src="https://img.youtube.com/vi/yEWfrTP1BCM/maxresdefault.jpg" alt="KIA vs 한화">
+                            <div class="play-overlay"></div>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-date">20260610</p>
+                            <p class="video-match">KIA vs 한화</p>
+                            <p class="video-score">3:4</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.youtube.com/watch?v=djLMH7EDNwc" target="_blank" class="video-card">
+                        <div class="thumbnail-box">
+                            <img src="https://img.youtube.com/vi/djLMH7EDNwc/maxresdefault.jpg" alt="NC vs 키움">
+                            <div class="play-overlay"></div>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-date">20260610</p>
+                            <p class="video-match">NC vs 키움</p>
+                            <p class="video-score">4:2</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.youtube.com/watch?v=8S3kusQO9nY" target="_blank" class="video-card">
+                        <div class="thumbnail-box">
+                            <img src="https://img.youtube.com/vi/8S3kusQO9nY/maxresdefault.jpg" alt="두산 vs 롯데">
+                            <div class="play-overlay"></div>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-date">20260610</p>
+                            <p class="video-match">두산 vs 롯데</p>
+                            <p class="video-score">1:3</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.youtube.com/watch?v=sd8ER9THuUY" target="_blank" class="video-card">
+                        <div class="thumbnail-box">
+                            <img src="https://img.youtube.com/vi/sd8ER9THuUY/maxresdefault.jpg" alt="SSG vs LG">
+                            <div class="play-overlay"></div>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-date">20260610</p>
+                            <p class="video-match">SSG vs LG</p>
+                            <p class="video-score">6:8</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.youtube.com/watch?v=TQQnAux2gMk" target="_blank" class="video-card">
+                        <div class="thumbnail-box">
+                            <img src="https://img.youtube.com/vi/TQQnAux2gMk/maxresdefault.jpg" alt="삼성 vs KT">
+                            <div class="play-overlay"></div>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-date">20260610</p>
+                            <p class="video-match">삼성 vs KT</p>
+                            <p class="video-score">3:4</p>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="global-footer"></footer>
+
+    <script src="main.js"></script>
+    <script>
+        // 기존 index.html과 동일한 푸터 동적 바인딩 스크립트 적용
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

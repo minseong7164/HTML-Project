@@ -2,12 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KBO 기록실</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- nav.html 연결 -->
-    <header class="kbo-navbar" id="global-navbar">
+    <!-- 페이지 상단 네비게이션 바: nav.html을 불러와서 삽입합니다. -->
+<header class="kbo-navbar" id="global-navbar">
         <script>
             fetch('nav.html').then(response => response.text()).then(data => {
                 document.getElementById('global-navbar').innerHTML = data;
@@ -15,33 +16,45 @@
         </script>
     </header>
 
-    <div class="main-container" style="display: flex;">
-        <!-- 왼쪽 사이드바 -->
-        <aside class="sidebar" style="width: 200px; padding: 20px;">
-            <h3>기록・순위</h3>
-            <ul>
-                <li><strong>기록실</strong></li>
-                <li>팀 순위</li>
-                <li>선수 순위</li>
-                <li>역대 기록</li>
-                <li>예상 달성 기록</li>
-                <li>기록 정정 현황</li>
-                <li>관중 현황</li>
+    <div class="main-container">
+        <!-- 좌측 사이드바: 페이지 내 기록 메뉴와 네비게이션을 제공합니다. -->
+        <aside class="sidebar">
+            <div class="sidebar-title">기록・순위</div>
+            <ul class="sidebar-menu">
+                <li class="has-submenu">
+                    <span class="menu-btn">선수 기록 ▾</span>
+                    <ul class="submenu">
+                        <li class="active"><a href="Batting Statistics.html?tab=batter">타자 기록</a></li>
+                        <li><a href="Batting Statistics.html?tab=pitcher">투수 기록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="record.html">팀 순위</a>
+                </li>
+                <li>
+                    <a href="plan.html">경기 일정 및 결과</a>
+                </li>
             </ul>
         </aside>
 
-        <!-- 본문 영역 -->
-        <div class="wiki-text" style="flex: 1; padding: 20px;">
+        <!-- 본문 영역: 페이지의 주요 콘텐츠를 담습니다. -->
+        <main class="main-content">
             <h2>기록실</h2>
             
-            <!-- 상단 탭 및 필터 -->
-            <div class="record-filter">
+            <!-- 상단 탭 및 필터: 기록 종류를 전환할 수 있는 버튼입니다. -->
+            <!-- <div class="record-filter">
                 <div class="top-tabs"><strong>선수 기록</strong> | 팀 기록 | 투수 VS 타자</div>
                 <div class="sub-tabs"><strong>타자</strong> | 투수 | 수비 | 주루</div>
+            </div> -->
+
+            <!-- 데이터 탭 전환 버튼: 타자/투수 기록표를 표시합니다. -->
+            <div class="record-tabs" style="margin-bottom: 10px;">
+                <button onclick="showTable('batter')" style="font-weight: bold; cursor: pointer;">타자 기록</button> | 
+                <button onclick="showTable('pitcher')" style="cursor: pointer;">투수 기록</button>
             </div>
 
-            <!-- 데이터 테이블 -->
-             <div class="record-table-wrapper">
+    <!-- 타자 기록 테이블: 기본으로 보이며, 타자 통계를 나열합니다. -->
+    <div id="batter-table" class="data-table rank-table-section">
     <table class="infobox-table record-table">
         <thead>
             <tr>
@@ -82,17 +95,50 @@
             <tr><td>29</td><td>전민재</td><td>롯데</td><td>0.273</td><td>53</td><td>182</td><td>165</td><td>16</td><td>45</td><td>7</td><td>0</td><td>5</td><td>67</td><td>25</td><td>2</td><td>1</td></tr>
             <tr><td>30</td><td>천성호</td><td>LG</td><td>0.272</td><td>53</td><td>177</td><td>162</td><td>25</td><td>44</td><td>10</td><td>1</td><td>1</td><td>59</td><td>20</td><td>2</td><td>0</td></tr>
         </tbody>
-    </tbody>    
     </table>
 </div>
-            
-            </table>
-        </div>
+
+    <!-- 투수 기록 테이블: 초기에는 숨겨져 있으며, 버튼으로 표시를 전환할 수 있습니다. -->
+<div id="pitcher-table" class="data-table rank-table-section" style="display: none;">
+    <table class="infobox-table record-table">
+        <thead>
+            <tr>
+                <th>순위</th><th>선수명</th><th>팀명</th><th>ERA</th><th>G</th><th>W</th><th>L</th><th>SV</th><th>HLD</th>
+                <th>WPCT</th><th>IP</th><th>H</th><th>HR</th><th>BB</th><th>HBP</th><th>SO</th><th>R</th><th>ER</th><th>WHIP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>올러</td><td>KIA</td><td>2.39</td><td>12</td><td>7</td><td>4</td><td>0</td><td>0</td><td>0.636</td><td>75 1/3</td><td>48</td><td>5</td><td>22</td><td>3</td><td>82</td><td>21</td><td>20</td><td>0.93</td></tr>
+            <tr><td>2</td><td>후라도</td><td>삼성</td><td>2.61</td><td>12</td><td>3</td><td>1</td><td>0</td><td>0</td><td>0.750</td><td>76</td><td>76</td><td>8</td><td>13</td><td>3</td><td>50</td><td>28</td><td>22</td><td>1.17</td></tr>
+            <tr><td>3</td><td>류현진</td><td>한화</td><td>2.97</td><td>11</td><td>7</td><td>2</td><td>0</td><td>0</td><td>0.778</td><td>63 2/3</td><td>55</td><td>4</td><td>9</td><td>2</td><td>51</td><td>27</td><td>21</td><td>1.01</td></tr>
+            <tr><td>4</td><td>최민석</td><td>두산</td><td>3.06</td><td>11</td><td>5</td><td>2</td><td>0</td><td>0</td><td>0.714</td><td>61 2/3</td><td>52</td><td>3</td><td>30</td><td>3</td><td>59</td><td>27</td><td>21</td><td>1.33</td></tr>
+            <tr><td>5</td><td>알칸타라</td><td>키움</td><td>3.12</td><td>12</td><td>6</td><td>4</td><td>0</td><td>0</td><td>0.600</td><td>78</td><td>79</td><td>11</td><td>11</td><td>0</td><td>70</td><td>28</td><td>27</td><td>1.15</td></tr>
+            <tr><td>6</td><td>왕옌청</td><td>한화</td><td>3.13</td><td>12</td><td>5</td><td>2</td><td>0</td><td>0</td><td>0.714</td><td>63 1/3</td><td>65</td><td>4</td><td>24</td><td>4</td><td>54</td><td>30</td><td>22</td><td>1.41</td></tr>
+            <tr><td>7</td><td>보쉴리</td><td>KT</td><td>3.16</td><td>11</td><td>7</td><td>3</td><td>0</td><td>0</td><td>0.700</td><td>62 2/3</td><td>68</td><td>3</td><td>15</td><td>1</td><td>56</td><td>23</td><td>22</td><td>1.32</td></tr>
+            <tr><td>8</td><td>곽빈</td><td>두산</td><td>3.26</td><td>11</td><td>3</td><td>3</td><td>0</td><td>0</td><td>0.500</td><td>60 2/3</td><td>59</td><td>3</td><td>22</td><td>1</td><td>75</td><td>26</td><td>22</td><td>1.34</td></tr>
+            <tr><td>9</td><td>톨허스트</td><td>LG</td><td>3.36</td><td>12</td><td>7</td><td>3</td><td>0</td><td>0</td><td>0.700</td><td>64 1/3</td><td>55</td><td>5</td><td>18</td><td>7</td><td>56</td><td>24</td><td>24</td><td>1.13</td></tr>
+            <tr><td>10</td><td>김진욱</td><td>롯데</td><td>3.48</td><td>11</td><td>3</td><td>3</td><td>0</td><td>0</td><td>0.500</td><td>64 2/3</td><td>59</td><td>8</td><td>18</td><td>1</td><td>51</td><td>32</td><td>25</td><td>1.19</td></tr>
+            <tr><td>11</td><td>나균안</td><td>롯데</td><td>3.53</td><td>11</td><td>2</td><td>5</td><td>0</td><td>0</td><td>0.286</td><td>63 2/3</td><td>64</td><td>8</td><td>20</td><td>2</td><td>53</td><td>29</td><td>25</td><td>1.32</td></tr>
+            <tr><td>12</td><td>네일</td><td>KIA</td><td>3.58</td><td>13</td><td>2</td><td>4</td><td>0</td><td>0</td><td>0.333</td><td>75 1/3</td><td>69</td><td>3</td><td>15</td><td>10</td><td>56</td><td>30</td><td>30</td><td>1.12</td></tr>
+            <tr><td>13</td><td>임찬규</td><td>LG</td><td>3.88</td><td>11</td><td>5</td><td>1</td><td>0</td><td>0</td><td>0.833</td><td>60 1/3</td><td>74</td><td>5</td><td>19</td><td>1</td><td>33</td><td>27</td><td>26</td><td>1.54</td></tr>
+            <tr><td>14</td><td>잭로그</td><td>두산</td><td>3.97</td><td>12</td><td>3</td><td>3</td><td>0</td><td>0</td><td>0.500</td><td>68</td><td>81</td><td>5</td><td>12</td><td>5</td><td>62</td><td>33</td><td>30</td><td>1.37</td></tr>
+            <tr><td>15</td><td>구창모</td><td>NC</td><td>4.04</td><td>11</td><td>5</td><td>2</td><td>0</td><td>0</td><td>0.714</td><td>62 1/3</td><td>58</td><td>8</td><td>21</td><td>2</td><td>50</td><td>31</td><td>28</td><td>1.27</td></tr>
+            <tr><td>16</td><td>오러클린</td><td>삼성</td><td>4.26</td><td>12</td><td>4</td><td>3</td><td>0</td><td>0</td><td>0.571</td><td>61 1/3</td><td>53</td><td>5</td><td>26</td><td>8</td><td>63</td><td>31</td><td>29</td><td>1.29</td></tr>
+            <tr><td>17</td><td>사우어</td><td>KT</td><td>4.54</td><td>12</td><td>4</td><td>3</td><td>0</td><td>0</td><td>0.571</td><td>69 1/3</td><td>67</td><td>7</td><td>27</td><td>9</td><td>53</td><td>37</td><td>35</td><td>1.36</td></tr>
+            <tr><td>18</td><td>고영표</td><td>KT</td><td>4.79</td><td>11</td><td>3</td><td>4</td><td>0</td><td>0</td><td>0.429</td><td>62</td><td>70</td><td>8</td><td>11</td><td>6</td><td>72</td><td>34</td><td>33</td><td>1.31</td></tr>
+            <tr><td>19</td><td>비슬리</td><td>롯데</td><td>4.86</td><td>12</td><td>4</td><td>3</td><td>0</td><td>0</td><td>0.571</td><td>63</td><td>76</td><td>5</td><td>19</td><td>5</td><td>74</td><td>36</td><td>34</td><td>1.51</td></tr>
+            <tr><td>20</td><td>박세웅</td><td>롯데</td><td>4.98</td><td>11</td><td>1</td><td>5</td><td>0</td><td>0</td><td>0.167</td><td>59 2/3</td><td>64</td><td>4</td><td>29</td><td>4</td><td>50</td><td>38</td><td>33</td><td>1.56</td></tr>
+            <tr><td>21</td><td>베니지아노</td><td>SSG</td><td>5.13</td><td>12</td><td>2</td><td>4</td><td>0</td><td>0</td><td>0.333</td><td>59 2/3</td><td>66</td><td>10</td><td>24</td><td>5</td><td>49</td><td>38</td><td>34</td><td>1.51</td></tr>
+        </tbody>
+    </table>
+</div>
+        </main>
+
     </div>
 
+    <!-- 페이지 하단 푸터: footer.html을 불러와 삽입합니다. -->
     <footer id="global-footer"></footer>
     <script src="main.js"></script>
-    <!-- footer 적용 -->
     <script>
         fetch('footer.html')
             .then(response => response.text())

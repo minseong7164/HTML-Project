@@ -1,35 +1,141 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KBO-Wiki</title>
+    <title>KBO-Wiki | 2026 시즌 메인 페이지</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header class="kbo-navbar" id="global-navbar">
-    </header>
+    <header class="kbo-navbar" id="global-navbar"></header>
 
     <main class="wiki-container">
+        
+        <section class="dashboard-grid">
+            <div class="col-main">
+                <div class="card preview-card">
+                    <h3>Today's Game Preview</h3>
+                    <img src="https://via.placeholder.com/600x300" alt="경기 프리뷰">
+                    <p class="preview-title">한화 vs 롯데 : 2026.06.10 Preview</p>
+                </div>
+                
+                <div class="card standings-card">
+                    <h3>Current League Standings (2026)</h3>
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr><th>순위</th><th>팀</th><th>승률</th><th>GB</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>LG</td><td>.617</td><td>-</td></tr>
+                            <tr><td>2</td><td>KT</td><td>.593</td><td>1.5</td></tr>
+                            <tr><td>3</td><td>삼성</td><td>.569</td><td>3</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="more-link-box" style="text-align: right; margin-top: 15px;">
+                        <a href="record.html" style="text-decoration: none; color: #00256c; font-size: 14px; font-weight: bold; display: inline-block; padding: 5px 10px; transition: 0.2s;">더보기 +</a>
+                    </div>
+                </div>
+            </div>
 
-        <div id="page-home" class="wiki-page active">
-            <h2>KBO-Wiki에 오신 것을 환영합니다</h2>
-            <p>상단의 <strong>[구단 소개]</strong> 메뉴에 마우스를 올린 뒤 원하는 구단을 선택해 보세요!</p>
-        </div>
+            <div class="col-side">
+                <div class="card news-card">
+                    <h3>공지사항 / 뉴스 요약</h3>
+                    <ul class="news-list">
+                        <li><span>[공지]</span> 2026 올스타 투표 안내</li>
+                        <li><span>[뉴스]</span> 최원준 선수, 역대 기록 경신</li>
+                        <li><span>[팀 소식]</span> KIA 타이거즈, 홈 5연승</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <footer id="global-footer"></footer>    
+        <section class="highlight-section">
+            <div class="section-header">
+                <h3>하이라이트</h3>
+                <div class="more-link-box" style="text-align: right; margin-top: 0;">
+                    <a href="highlight.html" style="text-decoration: none; color: #00256c; font-size: 14px; font-weight: bold; display: inline-block; padding: 5px 10px; transition: 0.2s;">더보기 +</a>
+                </div>
+            </div>
+            
+            <div class="highlight-scroll-container">
+                <a href="https://www.youtube.com/watch?v=djLMH7EDNwc" target="_blank" class="card-item">
+                    <img src="https://img.youtube.com/vi/djLMH7EDNwc/maxresdefault.jpg" alt="NC vs 키움">
+                    <div class="card-info">
+                        <h4>NC vs 키움</h4>
+                        <p>2026.06.10 | 고척</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.youtube.com/watch?v=8S3kusQO9nY" target="_blank" class="card-item">
+                    <img src="https://img.youtube.com/vi/8S3kusQO9nY/maxresdefault.jpg" alt="롯데 vs 두산">
+                    <div class="card-info">
+                        <h4>롯데 vs 두산</h4>
+                        <p>2026.06.10 | 사직</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.youtube.com/watch?v=yEWfrTP1BCM" target="_blank" class="card-item">
+                    <img src="https://img.youtube.com/vi/yEWfrTP1BCM/maxresdefault.jpg" alt="기아 vs 한화">
+                    <div class="card-info">
+                        <h4>기아 vs 한화</h4>
+                        <p>2026.06.10 | 대전</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.youtube.com/watch?v=TQQnAux2gMk" target="_blank" class="card-item">
+                    <img src="https://img.youtube.com/vi/TQQnAux2gMk/maxresdefault.jpg" alt="삼성 vs KT">
+                    <div class="card-info">
+                        <h4>삼성 vs KT</h4>
+                        <p>2026.06.10 | 수원</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.youtube.com/watch?v=sd8ER9THuUY" target="_blank" class="card-item">
+                    <img src="https://img.youtube.com/vi/sd8ER9THuUY/maxresdefault.jpg" alt="SSG vs LG">
+                    <div class="card-info">
+                        <h4>SSG vs LG</h4>
+                        <p>2026.06.10 | 잠실</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="quick-nav">
+            <a href="record.html" class="nav-item" style="text-decoration: none; color: inherit;">
+                <span>📊</span>
+                <p>팀 순위</p>
+            </a>
+            <a href="Batting Statistics.html" class="nav-item" style="text-decoration: none; color: inherit;">
+                <span>🏃</span>
+                <p>개인 기록</p>
+            </a>
+            <a href="plan.html" class="nav-item" style="text-decoration: none; color: inherit;">
+                <span>📅</span>
+                <p>경기일정 및 결과</p>
+            </a>
+            <a href="news.html" class="nav-item" style="text-decoration: none; color: inherit;">
+                <span>📰</span>
+                <p>뉴스</p>
+            </a>
+            <a href="notice.html" class="nav-item" style="text-decoration: none; color: inherit;">
+                <span>📢</span>
+                <p>공지사항</p>
+            </a>
+            <a href="highlight.html" class="nav-item" style="text-decoration: none; color: inherit;">
+                <span>📺</span>
+                <p>하이라이트</p>
+            </a>
+        </section>
+
+    </main>
+
+    <footer id="global-footer"></footer>
+
     <script src="main.js"></script>
-    <!-- footer 적용 -->
     <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('global-footer').innerHTML = data;
-            });
+        fetch('footer.html').then(r => r.text()).then(d => document.getElementById('global-footer').innerHTML = d);
     </script>
 </body>
-
 </html>

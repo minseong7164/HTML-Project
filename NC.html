@@ -1,193 +1,32 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>NC 다이노스 - KBO-Wiki</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet" />
 </head>
 
-<body>
-
+<body class="team-page">
     <!-- 자바스크립트가 네비게이션바를 주입할 공간 -->
     <header class="kbo-navbar" id="global-navbar"></header>
-
     <!-- 💡 [해결] 중복 상자들을 싹 걷어내고 완벽한 정렬을 복구한 단일 메인 컨테이너 -->
     <main class="wiki-container">
-        <div id="page-nc" class="wiki-page active">
-
+        <div class="wiki-page active" id="page-nc">
             <div class="wiki-header-row">
                 <h1>NC 다이노스 (NC Dinos)</h1>
             </div>
-
             <!-- 본문과 인포박스를 좌우로 나란히 이쁘게 배치해주는 flex 상자 -->
             <div class="wiki-body" style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
-
                 <!-- 1. 왼쪽 본문 영역 -->
-                <div class="wiki-text" style="flex: 1;">
-
-                    <!-- 📦 NC 다이노스 접기/펼치기 상자 -->
-                    <details class="namu-toggle-box"
-                        style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
-                        <summary
-                            style="font-weight: bold; cursor: pointer; color: #315288; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                            <span>ℹ️ NC 다이노스 추가 정보 (기록 및 요약)</strong>
-                                <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]</strong>
-                        </summary>
-                        <div class="toggle-content"
-                            style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
-                            <table style="width: 100%; border-collapse: collapse;">
-                                <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td>
-                                    <td style="padding: 6px;">총 8회 (신생팀 중 압도적인 단기전 도깨비)</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td>
-                                    <td style="padding: 6px;">2020년 (창단 9년 만의 첫 한국시리즈 통합 우승)</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 6px; font-weight: bold;">구단 마스코트</td>
-                                    <td style="padding: 6px;">단디 (Dandi), 쎄리 (Sseri)</td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 6px; font-weight: bold;">응원가</td>
-                                    <td style="padding: 6px;">우리는 다이노스, 마산 스트리트, 승리를 향해 다이노스</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </details>
-
-                    <h3>1. 개요</h3>
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/WZgUWXV9YpM" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-
-                    <p>
-                        연고지는 <strong>경상남도 창원시</strong>이며, 홈구장은 마산회원구 양덕동에 위치한 <strong>창원NC파크</strong>이다. KBO 리그의 9번째
-                        구단으로 합류하여, 최신식 시설과 체계적인 데이터 야구를 바탕으로 단기간에 강팀으로 도약했다.
-                    </p>
-
-                    <p>
-                        2020년, 창단 첫 <strong>통합 우승</strong>을 달성하며 새로운 강자의 등장을 알렸다. 구단 명칭인 '다이노스(Dinos)'는 연고지 창원이 과거 공룡 화석
-                        발견지라는 점을 반영하여 지어졌다.
-                    </p>
-
-                    <p>
-                        구단 상징색은 마린 블루(Marine Blue)와 골드(Gold)를 사용하여 신뢰와 승리를 상징하며, 창원 시민들의 전폭적인 지지를 받는 경남 지역의 대표 구단이다.
-                    </p>
-
-                    <h2><strong>2.</strong> 역사</h2>
-                    <p>
-                        NC 다이노스는 신생 구단의 한계를 뛰어넘고 빠르게 리그의 중심 구단으로 자리 잡았다.
-                    </p>
-
-                    <h4><strong>2.1</strong> 창단 및 1군 진입 (2011 ~ 2013)</h4>
-                    <p>
-                        2011년 창단 승인을 얻은 후, 2013년부터 1군 리그에 공식 합류했다. 신생 구단답지 않은 탄탄한 전력으로 리그에 빠르게 녹아들었다.
-                    </p>
-
-                    <h4><strong>2.2</strong> 꾸준한 상위권 도약 (2014 ~ 2019)</h4>
-                    <p>
-                        매 시즌 포스트시즌 진출을 다투는 강팀으로 성장했다. 이 시기 에이스 투수와 핵심 타자들을 육성하며 팀의 뼈대를 튼튼히 했다.
-                    </p>
-
-                    <h4><strong>2.3</strong> 창단 첫 통합 우승 (2020)</h4>
-                    <p>
-                        2020년 정규 시즌 1위와 한국시리즈 우승을 모두 거머쥐며 <strong>통합 우승</strong>을 달성했다. KBO 리그 역사에 새로운 왕조의 탄생을 알린 순간이었다.
-                    </p>
-
-                    <h4><strong>2.4</strong> 도전과 변화 (2021 ~ 현재)</h4>
-                    <p>
-                        우승 이후에도 주축 선수들의 세대교체와 전력 강화를 통해 상위권 경쟁력을 꾸준히 유지하고 있다.
-                    </p>
-
-                    <h2><strong>3.</strong> 상징 및 구단 특색</h2>
-                    <p>
-                        NC 다이노스는 데이터 기반의 야구와 창원NC파크라는 최고의 구장 환경을 갖춘 구단이다.
-                    </p>
-
-                    <h4><strong>3.1</strong> 응원 문화</h4>
-                    <p>
-                        창원NC파크는 개방형 구장으로 팬들에게 최고의 관람 경험을 제공하며, <strong>'가자! NC 다이노스'</strong>와 같은 열정적인 응원 문화를 자랑한다.
-                    </p>
-
-                    <h4><strong>3.2</strong> 구단 상징 및 마스코트</h4>
-                    <p>
-                        공식 마스코트인 <strong>'단디와 쎄리'</strong>는 공룡을 귀엽고 역동적으로 형상화하여 남녀노소 팬들에게 큰 사랑을 받고 있다.
-                    </p>
-
-                    <h4><strong>3.3</strong> 주요 라이벌리</h4>
-                    <ul>
-                        <li><strong>낙동강 시리즈</strong>: 롯데 자이언츠와의 맞대결로, 경상권을 연고로 하는 두 팀 간의 자존심이 걸린 뜨거운 라이벌 관계이다.</li>
-                    </ul>
-
-                    <h2><strong>4.</strong> 주요 선수 및 영구 결번</h2>
-                    <p>
-                        구단의 역사를 빛낸 레전드와 현재 핵심 선수들이다.
-                    </p>
-
-                    <h4><strong>4.1</strong> 영구 결번</h4>
-                    <table class="infobox-table">
-                        <tr>
-                            <th>등번호</th>
-                            <th>선수명</th>
-                            <th>비고</th>
-                        </tr>
-                        <tr>
-                            <td><strong>-</strong></td>
-                            <td><strong>-</strong></td>
-                            <td>현재 구단 영구 결번 선수는 없다.</td>
-                        </tr>
-                    </table>
-
-                    <h4><strong>4.2</strong> 팀의 상징적인 선수</h4>
-                    <ul>
-                        <li><strong>이호준</strong>: NC의 초대 주장으로 팀의 기틀을 다진 레전드 타자.</li>
-                        <li><strong>나성범</strong>: NC 창단 멤버이자 팀을 대표했던 최고의 강타자.</li>
-                    </ul>
-
-                    <h4><strong>4.3</strong> 현재 활약 중인 현역 핵심 선수</h4>
-                    <ul>
-                        <li><strong>손아섭</strong>: KBO 최다 안타 기록을 향해 달리는 팀의 핵심 타자.</li>
-                        <li><strong>구창모</strong>: 팀 마운드의 중심을 책임지는 국가대표 좌완 에이스.</li>
-                    </ul>
-
-                    <h2><strong>5.</strong> 우승 및 포스트시즌 기록</h2>
-                    <p>
-                        NC 다이노스의 <strong>한국시리즈 우승</strong> 횟수와 <strong>포스트시즌</strong> 진출 기록이다.
-                    </p>
-                    <table class="infobox-table">
-                        <tr>
-                            <th>구분</th>
-                            <th>기록</th>
-                        </tr>
-                        <tr>
-                            <td><strong>한국시리즈 우승</strong></td>
-                            <td><strong>1회</strong> (2020)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>포스트시즌 진출</strong></td>
-                            <td>총 6회 이상</td>
-                        </tr>
-                    </table>
-                    <p>
-                        빠른 시간 내에 정상의 자리에 오르며 신생 구단의 모범 사례가 된 NC 다이노스는, 앞으로도 팬들에게 즐거움을 주는 야구를 펼쳐나갈 것이다.
-                    </p>
-                </div>
-
-                <!-- 2. 오른쪽 인포박스 영역 (클래스명을 nc-theme로 맞춰주어 청량한 마린 블루가 정상 연동됩니다) -->
                 <aside class="infobox nc-theme">
                     <div class="infobox-title">NC 다이노스</div>
                     <div class="infobox-img">
-                        <img src="./images/NC다이노스 로고.svg" alt="NC 다이노스 로고"
-                            style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto; padding: 10px;">
+                        <img alt="NC 다이노스 로고" src="./images/NC다이노스 로고.svg"
+                            style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto; padding: 10px;" />
                     </div>
-
                     <table class="infobox-table"
                         style="width: 100%; border-collapse: collapse; background-color: #f8f9fa;">
                         <tr style="border-bottom: 1px solid #dddddd;">
@@ -214,12 +53,12 @@
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
                                 연고지</th>
-                            <td style="padding: 6px;"><span class="text-orange">경상남도 창원시</strong></td>
+                            <td style="padding: 6px;"><span class="text-orange">경상남도 창원시</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
                                 홈구장</th>
-                            <td style="padding: 6px;"><span class="text-navy">창원 NC 파크</strong></td>
+                            <td style="padding: 6px;"><span class="text-navy">창원 NC 파크</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
@@ -229,7 +68,7 @@
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">단장
                                 / 감독</th>
-                            <td style="padding: 6px;">임선남 / <span class="text-orange">이호준</strong></td>
+                            <td style="padding: 6px;">임선남 / <span class="text-orange">이호준</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주장
@@ -244,23 +83,23 @@
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주요
                                 라이벌</th>
-                            <td style="padding: 6px;">롯데 자이언츠 (낙동강 더비)<br>두산 베어스 (가을야구 단골 숙적)</td>
+                            <td style="padding: 6px;">롯데 자이언츠 (낙동강 더비)<br />두산 베어스 (가을야구 단골 숙적)</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">공식
                                 링크</th>
                             <td class="sns-links">
                                 <a href="https://www.ncdinos.com/" target="_blank">
-                                    <img src="./images/nc링크 로고.svg" alt="공식 홈페이지">
+                                    <img alt="공식 홈페이지" src="./images/nc링크 로고.svg" />
                                 </a>
                                 <a href="https://www.instagram.com/ncdinos2011" target="_blank">
-                                    <img src="./images/인스타그램 로고.svg" alt="인스타그램">
+                                    <img alt="인스타그램" src="./images/인스타그램 로고.svg" />
                                 </a>
                                 <a href="https://www.facebook.com/ncdinos/" target="_blank">
-                                    <img src="./images/페이스북 로고.svg" alt="페이스북">
+                                    <img alt="페이스북" src="./images/페이스북 로고.svg" />
                                 </a>
                                 <a href="https://www.youtube.com/channel/UC8_FRgynMX8wlGsU6Jh3zKg" target="_blank">
-                                    <img src="./images/유튜브 로고.svg" alt="유튜브">
+                                    <img alt="유튜브" src="./images/유튜브 로고.svg" />
                                 </a>
                             </td>
                         </tr>
@@ -273,11 +112,147 @@
                         </tr>
                     </table>
                 </aside>
+                <div class="wiki-text" style="flex: 1;">
+                    <!-- 📦 NC 다이노스 접기/펼치기 상자 -->
+                    <details class="namu-toggle-box"
+                        style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
+                        <summary
+                            style="font-weight: bold; cursor: pointer; color: #315288; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            <span>ℹ️ NC 다이노스 추가 정보 (기록 및 요약)
+                                <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]
+                                </span></span>
+                        </summary>
+                        <div class="toggle-content"
+                            style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td>
+                                    <td style="padding: 6px;">총 8회 (신생팀 중 압도적인 단기전 도깨비)</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td>
+                                    <td style="padding: 6px;">2020년 (창단 9년 만의 첫 한국시리즈 통합 우승)</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold;">구단 마스코트</td>
+                                    <td style="padding: 6px;">단디 (Dandi), 쎄리 (Sseri)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 6px; font-weight: bold;">응원가</td>
+                                    <td style="padding: 6px;">우리는 다이노스, 마산 스트리트, 승리를 향해 다이노스</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </details>
+                    <h3>1. 개요</h3>
+                    <div class="video-container">
+                        <iframe
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/WZgUWXV9YpM"
+                            title="YouTube video player">
+                        </iframe>
+                    </div>
+                    <p>
+                        연고지는 <strong>경상남도 창원시</strong>이며, 홈구장은 마산회원구 양덕동에 위치한 <strong>창원NC파크</strong>이다. KBO 리그의 9번째
+                        구단으로 합류하여, 최신식 시설과 체계적인 데이터 야구를 바탕으로 단기간에 강팀으로 도약했다.
+                    </p>
+                    <p>
+                        2020년, 창단 첫 <strong>통합 우승</strong>을 달성하며 새로운 강자의 등장을 알렸다. 구단 명칭인 '다이노스(Dinos)'는 연고지 창원이 과거 공룡 화석
+                        발견지라는 점을 반영하여 지어졌다.
+                    </p>
+                    <p>
+                        구단 상징색은 마린 블루(Marine Blue)와 골드(Gold)를 사용하여 신뢰와 승리를 상징하며, 창원 시민들의 전폭적인 지지를 받는 경남 지역의 대표 구단이다.
+                    </p>
+                    <h2><strong>2.</strong> 역사</h2>
+                    <p>
+                        NC 다이노스는 신생 구단의 한계를 뛰어넘고 빠르게 리그의 중심 구단으로 자리 잡았다.
+                    </p>
+                    <h4><strong>2.1</strong> 창단 및 1군 진입 (2011 ~ 2013)</h4>
+                    <p>
+                        2011년 창단 승인을 얻은 후, 2013년부터 1군 리그에 공식 합류했다. 신생 구단답지 않은 탄탄한 전력으로 리그에 빠르게 녹아들었다.
+                    </p>
+                    <h4><strong>2.2</strong> 꾸준한 상위권 도약 (2014 ~ 2019)</h4>
+                    <p>
+                        매 시즌 포스트시즌 진출을 다투는 강팀으로 성장했다. 이 시기 에이스 투수와 핵심 타자들을 육성하며 팀의 뼈대를 튼튼히 했다.
+                    </p>
+                    <h4><strong>2.3</strong> 창단 첫 통합 우승 (2020)</h4>
+                    <p>
+                        2020년 정규 시즌 1위와 한국시리즈 우승을 모두 거머쥐며 <strong>통합 우승</strong>을 달성했다. KBO 리그 역사에 새로운 왕조의 탄생을 알린 순간이었다.
+                    </p>
+                    <h4><strong>2.4</strong> 도전과 변화 (2021 ~ 현재)</h4>
+                    <p>
+                        우승 이후에도 주축 선수들의 세대교체와 전력 강화를 통해 상위권 경쟁력을 꾸준히 유지하고 있다.
+                    </p>
+                    <h2><strong>3.</strong> 상징 및 구단 특색</h2>
+                    <p>
+                        NC 다이노스는 데이터 기반의 야구와 창원NC파크라는 최고의 구장 환경을 갖춘 구단이다.
+                    </p>
+                    <h4><strong>3.1</strong> 응원 문화</h4>
+                    <p>
+                        창원NC파크는 개방형 구장으로 팬들에게 최고의 관람 경험을 제공하며, <strong>'가자! NC 다이노스'</strong>와 같은 열정적인 응원 문화를 자랑한다.
+                    </p>
+                    <h4><strong>3.2</strong> 구단 상징 및 마스코트</h4>
+                    <p>
+                        공식 마스코트인 <strong>'단디와 쎄리'</strong>는 공룡을 귀엽고 역동적으로 형상화하여 남녀노소 팬들에게 큰 사랑을 받고 있다.
+                    </p>
+                    <h4><strong>3.3</strong> 주요 라이벌리</h4>
+                    <ul>
+                        <li><strong>낙동강 시리즈</strong>: 롯데 자이언츠와의 맞대결로, 경상권을 연고로 하는 두 팀 간의 자존심이 걸린 뜨거운 라이벌 관계이다.</li>
+                    </ul>
+                    <h2><strong>4.</strong> 주요 선수 및 영구 결번</h2>
+                    <p>
+                        구단의 역사를 빛낸 레전드와 현재 핵심 선수들이다.
+                    </p>
+                    <h4><strong>4.1</strong> 영구 결번</h4>
+                    <table class="infobox-table">
+                        <tr>
+                            <th>등번호</th>
+                            <th>선수명</th>
+                            <th>비고</th>
+                        </tr>
+                        <tr>
+                            <td><strong>-</strong></td>
+                            <td><strong>-</strong></td>
+                            <td>현재 구단 영구 결번 선수는 없다.</td>
+                        </tr>
+                    </table>
+                    <h4><strong>4.2</strong> 팀의 상징적인 선수</h4>
+                    <ul>
+                        <li><strong>이호준</strong>: NC의 초대 주장으로 팀의 기틀을 다진 레전드 타자.</li>
+                        <li><strong>나성범</strong>: NC 창단 멤버이자 팀을 대표했던 최고의 강타자.</li>
+                    </ul>
+                    <h4><strong>4.3</strong> 현재 활약 중인 현역 핵심 선수</h4>
+                    <ul>
+                        <li><strong>손아섭</strong>: KBO 최다 안타 기록을 향해 달리는 팀의 핵심 타자.</li>
+                        <li><strong>구창모</strong>: 팀 마운드의 중심을 책임지는 국가대표 좌완 에이스.</li>
+                    </ul>
+                    <h2><strong>5.</strong> 우승 및 포스트시즌 기록</h2>
+                    <p>
+                        NC 다이노스의 <strong>한국시리즈 우승</strong> 횟수와 <strong>포스트시즌</strong> 진출 기록이다.
+                    </p>
+                    <table class="infobox-table">
+                        <tr>
+                            <th>구분</th>
+                            <th>기록</th>
+                        </tr>
+                        <tr>
+                            <td><strong>한국시리즈 우승</strong></td>
+                            <td><strong>1회</strong> (2020)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>포스트시즌 진출</strong></td>
+                            <td>총 8회</td>
+                        </tr>
+                    </table>
+                    <p>
+                        빠른 시간 내에 정상의 자리에 오르며 신생 구단의 모범 사례가 된 NC 다이노스는, 앞으로도 팬들에게 즐거움을 주는 야구를 펼쳐나갈 것이다.
+                    </p>
+                </div>
+                <!-- 2. 오른쪽 인포박스 영역 (클래스명을 nc-theme로 맞춰주어 청량한 마린 블루가 정상 연동됩니다) -->
 
             </div>
         </div>
     </main>
-
     <footer id="global-footer"></footer>
     <script src="main.js"></script>
     <!-- footer 적용 -->

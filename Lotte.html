@@ -1,237 +1,33 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>롯데 자이언츠 - KBO-Wiki</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet" />
 </head>
 
-<body>
-
-    <!-- 자바스크립트가 네비게이션바를 주입할 공간 -->
+<body class="team-page">
+    <!-- 상단 내비게이션 바: nav.html을 JavaScript로 로드하여 삽입합니다. -->
     <header class="kbo-navbar" id="global-navbar"></header>
-
-    <!-- 💡 [해결] 완전히 누락되어 레이아웃을 깨뜨렸던 외부 컨테이너 2개를 정상적으로 열어줍니다! -->
+    <!-- 메인 위키 컨텐츠 전체 래퍼: 팀 페이지 본문과 인포박스를 감쌉니다. -->
     <main class="wiki-container">
-        <div id="page-giants" class="wiki-page active">
-
+        <!-- 롯데 자이언츠 팀 페이지: 해당 팀 관련 컨텐츠를 담는 단일 페이지 섹션입니다. -->
+        <div class="wiki-page active" id="page-giants">
             <div class="wiki-header-row">
                 <h1>롯데 자이언츠 (Lotte Giants)</h1>
             </div>
-
             <!-- 본문과 인포박스를 예쁘게 좌우로 나란히 정렬해주는 flex 상자 -->
             <div class="wiki-body" style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
-
                 <!-- 1. 왼쪽 본문 영역 -->
-                <div class="wiki-text" style="flex: 1;">
-
-                    <!-- 롯데 자이언츠 접기/펼치기 상자 -->
-                    <details class="namu-toggle-box"
-                        style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
-                        <summary
-                            style="font-weight: bold; cursor: pointer; color: #063ea7; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                            <span>ℹ️ 롯데 자이언츠 추가 정보 (기록 및 요약)</strong>
-                                <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]</strong>
-                        </summary>
-                        <div class="toggle-content"
-                            style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
-                            <table style="width: 100%; border-collapse: collapse;">
-                                <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td>
-                                    <td style="padding: 6px;">총 13회</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td>
-                                    <td style="padding: 6px;">1992년 (KBO 리그 최장 미우승 기록 중)</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 6px; font-weight: bold;">구단 마스코트</td>
-                                    <td style="padding: 6px;">누리, 아라, 피니</td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 6px; font-weight: bold;">응원가</td>
-                                    <td style="padding: 6px;">부산갈매기, 돌아와요 부산항에</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </details>
-
-                    <h2><strong>1.</strong>개요</h2>
-                    <!--유튜브 영상링크 복사 붙여넣기 한 후 watch?v= 부분을 embed로 변경해야 오류 발생 안함-->
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/3g1OuKUywDo" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <p>
-                        <strong>1975년</strong>에 창단하여 <strong>1982년 프로화</strong>된 <strong>롯데그룹</strong>이 운영하는 <strong>KBO
-                            리그 소속 프로야구 팀</strong>이다.
-                    </p>
-
-                    <p>
-                        연고지는 <strong>부산광역시</strong>이며, 홈구장은 동래구 사직동에 위치한 <strong>사직 야구장</strong>이다. KBO 리그의 원년 구단 중 하나이자
-                        삼성 라이온즈와 함께 한국프로야구 원년부터 연고지·모그룹·구단명 모두 변하지 않고 명맥을 이어온 구단이다. <strong>한국실업야구 롯데 자이언츠</strong> 시절을
-                        포함한다면 KBO 리그 구단 중 가장 오랜 역사를 자랑한다.
-                    </p>
-
-                    <p>
-                        두 번의 <strong>한국시리즈 우승</strong>을 달성했으며, 일본의 <strong>치바 롯데 마린즈</strong>와 밀접한 관계를 맺고 있는 팀이다.
-                        <strong>모기업</strong>이 같고 <strong>구단주</strong>도 같으며 한때 동일한 엠블럼을 함께 사용하기까지 했다. 롯데 자이언츠는 마지막 한국시리즈
-                        우승으로부터 만 33년이 지나 한국시리즈 우승을 경험한 지 가장 오랜 시간이 지난 구단이며, <strong>프로 원년</strong>에 창단된 6개 구단들 중에서는
-                        <strong>우승 횟수가 가장 적은 팀</strong>이기도 하다.
-                    </p>
-
-                    <p>
-                        구단 상징은 초창기엔 자이언츠라는 구단명에 걸맞게 거인이었으나, 2004년 이후부터 현재까지는 해양도시인 연고지와 어울리는 데다 자매 구단인 일본의 <strong>치바 롯데
-                            마린즈</strong>의 상징과 동일한 <strong>갈매기</strong>를 메인으로 사용하고 있다.
-                    </p>
-
-                    <h2><strong>2. 역사</strong></h2>
-                    <p>
-                        롯데 자이언츠의 역사는 <strong>1975년 실업야구단 출범</strong>부터 시작된다. 대한민국 프로야구의 원년 구단으로서, 한국 야구의 흐름과 궤를 같이해 온 롯데
-                        자이언츠의 주요 흐름은 다음과 같다.
-                    </p>
-
-                    <h4><strong>2.1</strong> 실업야구 시절 및 창단기 (1975 ~ 1982)</h4>
-                    <p>
-                        1975년, <strong>롯데그룹</strong>은 실업야구단인 '롯데 자이언츠'를 창단하였다. 이후 <strong>1982년 KBO 리그</strong> 출범과 함께
-                        프로 구단으로 전환하며, 오늘날까지 연고지 부산을 지키는 명문 구단으로 자리 잡았다.
-                    </p>
-
-                    <h4><strong>2.2</strong> 전설과 함께한 영광의 시대 (1984 ~ 1992)</h4>
-                    <p>
-                        1984년 한국시리즈는 롯데 역사상 가장 <strong>극적인 우승</strong>으로 기억된다. <strong>최동원</strong> 투수가 홀로
-                        <strong>4승</strong>을 책임지는 불멸의 기록을 세우며 팀을 정상으로 이끌었다. 이어 <strong>1992년</strong>에는 신인
-                        <strong>염종석</strong>의 맹활약에 힘입어 통산 두 번째 우승을 차지하며 롯데 야구의 <strong>제1차 황금기</strong>를 완성하였다.
-                    </p>
-
-                    <h4><strong>2.3</strong> 암흑기와 도전의 세월 (1993 ~ 2007)</h4>
-                    <p>
-                        1992년 우승 이후, 팀은 긴 침체기에 빠졌다. 90년대 후반부터 2000년대 초반까지 일명 <strong>'비밀번호'</strong>(8888577)로 불리는 암흑기를
-                        겪으며 팬들에게 인내의 시간을 안겼다. 하지만 이 시기에도 <strong>사직구장</strong>의 응원 열기는 식지 않았고, 팬들은 묵묵히 팀을 지켰다.
-                    </p>
-
-                    <h4><strong>2.4</strong> '노 피어(No Fear)'와 재도약 (2008 ~ 2012)</h4>
-                    <p>
-                        <strong>제리 로이스터 감독</strong>이 부임하며 팀은 완전히 달라졌다. <strong>'노 피어(No Fear)'</strong> 정신을 이식하며 4년 연속
-                        포스트시즌 진출이라는 쾌거를 이뤘고, 사직구장은 전국적인 <strong>응원 문화의 성지</strong>가 되었다. 비록 우승까지는 닿지 못했으나, 롯데 야구가 나아갈
-                        새로운 방향을 제시한 시기였다.
-                    </p>
-
-                    <h4><strong>2.5</strong> 변화와 현재 (2013 ~ 현재)</h4>
-                    <p>
-                        이후 롯데는 여러 차례의 사령탑 교체와 선수단 개편을 단행하였다. 최근에는 <strong>육성 시스템 고도화</strong>와 체계적인 데이터 야구를 도입하며 다시 한번
-                        <strong>우승(V3)</strong>을 향한 기초를 다지고 있다. 팬들은 여전히 사직구장에서 <strong>부산갈매기</strong>를 부르며 우승의 그날을 기다리고
-                        있다.
-                    </p>
-                    <h2><strong>3.</strong> 상징 및 구단 특색</h2>
-                    <p>
-                        롯데 자이언츠는 <strong>한국 프로야구 최고의 흥행 구단</strong>으로, 독보적인 응원 문화와 열정적인 팬덤을 보유하고 있다.
-                    </p>
-
-                    <h4><strong>3.1</strong> 응원 문화</h4>
-                    <p>
-                        사직구장의 응원 문화는 타 구단과는 확연히 다르다. 경기 중 <strong>'부산갈매기'</strong>와 <strong>'돌아와요 부산항에'</strong>를 다 함께
-                        합창하는 모습은 롯데 자이언츠만의 상징이다. 또한, 과거 응원 도구로 사용하던 <strong>주황색 비닐봉지</strong>를 머리에 쓰는 <strong>'봉다리
-                            응원'</strong>은 롯데만의 진풍경이다.
-                    </p>
-
-                    <h4><strong>3.2</strong> 구단 상징 및 마스코트</h4>
-                    <p>
-                        현재 롯데 자이언츠의 상징은 해양도시 부산의 정체성을 담은 <strong>갈매기</strong>이다. 구단의 공식 마스코트인 <strong>누리, 아라,
-                            피니</strong>는 각각 롯데의 즐거움과 부산의 바다, 그리고 미래를 상징한다.
-                    </p>
-
-                    <h4><strong>3.3</strong> 주요 라이벌리</h4>
-                    <ul>
-                        <li><strong>낙동강 시리즈</strong>: NC 다이노스와의 맞대결로, 지역 자존심이 걸린 뜨거운 승부.</li>
-                        <li><strong>클래식 시리즈</strong>: 삼성 라이온즈와의 맞대결로, 원년 구단으로서의 전통적 자부심 대결.</li>
-                        <li><strong>헤리티지 시리즈</strong>: KIA 타이거즈와의 맞대결로, 전통의 강호들 간의 맞대결.</li>
-                    </ul>
-
-                    <h2><strong>4.</strong> 주요 선수 및 영구 결번</h2>
-                    <p>
-                        구단의 역사를 상징하는 영구 결번, 전설적인 레전드, 현재의 핵심 선수, 그리고 메이저리그에 진출했던 선수들이다.
-                    </p>
-
-                    <h4><strong>4.1</strong> 영구 결번 레전드</h4>
-                    <table class="infobox-table">
-                        <tr>
-                            <th>등번호</th>
-                            <th>선수명</th>
-                            <th>비고</th>
-                        </tr>
-                        <tr>
-                            <td><strong>11</strong></td>
-                            <td><strong>최동원</strong></td>
-                            <td>한국 야구의 상징, 1984년 한국시리즈 4승의 기적</td>
-                        </tr>
-                        <tr>
-                            <td><strong>10</strong></td>
-                            <td><strong>이대호</strong></td>
-                            <td>KBO 유일 타격 7관왕, 프랜차이즈 영원한 4번 타자</td>
-                        </tr>
-                    </table>
-
-                    <h4><strong>4.2</strong> 전설적인 레전드 선수</h4>
-                    <p>롯데 자이언츠의 전성기를 이끌었던 기념비적인 선수들이다.</p>
-                    <ul>
-                        <li><strong>박정태</strong>: <strong>'악바리'</strong> 정신으로 롯데 근성 야구를 대변한 최고의 2루수.</li>
-                        <li><strong>염종석</strong>: 1992년 우승을 이끈 '안경 에이스'이자 롯데의 영원한 보물.</li>
-                        <li><strong>조성환</strong>: 암흑기 시절 팀을 지탱했던 정신적 지주이자 <strong>'캡틴'</strong>.</li>
-                    </ul>
-
-                    <h4><strong>4.3</strong> 현재 활약 중인 현역 핵심 선수</h4>
-                    <p>현재 KBO 리그에서 팀의 중심을 잡고 있는 주축 선수들이다.</p>
-                    <ul>
-                        <li><strong>전준우</strong>: 팀의 정신적 지주이자 타선의 중심을 지키는 프랜차이즈 스타.</li>
-                        <li><strong>김원중</strong>: 사직의 뒷문을 책임지는 팀의 핵심 마무리 투수.</li>
-                        <li><strong>윤동희</strong>: 팀의 미래이자 리그를 대표하는 젊은 핵심 외야수.</li>
-                    </ul>
-
-                    <h4><strong>4.4</strong> 메이저리그(MLB) 진출 선수</h4>
-                    <p>롯데 자이언츠 출신으로 세계 최고의 무대인 메이저리그를 경험한 선수들이다.</p>
-                    <ul>
-                        <li><strong>최향남</strong>: KBO 리그 최초로 메이저리그 도전기를 썼던 도전자.</li>
-                        <li><strong>이대호</strong>: 롯데를 거쳐 시애틀 매리너스 등에서 활약하며 메이저리그 무대를 밟은 전설적인 타자.</li>
-                    </ul>
-
-                    <h2><strong>5.</strong> 우승 및 포스트시즌 기록</h2>
-                    <p>
-                        롯데 자이언츠의 <strong>한국시리즈 우승</strong> 횟수와 <strong>가을 야구(포스트시즌)</strong> 진출 기록이다.
-                    </p>
-                    <table class="infobox-table">
-                        <tr>
-                            <th>구분</th>
-                            <th>기록</th>
-                        </tr>
-                        <tr>
-                            <td><strong>한국시리즈 우승</strong></td>
-                            <td><strong>2회</strong> (1984, 1992)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>포스트시즌 진출</strong></td>
-                            <td>총 13회</td>
-                        </tr>
-                    </table>
-                    <p>
-                        마지막 우승으로부터 오랜 시간이 흘렀지만, 롯데 팬들은 <strong>사직구장</strong>의 뜨거운 열기를 바탕으로 <strong>V3</strong>를 향한 변함없는
-                        응원을 이어가고 있다.
-                    </p>
-                </div>
-
-                <!-- 2. 오른쪽 인포박스 영역 -->
                 <aside class="infobox giants-theme">
                     <div class="infobox-title">롯데 자이언츠</div>
                     <div class="infobox-img">
-                        <img src="./images/롯데자이언츠 로고.svg" alt="롯데 자이언츠 로고"
-                            style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto; padding: 10px;">
+                        <img alt="롯데 자이언츠 로고" src="./images/롯데자이언츠 로고.svg"
+                            style="width: 100%; max-width: 160px; height: auto; display: block; margin: 0 auto; padding: 10px;" />
                     </div>
-
                     <table class="infobox-table"
                         style="width: 100%; border-collapse: collapse; background-color: #f8f9fa;">
                         <tr style="border-bottom: 1px solid #dddddd;">
@@ -258,12 +54,12 @@
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
                                 연고지</th>
-                            <td style="padding: 6px;"><span class="text-orange">부산광역시</strong></td>
+                            <td style="padding: 6px;"><span class="text-orange">부산광역시</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
                                 홈구장</th>
-                            <td style="padding: 6px;"><span class="text-navy">사직 야구장</strong></td>
+                            <td style="padding: 6px;"><span class="text-navy">사직 야구장</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">
@@ -273,7 +69,7 @@
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">단장
                                 / 감독</th>
-                            <td style="padding: 6px;">박준혁 / <span class="text-orange">김태형</strong></td>
+                            <td style="padding: 6px;">박준혁 / <span class="text-orange">김태형</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주장
@@ -283,29 +79,29 @@
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">영구
                                 결번</th>
-                            <td style="padding: 6px;"><span class="text-orange">11 최동원</strong> | <span
-                                        class="text-navy">10 이대호</strong></td>
+                            <td style="padding: 6px;"><span class="text-orange">11 최동원 | <span class="text-navy">10
+                                        이대호</span></span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">주요
                                 라이벌</th>
-                            <td style="padding: 6px;">NC (낙동강 시리즈)<br>KIA (헤리티지 시리즈)<br>삼성 (클래식 씨리즈)</td>
+                            <td style="padding: 6px;">NC (낙동강 시리즈)<br />KIA (헤리티지 시리즈)<br />삼성 (클래식 씨리즈)</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #dddddd;">
                             <th style="padding: 6px; background-color: #eceeef; font-weight: bold; text-align: left;">공식
                                 링크</th>
                             <td class="sns-links">
                                 <a href="https://www.giantsclub.com/html/" target="_blank">
-                                    <img src="./images/롯데자이언츠 링크 로고.svg" alt="공식 홈페이지">
+                                    <img alt="공식 홈페이지" src="./images/롯데자이언츠 링크 로고.svg" />
                                 </a>
                                 <a href="https://www.instagram.com/busanlottegiants/" target="_blank">
-                                    <img src="./images/인스타그램 로고.svg" alt="인스타그램">
+                                    <img alt="인스타그램" src="./images/인스타그램 로고.svg" />
                                 </a>
                                 <a href="https://www.youtube.com/channel/UCAZQZdSY5_YrziMPqXi-Zfw" target="_blank">
-                                    <img src="./images/유튜브 로고.svg" alt="유튜브">
+                                    <img alt="유튜브" src="./images/유튜브 로고.svg" />
                                 </a>
                                 <a href="https://ko-kr.facebook.com/lottegiantsbusan" target="_blank">
-                                    <img src="./images/페이스북 로고.svg" alt="페이스북">
+                                    <img alt="페이스북" src="./images/페이스북 로고.svg" />
                                 </a>
                             </td>
                         </tr>
@@ -318,14 +114,193 @@
                         </tr>
                     </table>
                 </aside>
+                <div class="wiki-text" style="flex: 1;">
+                    <!-- 롯데 자이언츠 접기/펼치기 상자 -->
+                    <details class="namu-toggle-box"
+                        style="border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 4px; margin-bottom: 20px; padding: 10px;">
+                        <summary
+                            style="font-weight: bold; cursor: pointer; color: #063ea7; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            <span>ℹ️ 롯데 자이언츠 추가 정보 (기록 및 요약)
+                                <span style="font-size: 0.8rem; color: #666;">[ 펼치기 · 접기 ]
+                                </span></span>
+                        </summary>
+                        <div class="toggle-content"
+                            style="margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; font-size: 0.9rem; line-height: 1.6; color: #333;">
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold; width: 30%;">포스트시즌 진출</td>
+                                    <td style="padding: 6px;">총 13회</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold;">마지막 우승 연도</td>
+                                    <td style="padding: 6px;">1992년 (KBO 리그 최장 미우승 기록 중)</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 6px; font-weight: bold;">구단 마스코트</td>
+                                    <td style="padding: 6px;">누리, 아라, 피니</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 6px; font-weight: bold;">응원가</td>
+                                    <td style="padding: 6px;">부산갈매기, 돌아와요 부산항에</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </details>
+                    <h2><strong>1.</strong>개요</h2>
+                    <!--유튜브 영상링크 복사 붙여넣기 한 후 watch?v= 부분을 embed로 변경해야 오류 발생 안함-->
+                    <div class="video-container">
+                        <iframe
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/3g1OuKUywDo"
+                            title="YouTube video player">
+                        </iframe>
+                    </div>
+                    <p>
+                        <strong>1975년</strong>에 창단하여 <strong>1982년 프로화</strong>된 <strong>롯데그룹</strong>이 운영하는 <strong>KBO
+                            리그 소속 프로야구 팀</strong>이다.
+                    </p>
+                    <p>
+                        연고지는 <strong>부산광역시</strong>이며, 홈구장은 동래구 사직동에 위치한 <strong>사직 야구장</strong>이다. KBO 리그의 원년 구단 중 하나이자
+                        삼성 라이온즈와 함께 한국프로야구 원년부터 연고지·모그룹·구단명 모두 변하지 않고 명맥을 이어온 구단이다. <strong>한국실업야구 롯데 자이언츠</strong> 시절을
+                        포함한다면 KBO 리그 구단 중 가장 오랜 역사를 자랑한다.
+                    </p>
+                    <p>
+                        두 번의 <strong>한국시리즈 우승</strong>을 달성했으며, 일본의 <strong>치바 롯데 마린즈</strong>와 밀접한 관계를 맺고 있는 팀이다.
+                        <strong>모기업</strong>이 같고 <strong>구단주</strong>도 같으며 한때 동일한 엠블럼을 함께 사용하기까지 했다. 롯데 자이언츠는 마지막 한국시리즈
+                        우승으로부터 만 33년이 지나 한국시리즈 우승을 경험한 지 가장 오랜 시간이 지난 구단이며, <strong>프로 원년</strong>에 창단된 6개 구단들 중에서는
+                        <strong>우승 횟수가 가장 적은 팀</strong>이기도 하다.
+                    </p>
+                    <p>
+                        구단 상징은 초창기엔 자이언츠라는 구단명에 걸맞게 거인이었으나, 2004년 이후부터 현재까지는 해양도시인 연고지와 어울리는 데다 자매 구단인 일본의 <strong>치바 롯데
+                            마린즈</strong>의 상징과 동일한 <strong>갈매기</strong>를 메인으로 사용하고 있다.
+                    </p>
+                    <h2><strong>2. 역사</strong></h2>
+                    <p>
+                        롯데 자이언츠의 역사는 <strong>1975년 실업야구단 출범</strong>부터 시작된다. 대한민국 프로야구의 원년 구단으로서, 한국 야구의 흐름과 궤를 같이해 온 롯데
+                        자이언츠의 주요 흐름은 다음과 같다.
+                    </p>
+                    <h4><strong>2.1</strong> 실업야구 시절 및 창단기 (1975 ~ 1982)</h4>
+                    <p>
+                        1975년, <strong>롯데그룹</strong>은 실업야구단인 '롯데 자이언츠'를 창단하였다. 이후 <strong>1982년 KBO 리그</strong> 출범과 함께
+                        프로 구단으로 전환하며, 오늘날까지 연고지 부산을 지키는 명문 구단으로 자리 잡았다.
+                    </p>
+                    <h4><strong>2.2</strong> 전설과 함께한 영광의 시대 (1984 ~ 1992)</h4>
+                    <p>
+                        1984년 한국시리즈는 롯데 역사상 가장 <strong>극적인 우승</strong>으로 기억된다. <strong>최동원</strong> 투수가 홀로
+                        <strong>4승</strong>을 책임지는 불멸의 기록을 세우며 팀을 정상으로 이끌었다. 이어 <strong>1992년</strong>에는 신인
+                        <strong>염종석</strong>의 맹활약에 힘입어 통산 두 번째 우승을 차지하며 롯데 야구의 <strong>제1차 황금기</strong>를 완성하였다.
+                    </p>
+                    <h4><strong>2.3</strong> 암흑기와 도전의 세월 (1993 ~ 2007)</h4>
+                    <p>
+                        1992년 우승 이후, 팀은 긴 침체기에 빠졌다. 90년대 후반부터 2000년대 초반까지 일명 <strong>'비밀번호'</strong>(8888577)로 불리는 암흑기를
+                        겪으며 팬들에게 인내의 시간을 안겼다. 하지만 이 시기에도 <strong>사직구장</strong>의 응원 열기는 식지 않았고, 팬들은 묵묵히 팀을 지켰다.
+                    </p>
+                    <h4><strong>2.4</strong> '노 피어(No Fear)'와 재도약 (2008 ~ 2012)</h4>
+                    <p>
+                        <strong>제리 로이스터 감독</strong>이 부임하며 팀은 완전히 달라졌다. <strong>'노 피어(No Fear)'</strong> 정신을 이식하며 4년 연속
+                        포스트시즌 진출이라는 쾌거를 이뤘고, 사직구장은 전국적인 <strong>응원 문화의 성지</strong>가 되었다. 비록 우승까지는 닿지 못했으나, 롯데 야구가 나아갈
+                        새로운 방향을 제시한 시기였다.
+                    </p>
+                    <h4><strong>2.5</strong> 변화와 현재 (2013 ~ 현재)</h4>
+                    <p>
+                        이후 롯데는 여러 차례의 사령탑 교체와 선수단 개편을 단행하였다. 최근에는 <strong>육성 시스템 고도화</strong>와 체계적인 데이터 야구를 도입하며 다시 한번
+                        <strong>우승(V3)</strong>을 향한 기초를 다지고 있다. 팬들은 여전히 사직구장에서 <strong>부산갈매기</strong>를 부르며 우승의 그날을 기다리고
+                        있다.
+                    </p>
+                    <h2><strong>3.</strong> 상징 및 구단 특색</h2>
+                    <p>
+                        롯데 자이언츠는 <strong>한국 프로야구 최고의 흥행 구단</strong>으로, 독보적인 응원 문화와 열정적인 팬덤을 보유하고 있다.
+                    </p>
+                    <h4><strong>3.1</strong> 응원 문화</h4>
+                    <p>
+                        사직구장의 응원 문화는 타 구단과는 확연히 다르다. 경기 중 <strong>'부산갈매기'</strong>와 <strong>'돌아와요 부산항에'</strong>를 다 함께
+                        합창하는 모습은 롯데 자이언츠만의 상징이다. 또한, 과거 응원 도구로 사용하던 <strong>주황색 비닐봉지</strong>를 머리에 쓰는 <strong>'봉다리
+                            응원'</strong>은 롯데만의 진풍경이다.
+                    </p>
+                    <h4><strong>3.2</strong> 구단 상징 및 마스코트</h4>
+                    <p>
+                        현재 롯데 자이언츠의 상징은 해양도시 부산의 정체성을 담은 <strong>갈매기</strong>이다. 구단의 공식 마스코트인 <strong>누리, 아라,
+                            피니</strong>는 각각 롯데의 즐거움과 부산의 바다, 그리고 미래를 상징한다.
+                    </p>
+                    <h4><strong>3.3</strong> 주요 라이벌리</h4>
+                    <ul>
+                        <li><strong>낙동강 시리즈</strong>: NC 다이노스와의 맞대결로, 지역 자존심이 걸린 뜨거운 승부.</li>
+                        <li><strong>클래식 시리즈</strong>: 삼성 라이온즈와의 맞대결로, 원년 구단으로서의 전통적 자부심 대결.</li>
+                        <li><strong>헤리티지 시리즈</strong>: KIA 타이거즈와의 맞대결로, 전통의 강호들 간의 맞대결.</li>
+                    </ul>
+                    <h2><strong>4.</strong> 주요 선수 및 영구 결번</h2>
+                    <p>
+                        구단의 역사를 상징하는 영구 결번, 전설적인 레전드, 현재의 핵심 선수, 그리고 메이저리그에 진출했던 선수들이다.
+                    </p>
+                    <h4><strong>4.1</strong> 영구 결번 레전드</h4>
+                    <table class="infobox-table">
+                        <tr>
+                            <th>등번호</th>
+                            <th>선수명</th>
+                            <th>비고</th>
+                        </tr>
+                        <tr>
+                            <td><strong>11</strong></td>
+                            <td><strong>최동원</strong></td>
+                            <td>한국 야구의 상징, 1984년 한국시리즈 4승의 기적</td>
+                        </tr>
+                        <tr>
+                            <td><strong>10</strong></td>
+                            <td><strong>이대호</strong></td>
+                            <td>KBO 유일 타격 7관왕, 프랜차이즈 영원한 4번 타자</td>
+                        </tr>
+                    </table>
+                    <h4><strong>4.2</strong> 전설적인 레전드 선수</h4>
+                    <p>롯데 자이언츠의 전성기를 이끌었던 기념비적인 선수들이다.</p>
+                    <ul>
+                        <li><strong>박정태</strong>: <strong>'악바리'</strong> 정신으로 롯데 근성 야구를 대변한 최고의 2루수.</li>
+                        <li><strong>염종석</strong>: 1992년 우승을 이끈 '안경 에이스'이자 롯데의 영원한 보물.</li>
+                        <li><strong>조성환</strong>: 암흑기 시절 팀을 지탱했던 정신적 지주이자 <strong>'캡틴'</strong>.</li>
+                    </ul>
+                    <h4><strong>4.3</strong> 현재 활약 중인 현역 핵심 선수</h4>
+                    <p>현재 KBO 리그에서 팀의 중심을 잡고 있는 주축 선수들이다.</p>
+                    <ul>
+                        <li><strong>전준우</strong>: 팀의 정신적 지주이자 타선의 중심을 지키는 프랜차이즈 스타.</li>
+                        <li><strong>김원중</strong>: 사직의 뒷문을 책임지는 팀의 핵심 마무리 투수.</li>
+                        <li><strong>윤동희</strong>: 팀의 미래이자 리그를 대표하는 젊은 핵심 외야수.</li>
+                    </ul>
+                    <h4><strong>4.4</strong> 메이저리그(MLB) 진출 선수</h4>
+                    <p>롯데 자이언츠 출신으로 세계 최고의 무대인 메이저리그를 경험한 선수들이다.</p>
+                    <ul>
+                        <li><strong>최향남</strong>: KBO 리그 최초로 메이저리그 도전기를 썼던 도전자.</li>
+                        <li><strong>이대호</strong>: 롯데를 거쳐 시애틀 매리너스 등에서 활약하며 메이저리그 무대를 밟은 전설적인 타자.</li>
+                    </ul>
+                    <h2><strong>5.</strong> 우승 및 포스트시즌 기록</h2>
+                    <p>
+                        롯데 자이언츠의 <strong>한국시리즈 우승</strong> 횟수와 <strong>가을 야구(포스트시즌)</strong> 진출 기록이다.
+                    </p>
+                    <table class="infobox-table">
+                        <tr>
+                            <th>구분</th>
+                            <th>기록</th>
+                        </tr>
+                        <tr>
+                            <td><strong>한국시리즈 우승</strong></td>
+                            <td><strong>2회</strong> (1984, 1992)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>포스트시즌 진출</strong></td>
+                            <td>총 13회</td>
+                        </tr>
+                    </table>
+                    <p>
+                        마지막 우승으로부터 오랜 시간이 흘렀지만, 롯데 팬들은 <strong>사직구장</strong>의 뜨거운 열기를 바탕으로 <strong>V3</strong>를 향한 변함없는
+                        응원을 이어가고 있다.
+                    </p>
+                </div>
+                <!-- 2. 오른쪽 인포박스 영역 -->
 
             </div>
         </div>
     </main>
-
+    <!-- 하단 푸터 영역: footer.html을 로드하여 공통 푸터 내용을 삽입합니다. -->
     <footer id="global-footer"></footer>
     <script src="main.js"></script>
-    <!-- footer 적용 -->
     <script>
         fetch('footer.html')
             .then(response => response.text())

@@ -1,4 +1,6 @@
+<!-- 네비게이션 컨테이너: 상단 메뉴와 액션 버튼을 포함합니다. -->
 <div class="nav-container">
+    <!-- 로고 클릭 시 홈페이지(index.html)로 이동합니다. -->
     <h1 class="logo" onclick="location.href='index.html'">KBO<span>.Wiki</span></h1>
 
     <nav class="nav-menu">
@@ -6,6 +8,7 @@
             <a href="#" class="menu-title">구단 소개</a>
             <div class="dropdown-content">
                 <div class="dropdown-inner">
+                    <!-- 구단별 팀 소개 페이지 링크 목록 -->
                     <button onclick="location.href='Lotte.html'">롯데 자이언츠</button>
                     <button onclick="location.href='Hanwha.html'">한화 이글스</button>
                     <button onclick="location.href='KIA.html'">KIA 타이거즈</button>
@@ -19,24 +22,56 @@
                 </div>
             </div>
         </div>
-    </nav>
 
+    <!-- 기록실 메뉴: 타자/투수 기록과 팀 순위로 이동합니다. -->
     <div class="menu-item">
         <a href="#" class="menu-title">기록실</a>
         <div class="dropdown-content">
             <div class="dropdown-inner">
-                <button onclick="location.href='Batting Statistics.html'">타자 기록</button>
-                <button onclick="alert('투수기록 준비 중!')">투수 기록</button>
+                <!-- 타자 기록 페이지로 이동 -->
+                <button onclick="location.href='Batting Statistics.html?tab=batter'">타자 기록</button>
+                
+                <!-- 똑같은 페이지로 이동하되, 투수 탭을 보여달라는 신호(?)를 보냄 -->
+                <button onclick="location.href='Batting Statistics.html?tab=pitcher'">투수 기록</button>
+                
                 <button onclick="location.href='record.html'">팀 순위</button>
+                <button onclick="location.href='plan.html'">경기일정 및 결과</button>
             </div>
         </div>
     </div>
-    <nav>
-        <button id="dark-mode-toggle" class="mode-btn" style="color: white; border: none; background: none;">🌙
-            다크모드</button>
+    <div class="menu-item">
+        <a href="#" class="menu-title">미디어·뉴스</a>
+        <div class="dropdown-content">
+            <div class="dropdown-inner">
+                <button onclick="location.href='highlight.html'">하이라이트</button>
+                <button onclick="location.href='news.html'">뉴스</button>
+            </div>
+        </div>
+    </div>
+    <div class="menu-item">
+        <a href="#" class="menu-title">야구 이야기</a>
+        <div class="dropdown-content">
+            <div class="dropdown-inner">
+                <button onclick="location.href='history.html'">야구 개요 및 규칙</button>
+                <button onclick="location.href='kbo-history.html'">KBO 리그 역사</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="menu-item">
+        <a href="#" class="menu-title">고객센터</a>
+        <div class="dropdown-content">
+            <div class="dropdown-inner">
+                <button onclick="location.href='notice.html'">공지사항</button>
+                <button onclick="location.href='contact.html'">문의하기</button>
+            </div>
+        </div>
+    </div>
     </nav>
 
-    <li style="float: right; margin-left: auto; list-style: none;">
-        <a href="login.html" id="login-link" style="font-weight: bold; color: white; text-decoration: none;">로그인</a>
-    </li>
+    <!-- 네비게이션 우측 액션: 다크모드 토글 및 로그인/로그아웃 링크 -->
+    <div class="nav-actions">
+        <button id="dark-mode-toggle" class="mode-btn" type="button">🌙</button>
+        <a href="login.html" id="login-link" class="login-link">로그인</a>
+    </div>
 </div>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의하기 - KBO 고객센터</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* KBO 공식 홈페이지 서브페이지 전용 레이아웃 */
+        .kbo-sub-container {
+            width: 100%;
+            background-color: #fff;
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+        }
+        
+        /* 상단 와이드 타이틀 띠지 */
+        .kbo-sub-header {
+            width: 100%;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+            padding: 40px 0 25px 0;
+            text-align: center;
+        }
+        .kbo-sub-header .location-path {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        .kbo-sub-header h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #111;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        /* 중앙 정렬 콘텐츠 박스 */
+        .kbo-sub-content {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px 80px 20px;
+        }
+
+        /* 안내 문구 박스 */
+        .inquiry-info-box {
+            background-color: #f1f3f5;
+            border-left: 4px solid #1a2942;
+            padding: 15px 20px;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* 폼 테이블 스타일 */
+        .inquiry-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-top: 2px solid #1a2942;
+        }
+        .inquiry-table th {
+            background-color: #f8f9fa;
+            color: #333;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 15px 10px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+            padding-left: 15px;
+            width: 150px;
+        }
+        .inquiry-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+
+        /* 입력 요소 스타일 */
+        .form-control {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .form-control:focus {
+            border-color: #1a2942;
+            outline: none;
+        }
+        select.form-control {
+            height: 38px;
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 180px;
+        }
+
+        /* 필수 입력 표시 */
+        .required-dot {
+            color: #e64a19;
+            margin-left: 3px;
+            font-weight: bold;
+        }
+
+        /* 하단 버튼 영역 */
+        .inquiry-btn-bar {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .btn-submit {
+            background-color: #1a2942;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .btn-cancel {
+            background-color: #777;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .btn-submit:hover { background-color: #0b172a; }
+        .btn-cancel:hover { background-color: #555; }
+
+        /* 주소창 안 뜨는 커스텀 알림창 모달 스타일 */
+        .custom-alert {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+        .alert-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 6px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 상단 네비게이션 바 (공통 요소) -->
+    <header class="kbo-navbar" id="global-navbar"></header>
+
+    <div class="kbo-sub-container">
+        
+        <!-- 1. 상단 타이틀 영역 -->
+        <div class="kbo-sub-header">
+            <div class="location-path">🏠 홈 > 고객센터 > 문의하기</div>
+            <h2>1:1 문의하기</h2>
+        </div>
+
+        <!-- 2. 본문 폼 입력 영역 -->
+        <main class="kbo-sub-content">
+            
+            <div class="inquiry-info-box">
+                KBO 리그 및 사이트 이용과 관련하여 궁금하신 점이나 건의사항을 남겨주세요.<br>
+                보내주신 소중한 의견은 검토 후 빠른 시일 내에 답변해 드리겠습니다. (<span class="required-dot">*</span> 표시는 필수 입력 항목입니다.)
+            </div>
+
+            <!-- 문의 폼 작성 테이블 -->
+            <form id="inquiryForm" onsubmit="event.preventDefault(); validateForm();">
+                <table class="inquiry-table">
+                    <tbody>
+                        <!-- 문의 유형 -->
+                        <tr>
+                            <th>문의 유형<span class="required-dot">*</span></th>
+                            <td>
+                                <select id="inquiryType" class="form-control" style="width: 200px;">
+                                    <option value="">선택해 주세요</option>
+                                    <option value="site">사이트 이용 불편</option>
+                                    <option value="record">경기 기록 오류 제보</option>
+                                    <option value="proposal">건의 및 제안사항</option>
+                                    <option value="other">기타 문의</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- 작성자 이름 -->
+                        <tr>
+                            <th>작성자명<span class="required-dot">*</span></th>
+                            <td>
+                                <input type="text" id="username" class="form-control" style="width: 200px;" placeholder="이름을 입력하세요">
+                            </td>
+                        </tr>
+                        <!-- 이메일 주소 -->
+                        <tr>
+                            <th>이메일 주소<span class="required-dot">*</span></th>
+                            <td>
+                                <input type="email" id="email" class="form-control" style="max-width: 400px;" placeholder="example@kbowiki.com">
+                            </td>
+                        </tr>
+                        <!-- 문의 제목 -->
+                        <tr>
+                            <th>제목<span class="required-dot">*</span></th>
+                            <td>
+                                <input type="text" id="title" class="form-control" placeholder="제목을 입력하세요">
+                            </td>
+                        </tr>
+                        <!-- 문의 내용 -->
+                        <tr>
+                            <th>내용<span class="required-dot">*</span></th>
+                            <td>
+                                <textarea id="content" class="form-control" placeholder="상세한 문의 내용을 입력해 주세요. (최대 2000자)"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- 하단 버튼 바 -->
+                <div class="inquiry-btn-bar">
+                    <button type="button" class="btn-cancel" onclick="history.back();">취소</button>
+                    <button type="submit" class="btn-submit">문의등록</button>
+                </div>
+            </form>
+
+        </main>
+    </div>
+
+    <!-- 주소창 무시용 이쁜 커스텀 알림창 구조 -->
+    <div id="customAlert" class="custom-alert">
+        <div class="alert-box">
+            <p id="alertMessage" style="font-size:15px; margin-bottom:22px; color:#333; font-weight: bold; line-height: 1.5;"></p>
+            <button onclick="closeAlert()" id="alertConfirmBtn" style="background:#1a2942; color:#fff; border:none; padding:8px 25px; cursor:pointer; font-weight:bold; border-radius: 3px;">확인</button>
+        </div>
+    </div>
+
+    <!-- 공통 푸터 -->
+    <footer id="global-footer"></footer>
+    <script src="main.js"></script>
+
+    <!-- 유효성 검사 및 알림 제어 스크립트 -->
+    <script>
+        let isSuccess = false; // 등록 성공 여부 플래그
+
+        // 커스텀 알림 모달 열기
+        function showCustomAlert(msg, success = false) {
+            document.getElementById('alertMessage').innerText = msg;
+            document.getElementById('customAlert').style.display = 'flex';
+            isSuccess = success;
+        }
+
+        // 커스텀 알림 모달 닫기
+        function closeAlert() {
+            document.getElementById('customAlert').style.display = 'none';
+            if (isSuccess) {
+                // 성공 시 이전 페이지(혹은 홈)로 이동
+                location.href = 'index.html'; 
+            }
+        }
+
+        // 입력 폼 유효성 검사
+        function validateForm() {
+            const type = document.getElementById('inquiryType').value;
+            const username = document.getElementById('username').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const title = document.getElementById('title').value.trim();
+            const content = document.getElementById('content').value.trim();
+
+            if (!type) {
+                showCustomAlert("문의 유형을 선택해 주세요.");
+                return;
+            }
+            if (!username) {
+                showCustomAlert("작성자명을 입력해 주세요.");
+                return;
+            }
+            if (!email) {
+                showCustomAlert("답변을 받으실 이메일 주소를 입력해 주세요.");
+                return;
+            }
+            if (!title) {
+                showCustomAlert("문의 제목을 입력해 주세요.");
+                return;
+            }
+            if (!content) {
+                showCustomAlert("문의 내용을 입력해 주세요.");
+                return;
+            }
+
+            // 모든 조건 통과 시 성공 알림창 호출
+            showCustomAlert("문의가 성공적으로 접수되었습니다.\n검토 후 입력하신 이메일로 답변드리겠습니다.", true);
+        }
+    </script>
+</body>
+</html>

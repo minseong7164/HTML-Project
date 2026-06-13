@@ -10,7 +10,9 @@
 </head>
 
 <body>
+    <!-- 상단 네비게이션 바: nav.html을 JavaScript로 로드하여 삽입합니다. -->
     <header class="kbo-navbar" id="global-navbar"></header>
+    <!-- 로그인 페이지 전체 래퍼 -->
     <div class="login-page">
     <div class="login-wrapper">
         <!-- 로고 영역 -->
@@ -18,27 +20,30 @@
             <img src="./images/KBO-wiki_로고.png" alt="All-Star Logo">
         </div>
         
-        <!-- 로그인 폼 -->
+        <!-- 로그인 폼: 사용자 아이디/비밀번호 입력과 로그인 버튼을 표시합니다. -->
         <div class="login-box">
             <p class="login-msg">* 회원가입 후 로그인해주세요.</p>
             <p id="message" style="color: red; font-size: 14px; text-align: center; display: none;"></p>
             <input type="text" id="userid" placeholder="ID (아이디)">
             <input type="password" id="userpw" placeholder="PW (패스워드)">
+            <!-- 아이디 저장 체크박스: 선택 시 아이디를 기억하도록 할 수 있습니다. -->
             <div class="save-id">
                 <input type="checkbox" id="save-id"> <label for="save-id">아이디 저장</label>
             </div>
             <button class="login-btn" onclick="checkLogin()">로그인</button>
         </div>
 
-        <!-- 하단 메뉴 -->
+        <!-- 하단 메뉴: 로그인 페이지에서 추가 정보 버튼을 제공합니다. -->
         <div class="login-footer">
-            <a href="#">회원가입</a> | <a href="#">아이디 찾기</a> | <a href="#">비밀번호 찾기</a>
+            <button onclick="showInfo('회원가입')">회원가입</button> | 
+            <button onclick="showInfo('아이디 찾기')">아이디 찾기</button> | 
+            <button onclick="showInfo('비밀번호 찾기')">비밀번호 찾기</button>
         </div>
     </div>
 </div>
+    <!-- 공통 푸터 로드 영역: footer.html을 불러와 페이지 하단에 삽입합니다. -->
     <footer id="global-footer"></footer>
     <script src="main.js"></script>
-    <!-- footer 적용 -->
     <script>
         fetch('footer.html')
             .then(response => response.text())

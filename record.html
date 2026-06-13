@@ -2,26 +2,43 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>팀 순위 - KBO Wiki</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- 상단 네비게이션 바: nav.html을 JavaScript로 로드하여 삽입합니다. -->
     <header class="kbo-navbar" id="global-navbar"></header>
 
-
-    <main class="main-container">
-        <h1>기록실 - 팀 순위</h1>
-
-        <div class="tabs">
-            <button class="tab-btn active">팀 순위</button>
-            <button class="tab-btn">팀별 순위변동 그래프</button>
-        </div>
-
-        <section class="rank-table-section">
-            <h2>(2026년 06월 07일 기준)</h2>
-            <table class="rank-table">
-                <thead>
+    <!-- 메인 컨텐츠 래퍼: 사이드바와 본문을 함께 감쌉니다. -->
+    <div class="main-container">
+    <aside class="sidebar">
+        <div class="sidebar-title">기록・순위</div>
+        <ul class="sidebar-menu">
+            <li class="has-submenu">
+                <span class="menu-btn">선수 기록 ▾</span>
+                <ul class="submenu">
+                    <li><a href="Batting Statistics.html?tab=batter">타자 기록</a></li>
+                    <li><a href="Batting Statistics.html?tab=pitcher">투수 기록</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="record.html">팀 순위</a>
+            </li>
+            <li>
+                <a href="plan.html">경기 일정 및 결과</a>
+            </li>
+        </ul>
+    </aside>
+        
+        <main class="main-content">
+            <h1>기록실 - 팀 순위</h1>
+            <!-- 팀 순위 표 섹션: 현재 시즌 팀별 순위와 성적을 보여줍니다. -->
+            <section class="rank-table-section">
+                <h3>(2026년 06월 07일 기준)</h3>
+                <table class="rank-table">
+                    <thead>
                     <tr>
                         <th>순위</th><th>팀명</th><th>경기</th><th>승</th><th>패</th><th>무</th>
                         <th>승률</th><th>게임차</th><th>최근10경기</th><th>연속</th><th>홈</th><th>방문</th>
@@ -42,6 +59,7 @@
             </table>
         </section>
 
+        <!-- 팀 간 상대 전적 섹션: 각 팀과의 상대 전적을 행렬 형태로 표시합니다. -->
         <section class="h2h-table-section">
             <h2>팀간 승패표</h2>
             <table class="h2h-table">
@@ -65,10 +83,11 @@
                 </table>
         </section>
     </main>
+    </div>
 
+    <!-- 공통 푸터 로드 영역: footer.html을 가져와 삽입합니다. -->
     <footer id="global-footer"></footer>
     <script src="main.js"></script>
-    <!-- footer 적용 -->
     <script>
         fetch('footer.html')
             .then(response => response.text())

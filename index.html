@@ -13,12 +13,6 @@
     <main class="wiki-container">
         
         <section class="dashboard-grid">
-            <div class="col-main">
-                <div class="card preview-card">
-                    <h3>Today's Game Preview</h3>
-                    <img src="https://via.placeholder.com/600x300" alt="경기 프리뷰">
-                    <p class="preview-title">한화 vs 롯데 : 2026.06.10 Preview</p>
-                </div>
                 
                 <div class="card standings-card">
                     <h3>Current League Standings (2026)</h3>
@@ -43,9 +37,8 @@
                 <div class="card news-card">
                     <h3>공지사항 / 뉴스 요약</h3>
                     <ul class="news-list">
-                        <li><span>[공지]</span> 2026 올스타 투표 안내</li>
-                        <li><span>[뉴스]</span> 최원준 선수, 역대 기록 경신</li>
-                        <li><span>[팀 소식]</span> KIA 타이거즈, 홈 5연승</li>
+                        <li><a href="notice.html" style="text-decoration: none; color: inherit;"><span>[공지]</span> 2026 올스타 투표 안내</a></li>
+                        <li><a href="news.html" style="text-decoration: none; color: inherit;"><span>[뉴스]</span> 최원준 선수, 역대 기록 경신</a></li>
                     </ul>
                 </div>
             </div>
@@ -134,8 +127,6 @@
     <footer id="global-footer"></footer>
 
     <script src="main.js"></script>
-    <script>
-        fetch('footer.html').then(r => r.text()).then(d => document.getElementById('global-footer').innerHTML = d);
-    </script>
+    
 </body>
 </html>

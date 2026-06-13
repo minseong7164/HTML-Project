@@ -27,139 +27,60 @@
                     <h1 style="font-size: 28px; font-weight: bold; color: var(--text-color);">NEWS</h1>
                 </div>
 
-                <div class="record-tabs" style="border-bottom: 2px solid #ddd; margin-bottom: 20px; display: flex; gap: 5px;">
-                    <button class="tab-btn active" style="font-weight: bold; border-bottom: 3px solid #1a2942; padding: 10px 20px; font-size: 15px; color: #1a2942;">최신뉴스</button>
-                    <button class="tab-btn" style="padding: 10px 20px; font-size: 15px; color: #666;">프리뷰</button>
-                    <button class="tab-btn" style="padding: 10px 20px; font-size: 15px; color: #666;">스타 인터뷰</button>
-                    <button class="tab-btn" style="padding: 10px 20px; font-size: 15px; color: #666;">KBO PHOTO</button>
-                </div>
-
-                <div class="news-search-bar" style="background-color: #f8f9fa; padding: 15px; border: 1px solid #e0e0e0; margin-bottom: 25px; display: flex; gap: 10px; align-items: center; border-radius: 4px;">
-                    <select style="padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; background: #fff;">
-                        <option>제목</option>
-                        <option>내용</option>
-                    </select>
-                    <input type="text" placeholder="검색어를 입력하세요" style="flex: 1; padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px;">
-                    <button style="background-color: #4a4a4a; color: #fff; border: none; padding: 8px 20px; font-weight: bold; cursor: pointer; border-radius: 4px; font-size: 14px;">검색</button>
-                </div>
-
                 <div class="news-list-container" style="display: flex; flex-direction: column; gap: 20px;">
                     
                     <div class="news-post-item" data-link="newshtml.html" style="display: flex; gap: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; cursor: pointer; align-items: flex-start;">
                         <div class="news-thumb" style="width: 170px; height: 105px; background-color: #eee; flex-shrink: 0; overflow:hidden; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #999;"><img src="images/롯데 뉴스.jpg" alt="롯데 뉴스" style="width: 100%; height: 100%; object-fit: cover;" /></div>
                         <div class="news-info" style="flex: 1; min-width: 0; margin-top: -4px;">
                             <h3 style="font-size: 17px; font-weight: bold; margin-bottom: 8px; color: var(--text-color); line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">롯데 시즌 최다 17안타 16득점 대폭발, 1위 LG를 대파하다</h3>
-                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">프로야구 롯데 자이언츠가 LG 트윈스를 대파했다. 롯데는 12일 잠실구장에서 열린 2026 KBO리그 LG와 경기에서 장단 17안타를 터뜨리며 16-5로 크게 승리했다. 롯데의 올 시즌 ...</p>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 8px; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;">프로야구 롯데 자이언츠가 LG 트윈스를 대파했다. 롯데는 12일 잠실구장에서 열린 2026 KBO리그 LG와 경기에서 장단 17안타를 터뜨리며 16-5로 크게 승리했다. 롯데의 올 시즌 ...</p>
                             <span style="font-size: 12px; color: #999;">2026.06.12</span>
                         </div>
                     </div>
 
-                    <div class="news-post-item" style="display: flex; gap: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; cursor: pointer; align-items: flex-start;">
+                    <div class="news-post-item" data-link="newshtml.html" style="display: flex; gap: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; cursor: pointer; align-items: flex-start;">
                         <div class="news-thumb" style="width: 170px; height: 105px; background-color: #eee; flex-shrink: 0; overflow:hidden; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #999;"><img src="images/kt 뉴스.jpg" alt="KT 뉴스" style="width: 100%; height: 100%; object-fit: cover;" /></div>
                         <div class="news-info" style="flex: 1; min-width: 0; margin-top: -4px;">
                             <h3 style="font-size: 17px; font-weight: bold; margin-bottom: 8px; color: var(--text-color); line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">'김현수 결자해지 끝내기!' KT 2연승, 다시 LG 1G 추격</h3>
-                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">KT 위즈가 극적인 끝내기로 승리를 거뒀다. NC 다이노스는 이번 주에만 두 번째 끝내기 패배를 당했다. KT는 12일 수원 KT 위즈파크에서 열린 ‘2026 신한 SOL KB...</p>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 8px; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;">KT 위즈가 극적인 끝내기로 승리를 거뒀다. NC 다이노스는 이번 주에만 두 번째 끝내기 패배를 당했다. KT는 12일 수원 KT 위즈파크에서 열린 ‘2026 신한 SOL KB...</p>
                             <span style="font-size: 12px; color: #999;">2026.06.12</span>
                         </div>
                     </div>
 
-                    <div class="news-post-item" style="display: flex; gap: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; cursor: pointer; align-items: flex-start;">
+                    <div class="news-post-item" data-link="newshtml.html" style="display: flex; gap: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; cursor: pointer; align-items: flex-start;">
                         <div class="news-thumb" style="width: 170px; height: 105px; background-color: #eee; flex-shrink: 0; overflow:hidden; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #999;"><img src="images/두산 뉴스.jpg" alt="두산 뉴스" style="width: 100%; height: 100%; object-fit: cover;" /></div>
                         <div class="news-info" style="flex: 1; min-width: 0; margin-top: -4px;">
                             <h3 style="font-size: 17px; font-weight: bold; margin-bottom: 8px; color: var(--text-color); line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">KIA 패패패 5위도 위험하다...'최민석 KKKKKKK 6승'</h3>
-                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">두산베어스가 5위까지 넘보고 있다. 두산은 12일 광주-기아 챔피언스필드에서 열린 2026 신한은행 SOL bank KBO리그 KIA타이거즈와의 팀간 7차전을 4-2로 승리했다. 선발 최...</p>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 8px; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;">두산베어스가 5위까지 넘보고 있다. 두산은 12일 광주-기아 챔피언스필드에서 열린 2026 신한은행 SOL bank KBO리그 KIA타이거즈와의 팀간 7차전을 4-2로 승리했다. 선발 최...</p>
                             <span style="font-size: 12px; color: #999;">2026.06.12</span>
                         </div>
                     </div>
 
-                    <div class="news-post-item" style="display: flex; gap: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; cursor: pointer; align-items: flex-start;">
+                    <div class="news-post-item" data-link="newshtml.html" style="display: flex; gap: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; cursor: pointer; align-items: flex-start;">
                         <div class="news-thumb" style="width: 170px; height: 105px; background-color: #eee; flex-shrink: 0; overflow:hidden; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #999;"><img src="images/키움 뉴스.jpg" alt="키움 뉴스" style="width: 100%; height: 100%; object-fit: cover;" /></div>
                         <div class="news-info" style="flex: 1; min-width: 0; margin-top: -4px;">
                             <h3 style="font-size: 17px; font-weight: bold; margin-bottom: 8px; color: var(--text-color); line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">'서건창 끝내기 대폭발' 키움 뒤집기쇼! 한화 3연승 저지</h3>
-                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">프로야구 키움 히어로즈가 한화 이글스 상대로 짜릿한 끝내기 승리를 거두고 연패를 끊었다. 설종진 감독이 이끄는 키움은 12일 서울 잠실구장에서 열린 2026 신한 SOL KBO리그 키움과...</p>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 8px; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;">프로야구 키움 히어로즈가 한화 이글스 상대로 짜릿한 끝내기 승리를 거두고 연패를 끊었다. 설종진 감독이 이끄는 키움은 12일 서울 잠실구장에서 열린 2026 신한 SOL KBO리그 키움과...</p>
                             <span style="font-size: 12px; color: #999;">2026.06.12</span>
                         </div>
                     </div>
 
-                    <div class="news-post-item" style="display: flex; gap: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; cursor: pointer; align-items: flex-start;">
+                    <div class="news-post-item" data-link="newshtml.html" style="display: flex; gap: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; cursor: pointer; align-items: flex-start;">
                         <div class="news-thumb" style="width: 170px; height: 105px; background-color: #eee; flex-shrink: 0; overflow:hidden; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #999;"><img src="images/ssg 뉴스.jpg" alt="SSG 뉴스" style="width: 100%; height: 100%; object-fit: cover;" /></div>
                         <div class="news-info" style="flex: 1; min-width: 0; margin-top: -4px;">
                             <h3 style="font-size: 17px; font-weight: bold; margin-bottom: 8px; color: var(--text-color); line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">최정 홈런 쾅! 패패패 SSG, 삼성 만나 드디어 웃었다</h3>
-                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">프로야구 SSG 랜더스가 3연패의 늪에서 벗어났다. SSG는 12일 대구삼성라이온즈파크에서 열린 삼성 라이온즈와의 원정 경기에서 5-3으로 승리했다. 지난 9일 잠실 LG 트윈스전 이후 3...</p>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 8px; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;">프로야구 SSG 랜더스가 3연패의 늪에서 벗어났다. SSG는 12일 대구삼성라이온즈파크에서 열린 삼성 라이온즈와의 원정 경기에서 5-3으로 승리했다. 지난 9일 잠실 LG 트윈스전 이후 3...</p>
                             <span style="font-size: 12px; color: #999;">2026.06.12</span>
                         </div>
                     </div>
 
                 </div>
             </section>
-
-            <aside class="news-sub-widgets" style="width: 280px; flex-shrink: 0; display: flex; flex-direction: column; gap: 25px;">
-                
-                <div class="widget-card" style="border: 1px solid #e0e0e0; border-radius: 4px; overflow: hidden; background: #fff;">
-                    <div class="widget-title" style="background-color: #f8f9fa; border-bottom: 1px solid #e0e0e0; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center;">
-                        <span style="font-weight: bold; font-size: 14px; color: #333;">프리뷰</span>
-                        <a href="#" style="font-size: 11px; color: #999; text-decoration: none;">더보기 +</a>
-                    </div>
-                    <ul style="list-style: none; padding: 10px 15px; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
-                        <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; color: #444;">• [12일 프리뷰] 연패 끊고 안방 복귀...</li>
-                        <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; color: #444;">• [12일 프리뷰] '4위 도약' 한화, 연...</li>
-                        <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; color: #444;">• [12일 프리뷰] NC 테일러-KT 벤...</li>
-                        <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; color: #444;">• [12일 프리뷰] '롯데 킬러' 윌커스...</li>
-                        <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; color: #444;">• [12일 프리뷰] 박찬호 두 번째 친정...</li>
-                    </ul>
-                </div>
-
-                <div class="widget-card" style="border: 1px solid #e0e0e0; border-radius: 4px; overflow: hidden; background: #fff;">
-                    <div class="widget-title" style="background-color: #f8f9fa; border-bottom: 1px solid #e0e0e0; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center;">
-                        <span style="font-weight: bold; font-size: 14px; color: #333;">스타 인터뷰</span>
-                        <a href="#" style="font-size: 11px; color: #999; text-decoration: none;">더보기 +</a>
-                    </div>
-                    <ul style="list-style: none; padding: 10px 15px; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
-                        <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; color: #444;">• 오스틴 홈런 2방으로 뒤집고, 리오...</li>
-                        <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; color: #444;">• 길도영도 첫스윙 공포의 스위퍼, 7...</li>
-                        <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; color: #444;">• '역대 7번째' 김태형 통산 800승...</li>
-                        <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; color: #444;">• LG와 왕좌 체제 실화냐, 3위 따돌...</li>
-                        <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; color: #444;">• 두산 5위 보인다! "양의지가 타선 ...</li>
-                    </ul>
-                </div>
-
-            </aside>
         </main>
     </div>
 
     <footer id="global-footer"></footer>
     <script src="main.js"></script>
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('global-footer').innerHTML = data;
-            });
-
-        function showCopyrightAlert(event) {
-            const newsLinkCard = event.target.closest('.news-post-item[data-link]');
-            if (newsLinkCard) {
-                const url = newsLinkCard.dataset.link;
-                if (url) {
-                    window.location.href = url;
-                    return;
-                }
-            }
-
-            event.preventDefault();
-            event.stopPropagation();
-            alert('저작권의 의해 볼 수 없습니다');
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const mainContent = document.querySelector('.main-content');
-            if (!mainContent) return;
-
-            const selectors = 'a, button, input, select, .news-post-item, .news-thumb, .news-info, .widget-title a, .widget-card li';
-            mainContent.querySelectorAll(selectors).forEach(el => {
-                el.addEventListener('click', showCopyrightAlert);
-            });
-        });
-    </script>
+    
 </body>
 </html>

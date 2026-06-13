@@ -9,11 +9,7 @@
 <body>
     <!-- 페이지 상단 네비게이션 바: nav.html을 불러와서 삽입합니다. -->
 <header class="kbo-navbar" id="global-navbar">
-        <script>
-            fetch('nav.html').then(response => response.text()).then(data => {
-                document.getElementById('global-navbar').innerHTML = data;
-            });
-        </script>
+        
     </header>
 
     <div class="main-container">
@@ -139,12 +135,6 @@
     <!-- 페이지 하단 푸터: footer.html을 불러와 삽입합니다. -->
     <footer id="global-footer"></footer>
     <script src="main.js"></script>
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('global-footer').innerHTML = data;
-            });
-    </script>
+    
 </body>
 </html>

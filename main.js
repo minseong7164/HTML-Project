@@ -19,8 +19,31 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     }
 
+    const footerContainer = document.getElementById('global-footer');
+    if (footerContainer) {
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) throw new Error('footer load failed');
+                return response.text();
+            })
+            .then(data => {
+                footerContainer.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Footer load error:', error);
+            });
+    }
+
     // 로그인 엔터키 초기화
     initEnterKey();
+
+    // news-post-item 클릭 이벤트 (data-link 속성이 있는 요소)
+    const newsPostItems = document.querySelectorAll('.news-post-item[data-link]');
+    newsPostItems.forEach(item => {
+        item.addEventListener('click', function() {
+            window.location.href = this.getAttribute('data-link');
+        });
+    });
 
     // 기록실 탭 처리 (URL 파라미터 확인)
     const urlParams = new URLSearchParams(window.location.search);

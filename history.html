@@ -25,7 +25,7 @@
         </aside>
         
         <main class="main-content">
-            <div class="wiki-page active" style="padding: 0; border: none;">
+            <div class="wiki-page active">
                 
                 <div class="wiki-header-row">
                     <h1>야구 (Baseball)</h1>
@@ -67,7 +67,7 @@
 
                         <h2>4. 수비 포시전 및 역할</h2>
                         <p>야구의 수비수는 저마다 고유의 등번호 형태인 '포지션 번호(1~9번)'를 가집니다.</p>
-                        <table class="record-table" style="min-width: 100%; margin-bottom: 20px;">
+                        <table class="record-table">
                             <thead>
                                 <tr>
                                     <th>번호</th>
@@ -146,12 +146,6 @@
 
     <footer id="global-footer"></footer>
     <script src="main.js"></script>
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('global-footer').innerHTML = data;
-            });
-    </script>
+    
 </body>
 </html>
